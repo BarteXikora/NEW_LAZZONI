@@ -123,7 +123,7 @@ jQuery('document').ready(($) => {
     })
 
     // HIDE MOBILE NAV ON ANY OPERATION:
-    $('.group-button').click(() => {
+    $('.groups-list').click(() => {
         if (isMobile()) {
             isCollapseOpen = false
             toggleNavCollapse()

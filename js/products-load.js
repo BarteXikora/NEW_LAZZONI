@@ -4,22 +4,32 @@ jQuery('document').ready(($) => {
 
     // FILL SUBCATEGORIES LIST BASED ON LOADED CONTENT:
     const getCategoriesFromProducts = () => {
-        $('.sub-groups-list').each((i, e) => {
-            $(e).empty()
+        $('.sub-groups-list').animate({
+            opacity: 0
+        }, 300, () => {
+            $('.sub-groups-list').each((i, e) => {
+                $(e).empty()
+            })
+
+            $('#products-content').children().each(function () {
+                if ($(this).data('anchor')) {
+
+                    let anchorID = $(this).data('anchor').replace(/\s+/g, '-').toLowerCase()
+
+                    $(this).attr('id', anchorID)
+
+                    $('.groups-list .active .sub-groups-list')
+                        .append('<a class="group-button pb-1" href="#' + anchorID +
+                            '">' + $(this).data('anchor') + '</a>')
+                }
+            })
         })
 
-        $('#products-content').children().each(function () {
-            if ($(this).data('anchor')) {
-
-                let anchorID = $(this).data('anchor').replace(/\s+/g, '-').toLowerCase()
-
-                $(this).attr('id', anchorID)
-
-                $('.groups-list .active .sub-groups-list')
-                    .append('<a class="group-button pb-1" href="#' + anchorID +
-                        '">' + $(this).data('anchor') + '</a>')
-            }
-        })
+        setTimeout(() => {
+            $('.sub-groups-list').animate({
+                opacity: 1
+            }, 300)
+        }, 300)
     }
 
     // HIGHLIGHT SUBCATEGORY ON SCROLL:
@@ -64,52 +74,62 @@ jQuery('document').ready(($) => {
     }
 
     // HANDLE LOAD PRODUCTS:
+    let isLoading = false
+
     const loadProducts = (group) => {
-        setLoadingCourtain(true)
+        if (!isLoading) {
+            isLoading = true
 
-        $.ajax({
-            url: $('.single-container-products').data('link'),
-            data: {
-                action: 'lazzoni_load',
-                search: $('#search-input').val(),
-                group: group
-            },
-            method: 'post',
-            success: (ans) => {
-                $('#products-content').html(ans)
+            setLoadingCourtain(true)
 
-                getCategoriesFromProducts()
-                highlightSubCategory()
+            $('.groups-list').children().each((i, e) => {
+                if ($(e).hasClass('active')) $(e).removeClass('active')
+            })
 
-                setLoadingCourtain(false)
+            $.ajax({
+                url: $('.single-container-products').data('link'),
+                data: {
+                    action: 'lazzoni_load',
+                    search: $('#search-input').val(),
+                    group: group
+                },
+                method: 'post',
+                success: (ans) => {
+                    isLoading = false
 
-                $("html, body").animate({ scrollTop: 0 }, "smooth");
-            },
-            error: (err) => {
-                $('#products-content')
-                    .html('<div class="col-12 text-center mt-5 error">' +
-                        '<h2>Wystąpił błąd i nie udało się wczytać produktów!' +
-                        '</h2><p>Proszę spróbować później!</p></div>')
+                    $('#products-content').html(ans)
 
-                getCategoriesFromProducts()
-                setLoadingCourtain(false)
+                    $('.groups-list').find("[data-category='" + group + "']").parent().addClass('active')
 
-                $("html, body").animate({ scrollTop: 0 }, "smooth");
-            }
-        })
+                    getCategoriesFromProducts()
+                    highlightSubCategory()
 
-        $('#search-input').val('')
+                    setLoadingCourtain(false)
+
+                    $("html, body").animate({ scrollTop: 0 }, "smooth");
+                },
+                error: (err) => {
+                    isLoading = false
+
+                    $('#products-content')
+                        .html('<div class="col-12 text-center mt-5 error">' +
+                            '<h2>Wystąpił błąd i nie udało się wczytać produktów!' +
+                            '</h2><p>Proszę spróbować później!</p></div>')
+
+                    getCategoriesFromProducts()
+                    setLoadingCourtain(false)
+
+                    $("html, body").animate({ scrollTop: 0 }, "smooth");
+                }
+            })
+
+            $('#search-input').val('')
+        }
     }
 
     // HANDLE CLICK ON NAVIGATION:
     $('.group-button').click((e) => {
         if (!$(e.target).parent().hasClass('active')) {
-            $('.groups-list').children().each((i, e) => {
-                if ($(e).hasClass('active')) $(e).removeClass('active')
-            })
-
-            $(e.target).parent().addClass('active')
-
             loadProducts($(e.target).data('category') || '')
         }
     })
@@ -118,10 +138,6 @@ jQuery('document').ready(($) => {
     $('#search-form').on('submit', (e) => {
         e.preventDefault()
 
-        $('.groups-list').children().each((i, e) => {
-            if ($(e).hasClass('active')) $(e).removeClass('active')
-        })
-
         if ($('#search-input').val()) loadProducts('')
     })
 
@@ -129,5 +145,4 @@ jQuery('document').ready(($) => {
     highlightSubCategory()
 
     loadProducts($('.single-container-products').data('page') || defaultGroup)
-    $('.groups-list').find("[data-category='" + ($('.single-container-products').data('page') || defaultGroup) + "']").parent().addClass('active')
 })

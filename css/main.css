@@ -138,12 +138,25 @@
           box-shadow: 6px 6px 15px -11px #282828;
   position: fixed;
   top: 55px;
+  margin-left: 9px;
   width: 44px;
   padding: 10px;
 }
 
 #flags li {
   clear: both !important;
+  padding-bottom: 5px;
+}
+
+#flags li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#flags li a {
+  -webkit-box-shadow: 3px 3px 15px -5px #282828;
+          box-shadow: 3px 3px 15px -5px #282828;
+  padding: 0;
 }
 
 .navbar-toggler img {
@@ -988,8 +1001,6 @@ h1,
   font-weight: bold;
   margin-bottom: 45px;
   text-transform: uppercase;
-  font-family: 'Arial';
-  font-weight: black;
 }
 
 h2 {
@@ -1034,8 +1045,6 @@ textarea:focus,
   padding: 10px 45px;
   background-color: #f1f1f1;
   overflow-wrap: break-word;
-  font-family: 'Arial';
-  font-weight: black;
 }
 
 .title::before {
@@ -1142,7 +1151,7 @@ textarea:focus,
 }
 
 .play-icon {
-  max-width: 80px;
+  max-height: 40%;
 }
 
 .box-content {
