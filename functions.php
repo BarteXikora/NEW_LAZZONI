@@ -26,3 +26,6 @@ require_once('functions/post-type-films.php');
 
 // Add CATALOGS post type (2):
 require_once('functions/post-type-catalogs.php');
+
+// Handle products load:
+require_once('functions/products-load.php');

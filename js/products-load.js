@@ -62,17 +62,15 @@ jQuery('document').ready(($) => {
     }
 
     // HANDLE LOAD PRODUCTS:
-    const loadProducts = (category) => {
-        $('#search-input').val('')
-
+    const loadProducts = (group) => {
         setLoadingCourtain(true)
 
         $.ajax({
             url: $('.single-container-products').data('link'),
             data: {
-                action: '',
+                action: 'lazzoni_load',
                 search: $('#search-input').val(),
-                cetgory: category
+                group: group
             },
             method: 'post',
             success: (ans) => {
@@ -97,6 +95,8 @@ jQuery('document').ready(($) => {
                 $("html, body").animate({ scrollTop: 0 }, "smooth");
             }
         })
+
+        $('#search-input').val('')
     }
 
     // HANDLE CLICK ON NAVIGATION:
@@ -116,6 +116,10 @@ jQuery('document').ready(($) => {
     $('#search-form').on('submit', (e) => {
         e.preventDefault()
 
+        $('.groups-list').children().each((i, e) => {
+            if ($(e).hasClass('active')) $(e).removeClass('active')
+        })
+
         if ($('#search-input').val()) loadProducts('')
     })
 
@@ -123,4 +127,5 @@ jQuery('document').ready(($) => {
     highlightSubCategory()
 
     loadProducts($('.single-container-products').data('page') || '')
+    $('.groups-list').find("[data-category='" + $('.single-container-products').data('page') || '' + "']").parent().addClass('active')
 })

@@ -102,6 +102,15 @@ function lazzoni_enqueue_styles() {
         ); 
     }
 
+    // Fixed product navigation script:
+    if (is_page('products')) {
+        wp_enqueue_script(
+            'fixed-navigation',
+            get_stylesheet_directory_uri() . '/js/fixed-navigation.js',
+            array('jquery')
+        ); 
+    }
+
     // Load products script:
     if (is_page('products')) {
         wp_enqueue_script(

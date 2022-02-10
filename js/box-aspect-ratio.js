@@ -11,5 +11,7 @@ jQuery(document).ready(($) => {
         this.id = setTimeout(resizeBox, 100)
     })
 
+    $('#products-content').on('DOMSubtreeModified', () => { resizeBox() })
+
     resizeBox()
 })

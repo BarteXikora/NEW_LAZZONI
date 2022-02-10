@@ -54,27 +54,15 @@
 
 <!-- PRODUCTS -->
 <section class="container single-container py-5">
-    <div class="row pt-5 pb-4 single-container-products" data-page="wiertarki" data-link="//"> <!-- SET IN PHP -->
+    <div class="row pt-5 pb-4 single-container-products" \
+        data-page="<?php if (isset($_GET['p'])) echo $_GET['p']; ?>" 
+        data-link="<?php echo admin_url('admin-ajax.php'); ?>">
         <div class="col-12 col-lg-8 offset-0 offset-lg-4">
             <div class="loading-courtain pt-5">
                 <div class="loading-elements mt-5"></div>
             </div>
 
-            <div class="row text-center" id="products-content">
-                <div class="col-12 px-4" data-anchor="Wiertarki przelotowe">
-                    <h2 class="products-category-title title text-center text-md-left">
-                        Wiertarki przelotowe: 
-                    </h2>
-                </div>
-
-                <a href="#" class="miniature col-12 col-md-6 p-4 text-center text-md-left">
-                    <div class="box ar8" style="background-image: url(img/__drill.jpg)">
-                        <div class="box-content">
-                            <h3>Wiertarka wielowrzecionowa EXPERT Z 1+1 K</h3>
-                        </div>
-                    </div>
-                </a> 
-            </div>
+            <div class="row text-center" id="products-content"></div>
         </div>
     </div>
 </section>

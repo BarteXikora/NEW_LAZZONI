@@ -1,4 +1,4 @@
-$('document').ready(() => {
+jQuery('document').ready(($) => {
     const $navContainer = $('.products-navigation-container')
     const $navigation = $('.products-navigation')
     const $openIcon = $('.products-toggler #open')
@@ -8,7 +8,7 @@ $('document').ready(() => {
 
     // CHECK IF IT IS MOBILE:
     const isMobile = () => {
-        return Math.max(document.documentElement.clientWidth,window.innerWidth || 0) <= 992
+        return Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 992
     }
 
     // DISABLE GO-UP-BUTTON WHEN PRODUCTS MENU IS OPEN:
@@ -35,9 +35,9 @@ $('document').ready(() => {
     const setNavFixed = () => {
         if (!isMobile()) {
             if (isFooter) {
-                $navContainer.css('top', 
+                $navContainer.css('top',
                     (($(this).scrollTop() + $navContainer.innerHeight() + 50) - $('footer').offset().top) * -1)
-                } else {
+            } else {
                 $navContainer.css('top', 0)
             }
         }
@@ -47,7 +47,7 @@ $('document').ready(() => {
     const toggleNavCollapse = () => {
         $navigation.stop()
         $navContainer.css('top', 0)
-        
+
         if (isCollapseOpen) {
             $navigation.animate({
                 left: 0
@@ -65,7 +65,7 @@ $('document').ready(() => {
 
             setGoUp(true)
 
-            if ($('.products-toggler').hasClass('products-toggler-black')) 
+            if ($('.products-toggler').hasClass('products-toggler-black'))
                 $('.products-toggler').removeClass('products-toggler-black')
             $closeIcon.addClass('d-none')
             if ($openIcon.hasClass('d-none')) $openIcon.removeClass('d-none')
@@ -124,8 +124,6 @@ $('document').ready(() => {
 
     // HIDE MOBILE NAV ON ANY OPERATION:
     $('.group-button').click(() => {
-        console.log('e')
-
         if (isMobile()) {
             isCollapseOpen = false
             toggleNavCollapse()
@@ -145,7 +143,7 @@ $('document').ready(() => {
 
     if (isMobile()) {
         isCollapseOpen = false
-            
+
         $navigation.css('left', ($navigation.outerWidth() + $navContainer.offset().left) * -1)
         toggleNavCollapse()
     }
