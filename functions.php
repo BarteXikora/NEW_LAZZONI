@@ -15,6 +15,9 @@ require_once('functions/add-theme-support.php');
 // Change posts to PRODUCTS:
 require_once('functions/posts-to-products.php');
 
+// Add custom taxonomy of "PRODUCT TYPE":
+require_once('functions/taxonomy-type.php');
+
 // Add NEWS post type (0):
 require_once('functions/post-type-news.php');
 
