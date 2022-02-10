@@ -4,12 +4,20 @@ add_action('wp_ajax_lazzoni_load', 'load_products');
 add_action('wp_ajax_nopriv_lazzoni_load', 'load_products');
 
 function load_products () {
+    $default_group_slug = 'test';
+
     $search = $_REQUEST['search'];
     $group = $_REQUEST['group'];
+
+    $show_categories = true;
+
+    if ($group == '') $group = $default_group_slug;
 
     $query_array = array('post_type' => 'post', 'posts_per_page' => -1);
 
     if (strlen($search) > 0) {
+        $show_categories = false;
+
         $_a = array('s' => $search);
 
         $query_array = array_merge($query_array, $_a);
@@ -42,14 +50,36 @@ function load_products () {
             
             array_push($products_list, $current);
         }
-    } else echo 'nic ni ma';
+    } else {
+        ?>
+
+            <div class="col-12 text-center mt-5 error">
+                <h2>Nie znaleziono żadnych produktów!</h2>
+            </div>
+
+        <?php
+
+        die();
+    }
 
     $columns = array_column($products_list, 'category');
     array_multisort($columns, SORT_ASC, $products_list);
+
+    if (!$show_categories) {
+        ?>
+
+        <div class="col-12 px-4">
+            <h2 class="products-category-title title text-center text-md-left">
+                Wyniki wyszukiwania dla <i>&bdquo;<?php echo $search; ?>&rdquo;</i>:
+            </h2>
+        </div>
+
+        <?php
+    }
     
     $last_category = '';
     foreach ($products_list as $current_product) {
-        if ($last_category != $current_product['category']) {
+        if ($show_categories && $last_category != $current_product['category']) {
             $current_category = get_category_by_slug($current_product['category'])->name;
 
             ?>

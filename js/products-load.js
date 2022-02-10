@@ -1,4 +1,6 @@
 jQuery('document').ready(($) => {
+    // DEFAULT GROUP SLUG:
+    const defaultGroup = 'test'
 
     // FILL SUBCATEGORIES LIST BASED ON LOADED CONTENT:
     const getCategoriesFromProducts = () => {
@@ -126,6 +128,6 @@ jQuery('document').ready(($) => {
     getCategoriesFromProducts()
     highlightSubCategory()
 
-    loadProducts($('.single-container-products').data('page') || '')
-    $('.groups-list').find("[data-category='" + $('.single-container-products').data('page') || '' + "']").parent().addClass('active')
+    loadProducts($('.single-container-products').data('page') || defaultGroup)
+    $('.groups-list').find("[data-category='" + ($('.single-container-products').data('page') || defaultGroup) + "']").parent().addClass('active')
 })
