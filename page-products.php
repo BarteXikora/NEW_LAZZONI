@@ -26,10 +26,26 @@
                 <h2 class="p-2 mb-3">Grupy produktów:</h3>
 
                 <ul class="pr-3 groups-list" id="groups">
+
+                    <?php
+                        $post_types = get_terms('product-group', array(
+                            'hide_empty' => 0
+                        ));
+
+                        foreach($post_types as $type) {
+                    ?>
+
                     <li>
-                        <a class="group-button py-1" data-category="dostępne-w-magazynie">Dostępne w magazynie</a>
+                        <a class="group-button py-1" data-category="<?php echo $type->slug; ?>">
+                            <?php echo $type->name; ?>
+                        </a>
                         <div class="sub-groups-list"></div>
                     </li>
+
+                    <?php
+                        }
+                    ?>
+
                 </ul>
             </div>
         </div>

@@ -101,5 +101,14 @@ function lazzoni_enqueue_styles() {
             array('jquery')
         ); 
     }
+
+    // Load products script:
+    if (is_page('products')) {
+        wp_enqueue_script(
+            'products-load',
+            get_stylesheet_directory_uri() . '/js/products-load.js',
+            array('jquery')
+        ); 
+    }
 }
 add_action('wp_enqueue_scripts', 'lazzoni_enqueue_styles');

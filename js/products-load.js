@@ -1,4 +1,4 @@
-$('document').ready(() => {
+jQuery('document').ready(($) => {
 
     // FILL SUBCATEGORIES LIST BASED ON LOADED CONTENT:
     const getCategoriesFromProducts = () => {
@@ -15,7 +15,7 @@ $('document').ready(() => {
 
                 $('.groups-list .active .sub-groups-list')
                     .append('<a class="group-button pb-1" href="#' + anchorID +
-                    '">' + $(this).data('anchor') + '</a>')
+                        '">' + $(this).data('anchor') + '</a>')
             }
         })
     }
@@ -87,9 +87,9 @@ $('document').ready(() => {
             },
             error: (err) => {
                 $('#products-content')
-                    .html('<div class="col-12 text-center mt-5 error">'+
-                    '<h2>Wystąpił błąd i nie udało się wczytać produktów!' +
-                    '</h2><p>Proszę spróbować później!</p></div>')
+                    .html('<div class="col-12 text-center mt-5 error">' +
+                        '<h2>Wystąpił błąd i nie udało się wczytać produktów!' +
+                        '</h2><p>Proszę spróbować później!</p></div>')
 
                 getCategoriesFromProducts()
                 setLoadingCourtain(false)
@@ -109,7 +109,7 @@ $('document').ready(() => {
             $(e.target).parent().addClass('active')
 
             loadProducts($(e.target).data('category') || '')
-        } 
+        }
     })
 
     // HANDLE SEARCH:
@@ -122,5 +122,5 @@ $('document').ready(() => {
     getCategoriesFromProducts()
     highlightSubCategory()
 
-    // loadProducts($('.single-container-products').data('page') || '')
+    loadProducts($('.single-container-products').data('page') || '')
 })
