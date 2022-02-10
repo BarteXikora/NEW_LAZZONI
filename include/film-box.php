@@ -1,16 +1,4 @@
-<?php
-    $link = ''; $title = '';
-
-    if (is_page('films')) if (isset($_GET['v'])) {
-        $link = $_GET['v'];
-
-        if (isset($_GET['t'])) $title = $_GET['t'];
-    }
-?>
-
-<div class="film-box-container <?php
-    if ($link == '') echo 'd-none';
-?>">
+<div class="film-box-container d-none" data-default="<?php if (isset($_GET['v'])) echo $_GET['v'] ?>"> 
     <div class="film-box">
         <div class="film-box-close-box">
             <button class="film-box-close">
@@ -20,11 +8,11 @@
         <div class="px-5 pt-2 pb-2">
             <iframe 
                 id="yt-film-iframe" 
-                src="<?php echo $link; ?>"
+                src=""
                 class="yt-film-iframe"
-                allowfullscreen
-            ></iframe>
-            <h3 id="film-title" class="mt-4"><?php echo $title; ?></h3>
+                allowfullscreen>
+            </iframe>
+            <h3 id="film-title" class="mt-4"></h3>
         </div>
     </div>
 </div>

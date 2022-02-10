@@ -8,5 +8,5 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/play-icon.png" alt="Zobacz film!" class="play-icon">
         </div>
     </div>
-    <h3 class="pt-3"><?php echo $args['title'] ?></h3>
+    <h3 class="pt-3"><?php echo $args['title']; ?></h3>
 </a>
