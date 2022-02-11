@@ -148,6 +148,10 @@ function load_products () {
         if ($show_categories && $last_category != $current_product['category']) {
             $current_category = get_category_by_slug($current_product['category'])->name;
 
+            $current_slug = get_category_by_slug($current_product['category'])->slug;
+            if ($current_slug == 'uncategorized' || $current_slug == 'bez-kategorii')
+                $current_category = "Produkty LAZZONI GROUP"
+
             ?>
 
             <div class="col-12 px-4" data-anchor="<?php echo $current_category; ?>">
