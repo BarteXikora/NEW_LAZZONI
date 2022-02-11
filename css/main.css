@@ -744,6 +744,13 @@
   max-height: 95vh;
 }
 
+.film-box-bar {
+  width: 100%;
+  background-color: #ea9334;
+  padding: 0;
+  height: 50px;
+}
+
 .film-box-close-box {
   width: 100%;
   height: 60px;
@@ -1384,6 +1391,27 @@ footer .footer-contact a:hover {
 
 .contact-container p {
   margin: 0;
+}
+
+table {
+  width: 100%;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+table tr:first-of-type {
+  background-color: #282828;
+  color: white;
+}
+
+table tr:first-of-type td {
+  padding: 10px;
+}
+
+table td {
+  padding: 5px 10px;
 }
 
 @media (max-width: 767.98px) {
