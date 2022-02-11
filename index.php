@@ -44,7 +44,7 @@
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-0.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
-                        <h2 class="pt-2 pb-3">Wiertarki</h2>
+                        <h2 class="font-title pt-2 pb-3">Wiertarki</h2>
                         <p>
                             W ofercie posiadamy wiertarki półautomatyczne z załadunkiem ręcznym, wiertarki
                             przemysłowe z
@@ -59,7 +59,7 @@
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-1.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
-                        <h2 class="pt-2 pb-3">Automatyzacja</h3>
+                        <h2 class="font-title pt-2 pb-3">Automatyzacja</h3>
                             <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam saepe dignissimos
                                 ea
@@ -76,7 +76,7 @@
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-2.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
-                        <h2 class="pt-2 pb-3">Głowice wiertarskie</h3>
+                        <h2 class="font-title pt-2 pb-3">Głowice wiertarskie</h3>
                             <p>
                                 Projektujemy i wykonujemy głowice wiertarskie dedykowane do wiertarek przemysłowych. 
                                 Posiadamy wiele konfiguracji głowic z możliwością adaptacji pod Państwa urządzenie oraz 
@@ -91,7 +91,7 @@
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-3.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
-                        <h2 class="pt-2 pb-3">Dostępne w magazynie</h3>
+                        <h2 class="font-title pt-2 pb-3">Dostępne w magazynie</h3>
                             <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam saepe dignissimos
                                 ea
@@ -245,7 +245,9 @@
                             'image' => wp_get_attachment_url(get_post_thumbnail_id( $post->ID )),
                             'link' => get_the_permalink(),
                             'title' => get_the_title(),
-                            'date' => get_the_date()
+                            'date' => get_the_date(),
+                            'small' => false,
+                            'catalog' => false
                         ]);
                     }
                 }

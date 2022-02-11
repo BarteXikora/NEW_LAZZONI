@@ -3,7 +3,7 @@
 <main class="container single-container my-5">
     <div class="row my-5 pt-5">
         <div class="col-12">
-            <h1 class="title">Aktualności / Katalogi:</h1>
+            <h1 class="title">Aktualności:</h1>
         </div>
 
         <?php
@@ -21,7 +21,9 @@
                         'image' => wp_get_attachment_url(get_post_thumbnail_id( $post->ID )),
                         'link' => get_the_permalink(),
                         'title' => get_the_title(),
-                        'date' => get_the_date()
+                        'date' => get_the_date(),
+                        'small' => false,
+                        'catalog' => false
                     ]);
                 }
             }

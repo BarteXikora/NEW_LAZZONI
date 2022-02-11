@@ -76,7 +76,7 @@ function lazzoni_enqueue_styles() {
     }
 
     // Box aspect ratio script:
-    if (is_home() || is_page('films') || is_page('news') || is_page('products')) {
+    if (is_home() || is_page('films') || is_page('news') || is_page('products') || is_page('catalogs')) {
         wp_enqueue_script(
             'box-aspect-ratio',
             get_stylesheet_directory_uri() . '/js/box-aspect-ratio.js',
@@ -98,6 +98,15 @@ function lazzoni_enqueue_styles() {
         wp_enqueue_script(
             'service-form',
             get_stylesheet_directory_uri() . '/js/service-form.js',
+            array('jquery')
+        ); 
+    }
+
+    // Custom select input script:
+    if (is_page('service')) {
+        wp_enqueue_script(
+            'custom-select',
+            get_stylesheet_directory_uri() . '/js/custom-select.js',
             array('jquery')
         ); 
     }

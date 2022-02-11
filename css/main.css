@@ -197,7 +197,7 @@
 }
 
 .video-bg-courtain p {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
@@ -415,7 +415,7 @@
     overflow-x: hidden;
   }
   .contact-app-container h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .contact-app-container textarea {
     height: 65px !important;
@@ -590,7 +590,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .checkbox-container label:hover {
@@ -776,8 +776,10 @@
   border: 0;
 }
 
-.film h3 {
-  font-size: 1.2rem;
+.film-box h3 {
+  font-size: 2rem;
+  font-family: "Arial";
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
@@ -822,7 +824,7 @@
 }
 
 .products-navigation h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
@@ -855,14 +857,14 @@
 }
 
 .sub-groups-list .group-button {
-  font-size: .9rem;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 
 .group-button {
   border: none;
   background-color: transparent;
-  font-size: 1.1rem;
+  font-size: 1rem;
   display: block;
   cursor: pointer;
   font-weight: bold;
@@ -880,7 +882,10 @@
 }
 
 .products-category-title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  font-family: "Arial";
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .loading-courtain {
@@ -898,7 +903,7 @@
 }
 
 .error h2 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
@@ -935,7 +940,7 @@
 }
 
 .e404-container p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .e404-box {
@@ -1022,7 +1027,7 @@ button:focus,
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   margin: 0;
   background-color: white;
   color: #282828;
@@ -1031,10 +1036,16 @@ body {
 
 h1,
 .h1 {
+  font-family: "Arial";
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 45px;
   text-transform: uppercase;
+}
+
+.font-title {
+  font-family: "Arial";
+  font-weight: bold;
 }
 
 h2 {
@@ -1079,6 +1090,7 @@ textarea:focus,
   padding: 10px 45px;
   background-color: #f1f1f1;
   overflow-wrap: break-word;
+  font-family: "Arial" !important;
 }
 
 .title::before {
@@ -1200,10 +1212,11 @@ textarea:focus,
 
 .box-content p {
   margin-bottom: 5px;
+  font-size: 0.8rem;
 }
 
 .box-content h3 {
-  font-size: 1.35rem;
+  font-size: 1rem;
   padding: 0;
   margin: 0;
   font-weight: bold;
@@ -1211,6 +1224,10 @@ textarea:focus,
 
 .box-content:hover {
   color: #ea9334;
+}
+
+.box-content:hover p {
+  color: white;
 }
 
 .map {
@@ -1361,7 +1378,7 @@ footer .footer-contact a:hover {
 
 .contact-container h3 {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -1371,13 +1388,13 @@ footer .footer-contact a:hover {
 
 @media (max-width: 767.98px) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   .button {
     padding: 10px 20px;
   }
   .video-bg-container p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .fixed-button {
     width: 55px;
