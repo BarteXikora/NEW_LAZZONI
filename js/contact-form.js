@@ -27,7 +27,8 @@ jQuery(document).ready(($) => {
             $.ajax({
                 url: $('#contact-form').data('link'),
                 data: {
-                    action: '', // name an action!
+                    action: 'enquiry_form',
+                    from: 'contact-form',
                     name: $('#c-name').val(),
                     email: $('#c-email').val(),
                     phone: $('#c-phone').val(),

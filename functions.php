@@ -29,3 +29,6 @@ require_once('functions/post-type-catalogs.php');
 
 // Handle products load:
 require_once('functions/products-load.php');
+
+// Handle forms - send mails:
+require_once('functions/forms-handler.php');

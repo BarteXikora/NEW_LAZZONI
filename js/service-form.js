@@ -35,7 +35,8 @@ jQuery('document').ready(($) => {
             $.ajax({
                 url: $('#service-form').data('link'),
                 data: {
-                    action: '', // name an action!
+                    action: 'enquiry_form',
+                    from: 'service-form',
                     type: $('#s-type').data('value'),
                     country: $('#s-country').data('value'),
                     company: $('#s-company-name').val(),
