@@ -46,9 +46,8 @@
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Wiertarki</h2>
                         <p>
-                            W ofercie posiadamy wiertarki półautomatyczne z załadunkiem ręcznym, wiertarki
-                            przemysłowe z
-                            załadunkiem automatycznym, wiertarki przelotowe oraz inne urządzenia.
+                         W ofercie posiadamy wiertarki półautomatyczne z załadunkiem ręcznym, wiertarki przemysłowe z załadunkiem 
+                         automatycznym, wiertarki przelotowe, wiertarki wielowrzecionowe oraz inne urządzenia.
                         </p>
                     </div>
                 </div>
@@ -61,11 +60,8 @@
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Automatyzacja</h3>
                             <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam saepe dignissimos
-                                ea
-                                inventore exercitationem ab? Quia repellendus exercitationem voluptatibus saepe
-                                deserunt
-                                sit ab veniam aut.
+                                Specjalizujemy się również w automatyzacji procesu wiercenia. Nasze zautomatyzowane podajniki 
+                                idealnie współgrają z wiertarkami przelotowymi.
                             </p>
                     </div>
                 </div>
@@ -78,9 +74,9 @@
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Głowice wiertarskie</h3>
                             <p>
-                                Projektujemy i wykonujemy głowice wiertarskie dedykowane do wiertarek przemysłowych. 
-                                Posiadamy wiele konfiguracji głowic z możliwością adaptacji pod Państwa urządzenie oraz 
-                                szybki czas realizacji.
+                                Projektujemy i wykonujemy głowice wiertarskie na zamówienie do wiertarek przemysłowych, wiertarek 
+                                przelotowych, wielowrzecionowych itp. Posiadamy wiele konfiguracji głowic wiertarskich z 
+                                możliwością adaptacji pod Państwa urządzenie. 
                             </p>
                     </div>
                 </div>
@@ -93,9 +89,8 @@
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Dostępne w magazynie</h3>
                             <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam saepe dignissimos
-                                ea
-                                inventore exercitationem ab? Quia repellendus exercitationem.
+                                W naszej hali wystawowo-prezentacyjnej posiadamy około 60 produktów lazzoni dostępnych od ręki. 
+                                Są to urządzenia takie jak: wiertarki przelotowe, wiertarki wielowrzecionowe, podajniki, roboty.
                             </p>
                     </div>
                 </div>
