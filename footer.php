@@ -1,4 +1,4 @@
-<footer class="section-dark py-5">
+<footer class="section-dark py-5<?php if (is_404()) echo ' d-none'; ?>">
         <div class="container py-4">
             <div class="row">
 

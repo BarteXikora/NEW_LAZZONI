@@ -40,7 +40,7 @@
         <div class="row">
 
             <!-- CARD 1: WIERTARKI -->
-            <a href="#" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pr-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=test" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pr-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-0.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
@@ -55,7 +55,7 @@
             </a>
 
             <!-- CARD 2: AUTOMATYZACJA -->
-            <a href="#" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pl-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=aaa" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pl-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-1.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
@@ -72,7 +72,7 @@
             </a>
 
             <!-- CARD 3: GŁOWICE WIERTARSKIE -->
-            <a href="#" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pr-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pr-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-2.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
@@ -87,7 +87,7 @@
             </a>
 
             <!-- CARD 4: DOSTEPNE W MAGAZYNIE -->
-            <a href="#" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pl-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pl-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-3.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">

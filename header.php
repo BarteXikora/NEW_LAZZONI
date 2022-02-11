@@ -35,7 +35,7 @@
     ?>
     
     <!-- NAVBAR -->
-    <nav class="navbar fixed-top navbar-expand-xl py-0">
+    <nav class="navbar fixed-top navbar-expand-xl py-0<?php if (is_404()) echo ' d-none'; ?>">
         <div class="container">
 
             <!-- NAVBAR LOGO -->
