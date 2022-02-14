@@ -1,0 +1,27 @@
+@import './variables.scss';
+
+.wp-block-separator {
+    border-color: $gray-l;
+    margin: 50px auto;
+    display: block;
+}
+
+.wp-block-quote {
+    padding-left: 25px;
+    font-style: italic;
+
+    cite {
+        position: relative;
+        font-style: normal;
+        margin-left: 35px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            width: 20px;
+            border-top: 1px solid $black;
+        }
+    }
+}

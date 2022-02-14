@@ -925,6 +925,32 @@
   }
 }
 
+.wp-block-separator {
+  border-color: #a0a0a0;
+  margin: 50px auto;
+  display: block;
+}
+
+.wp-block-quote {
+  padding-left: 25px;
+  font-style: italic;
+}
+
+.wp-block-quote cite {
+  position: relative;
+  font-style: normal;
+  margin-left: 35px;
+}
+
+.wp-block-quote cite::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  width: 20px;
+  border-top: 1px solid #282828;
+}
+
 .e404-container {
   display: -webkit-box;
   display: -ms-flexbox;
