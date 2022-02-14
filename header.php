@@ -32,6 +32,7 @@
         get_template_part('include/fixed-buttons', 'fixed-buttons');
         if (is_home()) get_template_part('include/contact-app', 'contact-app');
         if (is_home() || is_page('films')) get_template_part('include/film-box', 'film-box');
+        if (is_single()) get_template_part('include/lightbox', 'lightbox');
     ?>
     
     <!-- NAVBAR -->

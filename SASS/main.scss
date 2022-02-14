@@ -394,6 +394,15 @@ table {
     }
 }
 
+#single-content img {
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        transform: $zoom;
+    }
+}
+
 @media (max-width: 767.98px) {
     h1 {
         font-size: $f-big;

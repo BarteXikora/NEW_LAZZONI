@@ -128,5 +128,14 @@ function lazzoni_enqueue_styles() {
             array('jquery')
         ); 
     }
+
+    // Lightbox script:
+    if (is_single()) {
+        wp_enqueue_script(
+            'lightbox',
+            get_stylesheet_directory_uri() . '/js/lightbox.js',
+            array('jquery')
+        ); 
+    }
 }
 add_action('wp_enqueue_scripts', 'lazzoni_enqueue_styles');

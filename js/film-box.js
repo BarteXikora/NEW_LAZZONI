@@ -1,5 +1,5 @@
 jQuery('document').ready(function ($) {
-    const $filmBoxContainer = $('.film-box-container')
+    const $filmBoxContainer = $('#film-box-container')
 
     // KEEP IFRAME'S ASPECT RATIO:
     const resizeIframe = () => {

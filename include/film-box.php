@@ -1,4 +1,4 @@
-<div class="film-box-container d-none" data-default="<?php if (isset($_GET['v'])) echo $_GET['v'] ?>"> 
+<div class="film-box-container d-none" id="film-box-container" data-default="<?php if (isset($_GET['v'])) echo $_GET['v'] ?>"> 
     <div class="film-box">
         <div class="film-box-bar p-0 mb-3">
             <div class="film-box-close-box">
