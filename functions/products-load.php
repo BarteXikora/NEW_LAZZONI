@@ -165,15 +165,21 @@ function load_products () {
             $last_category = $current_product['category'];
         }
 
+        get_template_part('include/product-miniature', 'product-miniature', [
+            'image' => $current_product['image'],
+            'link' => $current_product['link'],
+            'title' => $current_product['title']
+        ]);
+
         ?>
 
-        <a href="<?php echo $current_product['link']; ?>" class="miniature col-12 col-md-6 p-4 text-center text-md-left">
-            <div class="box ar8" style="background-image: url(<?php echo $current_product['image']; ?>)">
+        <!-- <a href="<?php //echo $current_product['link']; ?>" class="miniature col-12 col-md-6 p-4 text-center text-md-left">
+            <div class="box ar8" style="background-image: url(<?php //echo $current_product['image']; ?>)">
                 <div class="box-content">
-                    <h3><?php echo $current_product['title']; ?></h3>
+                    <h3><?php //echo $current_product['title']; ?></h3>
                 </div>
             </div>
-        </a> 
+        </a>  -->
 
         <?php
     }
