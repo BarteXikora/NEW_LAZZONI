@@ -49,41 +49,35 @@ jQuery('document').ready(($) => {
                     sn: $('#s-sn').val(),
                     date: $('#s-date').val(),
                     fv: $('#s-fv').val(),
-                    massage: $('#s-message').val(),
+                    message: $('#s-message').val(),
                 },
                 method: 'post',
                 success: (answer) => {
-                    $('#service-form').animate({
-                        opacity: 0
-                    }, 300, () => {
-                        $('#service-form').addClass('d-none')
+                    if (answer) {
+                        $('#service-form').animate({
+                            opacity: 0
+                        }, 300, () => {
+                            $('#service-form').addClass('d-none')
 
-                        $('#s-success').css('opacity', 0)
-                        $('#s-success').removeClass('d-none')
-                        $('#s-success').animate({
-                            opacity: 1
-                        }, 300)
-                    })
+                            $('#s-success').css('opacity', 0)
+                            $('#s-success').removeClass('d-none')
+                            $('#s-success').animate({
+                                opacity: 1
+                            }, 300)
+                        })
+                    } else showError()
                 },
                 error: (error) => {
-                    // $('#s-submit').html('Wyślij!')
-                    // $('#s-submit').removeClass('button-disabled')
-
-                    // $('.error-box').html('Nie udało się wysłaćdanych. Prosimy spróbować później!')
-
-                    $('#service-form').animate({
-                        opacity: 0
-                    }, 300, () => {
-                        $('#service-form').addClass('d-none')
-
-                        $('#s-success').css('opacity', 0)
-                        $('#s-success').removeClass('d-none')
-                        $('#s-success').animate({
-                            opacity: 1
-                        }, 300)
-                    })
+                    showError()
                 }
             })
         }
     })
+
+    const showError = () => {
+        $('#s-submit').html('Wyślij!')
+        $('#s-submit').removeClass('button-disabled')
+
+        $('.error-box').html('Nie udało się wysłaćdanych. Prosimy spróbować później!')
+    }
 })

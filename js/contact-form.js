@@ -32,41 +32,35 @@ jQuery(document).ready(($) => {
                     name: $('#c-name').val(),
                     email: $('#c-email').val(),
                     phone: $('#c-phone').val(),
-                    massage: $('#c-message').val(),
+                    message: $('#c-message').val()
                 },
                 method: 'post',
                 success: (answer) => {
-                    $('#contact-form').animate({
-                        opacity: 0
-                    }, 300, () => {
-                        $('#contact-form').addClass('d-none')
+                    if (answer) {
+                        $('#contact-form').animate({
+                            opacity: 0
+                        }, 300, () => {
+                            $('#contact-form').addClass('d-none')
 
-                        $('#c-success').css('opacity', 0)
-                        $('#c-success').removeClass('d-none')
-                        $('#c-success').animate({
-                            opacity: 1
-                        }, 300)
-                    })
+                            $('#c-success').css('opacity', 0)
+                            $('#c-success').removeClass('d-none')
+                            $('#c-success').animate({
+                                opacity: 1
+                            }, 300)
+                        })
+                    } else showError()
                 },
                 error: (error) => {
-                    // $('#s-submit').html('Wyślij!')
-                    // $('#s-submit').removeClass('button-disabled')
-
-                    // $('.error-box').html('Nie udało się wysłaćdanych. Prosimy spróbować później!')
-
-                    $('#contact-form').animate({
-                        opacity: 0
-                    }, 300, () => {
-                        $('#contact-form').addClass('d-none')
-
-                        $('#c-success').css('opacity', 0)
-                        $('#c-success').removeClass('d-none')
-                        $('#c-success').animate({
-                            opacity: 1
-                        }, 300)
-                    })
+                    showError()
                 }
             })
         }
     })
+
+    const showError = () => {
+        $('#s-submit').html('Wyślij!')
+        $('#s-submit').removeClass('button-disabled')
+
+        $('.error-box').html('Nie udało się wysłać danych. Prosimy spróbować później!')
+    }
 })

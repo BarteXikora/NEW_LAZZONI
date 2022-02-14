@@ -1,43 +1,50 @@
 <?php
 
-add_action('wp_ajax_enquiry', 'enquiry_form');
-add_action('wp_ajax_nopriv_enquiry', 'enquiry_form');
+add_action('wp_ajax_enquiry_form', 'enquiry_form');
+add_action('wp_ajax_nopriv_enquiry_form', 'enquiry_form');
 
 function enquiry_form() {
 
     // From 'contact' page:
     $send_to_contact = [
-        'biuro@lazzonigroup.pl'
+        // 'biuro@lazzonigroup.pl'
+        'sbartek50@gmail.com'
     ];
 
     // From 'service' page - pl:
     $send_to_service_pl = [
-        'serwis@lazzonigroup.pl'
+        // 'serwis@lazzonigroup.pl'
+        'sbartek50@gmail.com'
     ];
 
     // From 'service' page - other lang:
     $send_to_service_other = [
-        'service@lazzonigroup.pl'
+        // 'service@lazzonigroup.pl'
+        'sbartek50@gmail.com'
     ];
 
     // From 'contact app' - wiertarki:
     $send_to_phone_wiertarki = [
-        'm.zadlo@lazzonigroup.pl'
+        // 'm.zadlo@lazzonigroup.pl'
+        'sbartek50@gmail.com'
     ];
 
     // From 'contact app' - glowice:
     $send_to_phone_glowice = [
-        'w.ciesielski@lazzonigroup.pl'
+        // 'w.ciesielski@lazzonigroup.pl'
+        'sbartek50@gmail.com'
     ];
 
     // From 'contact app' - czesci:
     $send_to_phone_czesci = [
-        'czesci@lazzonigroup.pl'
+        // 'czesci@lazzonigroup.pl'
+        'sbartek50@gmail.com'
     ];
 
     // From 'contact app' - serwis:
     $send_to_phone_serwis = [
-        'serwis@lazzonigroup.pl'
+        // 'serwis@lazzonigroup.pl'
+        'sbartek50@gmail.com'
     ];
 
     // ===============================
@@ -50,16 +57,17 @@ function enquiry_form() {
     $req_message = $_REQUEST['message'];
 
     $headers[] = 'Content-Type: text/html; charset=UTF-8';
-    $headers[] = 'From:'.get_option('admin_email');
+    $headers[] = 'From: '.get_option('admin_email');
 
-    $answer = false;
+    $message = '<strong>Data i czas otrzymania zgłoszenia: </strong>'.date('d.m.Y').' '.date('H:i').'<br /><br />';
+
+    $answer;
 
     // If request from CONTACT APP:
     if ($from == 'contact-app') {
         $topic = $_REQUEST['topic'];
 
         $subject = 'Prośba o kontakt ze strony głównej lazzonigroup.pl';
-        $message = '';
         
         if (strlen($phone) > 0) $message .= '<strong>Podany numer kontaktowy:</strong> '.$phone.'<br />';
         if (strlen($email) > 0) $message .= '<strong>Podany adres e-mail:</strong> '.$email.'<br />';
@@ -79,7 +87,7 @@ function enquiry_form() {
 
         $subject = 'Prośba o kontakt z formularza kontaktowego na stronie lazzonigroup.pl';
 
-        $message = '<strong>Podany numer kontaktowy:</strong> '.$phone.'<br />';
+        $message .= '<strong>Podany numer kontaktowy:</strong> '.$phone.'<br />';
         $message .= '<strong>Podany adres e-mail:</strong> '.$email.'<br />';
         $message .= '<strong>Podane imię i nazwisko:</strong> '.$name.'<br />';
         $message .= '<strong>Treść wiadomości:</strong> '.$req_message;
@@ -99,9 +107,21 @@ function enquiry_form() {
         $date = $_REQUEST['date'];
         $fv = $_REQUEST['fv'];
 
+        switch ($country) {
+            case 'pl': $country = 'Polska';
+            case 'ua': $country = 'Ukraina';
+            case 'de': $country = 'Niemcy';
+            case 'cz': $country = 'Czechy';
+            case 'sk': $country = 'Słowacja';
+            case 'by': $country = 'Białoruś';
+            case 'lt': $country = 'Litwa';
+            case 'lv': $country = 'Łotwa';
+            case 'ee': $country = 'Estonia';
+        }
+
         $subject = 'Prośba o kontakt z formularza serwisowego na stronie lazzonigroup.pl';
 
-        $message = '<strong>Podany numer kontaktowy:</strong> '.$phone.'<br />';
+        $message .= '<strong>Podany numer kontaktowy:</strong> '.$phone.'<br />';
         $message .= '<strong>Podany adres e-mail:</strong> '.$email.'<br /><br />';
 
         if ($type == 'guarantee') $message .= '<strong>Typ zgłoszenia:</strong> Gwarancja,<br />';
@@ -127,8 +147,7 @@ function enquiry_form() {
 
     }
 
-    if ($answer) wp_send_json_success(true);
-    else wp_send_json_error(false);
+    echo json_encode($answer);
 
     die();
 }
@@ -138,7 +157,7 @@ function send_mail($mails_to, $headers, $subject, $message) {
         $ok = true;
 
         foreach($mails_to as $mail) {
-            if (!wp_mail($send_to, $subject, $message, $headers)) $ok = false;
+            if (!wp_mail($mail, $subject, $message, $headers)) $ok = false;
         }
 
         return $ok;

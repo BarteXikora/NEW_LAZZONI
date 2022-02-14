@@ -183,28 +183,34 @@ jQuery('document').ready(($) => {
                 },
                 method: 'post',
                 success: (answer) => {
-                    $('.contact-app-form-container').animate({
-                        opacity: 0
-                    }, 200, () => {
-                        $submit.css('animation', 'none')
+                    if (answer) {
+                        $('.contact-app-form-container').animate({
+                            opacity: 0
+                        }, 200, () => {
+                            $submit.css('animation', 'none')
 
-                        $('.contact-app-form-container').addClass('d-none')
+                            $('.contact-app-form-container').addClass('d-none')
 
-                        $('.contact-app-sent-container').removeClass('d-none')
-                        $('.contact-app-sent-container').css('opacity', 0)
-                        $('.contact-app-sent-container').animate({
-                            opacity: 1
-                        }, 200)
-                    })
+                            $('.contact-app-sent-container').removeClass('d-none')
+                            $('.contact-app-sent-container').css('opacity', 0)
+                            $('.contact-app-sent-container').animate({
+                                opacity: 1
+                            }, 200)
+                        })
+                    } else showError()
                 },
                 error: function (error) {
-                    $('.error-box').html('Nie udało się wysłać wiadomości. <br> Proszę spróbować później!')
-                    $('.error-box').removeClass('d-none')
-
-                    $submit.removeClass('button-disabled')
-                    $submit.html('Wyślij wiadomość!')
+                    showError()
                 }
             })
         }
     })
+
+    const showError = () => {
+        $('.error-box').html('Nie udało się wysłać wiadomości. <br> Proszę spróbować później!')
+        $('.error-box').removeClass('d-none')
+
+        $submit.removeClass('button-disabled')
+        $submit.html('Wyślij wiadomość!')
+    }
 })

@@ -10,7 +10,7 @@
             <?php get_template_part('include/success', 'success'); ?>
         </div>
 
-        <form class="form col-12 col-md-6 px-md-5 mb-5" id="contact-form">
+        <form class="form col-12 col-md-6 px-md-5 mb-5" id="contact-form" data-link="<?php echo admin_url('admin-ajax.php'); ?>">
             <h2>Formularz kontaktowy:</h2>
 
             <label for="c-name">Imię i nazwisko:</label>

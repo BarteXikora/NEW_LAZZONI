@@ -7,7 +7,7 @@
         </div>
     </div>
 
-    <form class="row form my-5 pt-5" id="service-form" data-link=""> <!-- PASTE PHP HERE -->
+    <form class="row form my-5 pt-5" id="service-form" data-link="<?php echo admin_url('admin-ajax.php'); ?>">
         <div class="col-12">
             <h1 class="title">Formularz kontaktowy:</h1>
         </div>
