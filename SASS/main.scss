@@ -1,0 +1,419 @@
+@import './variables.scss';
+
+@import './loading-screen.scss';
+@import './navbar.scss';
+@import './video-bg.scss';
+@import './arrow-down.scss';
+@import './contact-app.scss';
+@import './forms.scss';
+@import './film-box.scss';
+@import './products.scss';
+@import './404.scss';
+
+@import './_sizes.scss';
+
+button:focus,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+::selection {
+    color: $black;
+    background-color: $prim;
+}
+
+body {
+    font-family: $font-default;
+    margin: 0;
+    background-color: $white;
+    color: $black;
+    font-size: $f-default;
+}
+
+h1,
+.h1 {
+    font-family: $font-title;
+    font-size: $f-title;
+    font-weight: bold;
+    margin-bottom: 45px;
+    text-transform: uppercase;
+}
+
+.font-title {
+    font-family: $font-title;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: $f-subtitle;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: $f-big;
+    margin-bottom: 15px;
+}
+
+a {
+    color: $prim;
+
+    &:hover {
+        color: $prim-l;
+        text-decoration: none;
+    }
+}
+
+ol,
+ul {
+    margin-bottom: 45px;
+    text-align: left;
+}
+
+select,
+input,
+textarea,
+.form-control {
+    &:hover,
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.title {
+    position: relative;
+    padding: 10px 45px;
+    background-color: $white-d;
+    overflow-wrap: break-word;
+    font-family: $font-title !important;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 100%;
+        background-color: $prim;
+        border-right: 15px solid $black;
+    }
+}
+
+.section-dark {
+    background-color: $black;
+    color: $white;
+}
+
+.card-a:hover {
+    color: $black;
+    text-decoration: none;
+}
+
+.card-container {
+    background-color: $white;
+    color: $black;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        color: $black;
+        text-decoration: none;
+        transform: $zoom;
+    }
+
+    h2 {
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+}
+
+.card-image {
+    background-size: cover;
+    min-height: 250px;
+}
+
+.about-us-container {
+    p {
+        margin-bottom: 25px;
+    }
+
+    h3 {
+        margin-top: 45px;
+    }
+}
+
+.box {
+    position: relative;
+    background-size: cover;
+    transition: all .1s ease-in-out;
+    background-position: center;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+}
+
+.play-icon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $courtain-d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .1s ease-in-out;
+}
+
+.miniature {
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        .box {
+            transform: $zoom;
+        }
+
+        .play-icon-container {
+            opacity: 1;
+        }
+
+        h3 {
+            color: $prim;
+        }
+    }
+}
+
+.play-icon {
+    max-height: 40%;
+}
+
+.box-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $courtain-d;
+    padding: 10px 15px;
+    color: $white;
+
+    p {
+        margin-bottom: 5px;
+        font-size: $f-small;
+    }
+
+    h3 {
+        font-size: $f-default;
+        padding: 0;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    &:hover {
+        color: $prim;
+
+        p {
+            color: $white;
+        }
+    }
+}
+
+.map {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+footer {
+    a {
+        color: $white;
+
+        &:hover {
+            color: $prim;
+        }
+    }
+
+    ul {
+        padding: 0;
+        text-align: inherit;
+    }
+
+    li {
+        list-style-type: none;
+        padding-bottom: 5px;
+    }
+
+    p {
+        margin-bottom: 5px;
+    }
+
+    .footer-contact a {
+        color: $prim;
+
+        &:hover {
+            color: $prim-l;
+        }
+    }
+}
+
+.icon-a {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 1px;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        background-color: $gray-d;
+    }
+}
+
+.fixed-buttons-container {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1000;
+}
+
+.fixed-button {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border: none;
+    box-shadow: $shadow;
+    transition: all .1s ease-in-out;
+}
+
+.go-up-button {
+    opacity: 0;
+    background-color: $gray-d;
+
+    &:hover {
+        background-color: $gray;
+        transform: $zoom-big;
+    }
+}
+
+.go-up-disabled {
+    display: none;
+}
+
+.single-container {
+    min-height: 80vh; 
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    background-color: $black;
+    color: $white;
+    padding: 15px 35px;
+    transition: all .1s ease-in-out;
+    text-transform: uppercase;
+    margin: 0 5px;
+    font-weight: 700;
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+        background-color: $gray-d;
+    }
+}
+
+.button-prim {
+    background-color: $prim;
+    color: $black;
+
+    &:hover {
+        background-color: $prim-l;
+        color: $black;
+    }
+}
+
+.button-smaller {
+    padding: 10px 30px;
+    font-size: $f-default;
+}
+
+.button-disabled {
+    cursor: default !important;
+    background-color: $gray-l;
+    color: $gray;
+
+    &:hover {
+        background-color: $gray-l;
+        color: $gray;
+    }
+}
+
+.button-read-more {
+    background-color: transparent;
+    border: none;
+    transition: all .1s ease-in-out;
+    font-weight: bold;
+
+    &:hover {
+        background-color: $gray-l;
+    }
+}
+
+.button-group {
+    border: 1px solid $black;
+}
+
+.contact-container {
+    h3 {
+        font-weight: bold;
+        font-size: $f-default;
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+table {
+    width:  100%;
+
+    tr:nth-child(odd) {
+        background-color: $white-d;
+    }
+
+    tr:first-of-type {
+        background-color: $black;
+        color: $white;
+
+        td {
+            padding: 10px;
+        }
+    }
+
+    td {
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: $f-big;
+    }
+
+    .button {
+        padding: 10px 20px;
+    }
+
+    .video-bg-container {
+        p {
+            font-size: $f-default;
+        }
+    }
+
+    .fixed-button {
+        width: 55px;
+        height: 55px;
+    }
+
+    .box h3 {
+        font-size: $f-default;
+    }
+}

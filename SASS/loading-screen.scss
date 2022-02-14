@@ -1,0 +1,67 @@
+@import './variables.scss';
+
+.loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: $white;
+    z-index: 5000000;
+}
+
+.loading-box {
+    height: 40px;
+    margin-top: calc(50vh - 20px);
+}
+
+.loading-elements {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    margin: 0 auto;
+    background-color: $gray;
+    animation-name: loading;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-delay: .5s;
+}
+
+.loading-elements::before,
+.loading-elements::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: $gray;
+    animation-name: loading;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.loading-elements::before {
+    left: -50px;
+}
+
+.loading-elements::after {
+    right: -50px;
+    animation-delay: 1s;
+}
+
+@keyframes loading {
+    5% {
+        background-color: $prim;
+    }
+
+    33% {
+        background-color: $prim;
+    }
+
+    39% {
+        background-color: $gray-d;
+    }
+
+    100% {
+        background-color: $gray-d;
+    }
+}

@@ -1,0 +1,184 @@
+@import './variables.scss';
+
+.form {
+    select,
+    input,
+    textarea {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+        border: 1px solid $black;
+        padding: 4px 10px;
+
+        &:hover,
+        &:focus  {
+            border-color: $prim;
+            outline: none;
+            color: $prim;
+        }
+
+        &.input-wrong {
+            border-color: $wrong;
+            background-color: $wrong-l;
+            color: $wrong;
+        }
+
+        &.input-wrong:focus {
+            border-color: $prim;
+            background-color: $white;
+            color: $prim;
+        }
+
+        &.input-correct:focus {
+            border-color: $correct;
+            background-color: $correct-l;
+            color: $correct;
+        }
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    label {
+        margin: 0;
+    }
+}
+
+.error-box {
+    text-align: center;
+    color: $wrong;
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.checkbox-container {
+    label {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        cursor: pointer;
+        user-select: none;
+        font-size: $f-small;
+
+        &:hover {
+            color: $prim;
+        }
+
+        &:hover input ~ .checkmark {
+            border-color: $prim;
+        }
+
+        input:checked ~ .checkmark {
+            background-color: $prim;
+        }
+
+        input:hover:checked ~ .checkmark {
+            background-color: $prim-l;
+            border-color: $black;
+        }
+    }
+      
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .checkmark::after {
+            display: block;
+        }
+    }
+      
+    .checkmark {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        border: 1px solid $black;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: none;
+            left: 6px;
+            top: 1px;
+            width: 8px;
+            height: 14px;
+            border: solid $black;
+            border-width: 0 4px 4px 0;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.select-container {
+    position: relative;
+    width: 100%;
+    transition: all .1s ease-in-out;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    &:hover {
+        color: $prim;
+
+        .selected-option {
+            border-color: $prim;
+        }
+    }
+
+    .selected-option {
+        border: 1px solid $black;
+        padding: 4px 10px;
+        transition: all .1s ease-in-out;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 6px;
+            right: 25px;
+            height: 15px;
+            width: 15px;
+            border-bottom: 2px solid $black;
+            border-right: 2px solid $black;
+            transform: rotateZ(45deg);
+        }
+    }
+
+    .select {
+        position: absolute;
+        top: 34px;
+        left: 0;
+        width: 100%;
+        background-color: $white;
+        box-shadow: $shadow-big;
+        z-index: 100;
+    }
+
+    .option {
+        display: none;
+        padding: 8px 10px;
+        color: $black;
+
+        &:hover {
+            color: $prim;
+        }
+    } 
+
+    .select-show {
+        .option {
+            display: block !important;
+        }
+    }
+}
+
+.required {
+    color: $wrong;
+    font-weight: bold;
+    padding: 0 5px;
+}

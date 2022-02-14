@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+.e404-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: $wrong;
+    overflow: hidden;
+    
+    h1 {
+        font-family: 'Arial';
+        font-size: 5rem;
+        margin: 0;
+    }
+
+    p {
+        font-size: $f-big;
+    }
+}
+
+.e404-box {
+    position: relative;
+    text-align: center;
+    width: 50vw;
+    min-width: 400px;
+    display: block;
+    margin-bottom: 50px;
+}

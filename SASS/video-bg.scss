@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+.video-bg-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-bg-courtain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $courtain-l;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    p {
+        font-size: $f-big;
+        font-weight: bold;
+    }
+}

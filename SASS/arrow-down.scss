@@ -1,0 +1,73 @@
+@import './variables.scss';
+
+.arrow-down-container {
+    position: absolute;
+    bottom: 0;
+    left: calc(50vw - 50px);
+    width: 100px;
+    height: 80px;
+    text-align: center;
+    transition: all .4s ease-in-out;
+}
+
+.arrow-down {
+    animation-name: arrow;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+
+    &::before,
+    &::after {
+        position: relative;
+        top: 20px;
+        height: 50px;
+        border: 4px $black solid;
+        background-color: $black;
+        width: 0;
+        border-radius: 5px;
+        content: '';
+        display: inline-block;
+    }
+
+    &::before {
+        transform: rotate(-55deg);
+        margin-right: 14px;
+    }
+
+    &::after {
+        transform: rotate(55deg);
+        margin-left: 14px;
+    }
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(0);
+    }
+    
+    60% {
+        transform: translateY(-20px);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .arrow-down {
+        &::before,
+        &::after {
+            height: 35px;
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+            margin-right: 6px;
+        }
+    
+        &::after {
+            transform: rotate(45deg);
+            margin-left: 6px;
+        }
+    }
+}

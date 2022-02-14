@@ -1,0 +1,45 @@
+// Colors:
+
+$prim: #ea9334;
+$prim-l: #f5ad5b;
+$prim-d: #df600c;
+
+$gray: #6b6b6b;
+$gray-l: #a0a0a0;
+$gray-d: #474747;
+
+$black: #282828;
+$white: white;
+$white-d: #f1f1f1;
+
+$wrong: #ff1e00;
+$wrong-l: #ffdddc;
+
+$correct: #76c000;
+$correct-l: #c6ffc4;
+
+$courtain-l: rgba(255, 255, 255, .7);
+$courtain-d: rgba(27, 27, 27, 0.7);
+
+// Font sizes:
+
+$f-default: 1rem;
+
+$f-title: 2rem;
+$f-subtitle: 1.8rem;
+
+$f-big: 1.4rem;
+$f-small: .8rem;
+
+// Font faces:
+
+$font-default: 'Quicksand', sans-serif;
+$font-title: 'Arial';
+
+// Other:
+
+$shadow: 6px 6px 15px -11px $black;
+$shadow-big: 3px 3px 15px -5px $black;
+
+$zoom: scale(1.03);
+$zoom-big: scale(1.1);

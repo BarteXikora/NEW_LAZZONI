@@ -1,0 +1,80 @@
+@import './variables.scss';
+
+.navbar {
+    background-color: $white;
+    box-shadow: 0px 6px 25px -11px $gray-l;
+}
+
+.navbar-brand img {
+    height: 30px;
+}
+
+.nav-link {
+    color: $black;
+
+    &:hover {
+        color: $prim;
+    }
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    box-shadow: $shadow;
+}
+
+.dropdown-item:hover {
+    color: $prim;
+    background-color: transparent;
+}
+
+.collapse {
+    background-color: $white;
+}
+
+.language-btn {
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        transform: $zoom-big;
+    }
+}
+
+.language-box {
+    position: relative;
+}
+
+.language-list {
+    background-color: $white;
+    box-shadow: $shadow;
+    position: fixed;
+    top: 55px;
+    margin-left: 9px;
+    width: 44px;
+    padding: 10px;
+
+}
+
+#flags li {
+    clear: both !important;
+    padding-bottom: 5px;
+
+    &:hover {
+        transform: $zoom-big;
+    }
+
+    a {
+        box-shadow: $shadow-big;
+        padding: 0;
+    }
+}
+
+.navbar-toggler img {
+    width: 30px;
+}
+
+@media (max-width: 1200px) {
+    .dropdown-menu {
+        box-shadow: none;
+    }
+}
