@@ -4,7 +4,7 @@ add_action('wp_ajax_lazzoni_load', 'load_products');
 add_action('wp_ajax_nopriv_lazzoni_load', 'load_products');
 
 function load_products () {
-    $default_group_slug = 'test';
+    $default_group_slug = 'wiertarki';
 
     $search = $_REQUEST['search'];
     $group = $_REQUEST['group'];
@@ -70,7 +70,7 @@ function load_products () {
     if (!$show_categories) {
         ?>
 
-        <div class="col-12 px-4">
+        <div class="col-12 px-4 mt-5">
             <h2 class="products-category-title title text-center text-md-left">
                 Wyniki wyszukiwania dla <i>&bdquo;<?php echo $search; ?>&rdquo;</i>:
             </h2>
@@ -80,6 +80,7 @@ function load_products () {
     }
     
     $last_category = '';
+    $n = 0;
     foreach ($products_list as $current_product) {
         if ($show_categories && $last_category != $current_product['category']) {
             $current_category = get_category_by_slug($current_product['category'])->name;
@@ -90,7 +91,7 @@ function load_products () {
 
             ?>
 
-            <div class="col-12 px-4" data-anchor="<?php echo $current_category; ?>">
+            <div class="col-12 px-4 <?php if ($n > 0) echo 'mt-5' ?>" data-anchor="<?php echo $current_category; ?>">
                 <h2 class="products-category-title title text-center text-md-left">
                     <?php echo $current_category; ?>
                 </h2>
@@ -98,6 +99,7 @@ function load_products () {
 
             <?php
 
+            $n++;
             $last_category = $current_product['category'];
         }
 

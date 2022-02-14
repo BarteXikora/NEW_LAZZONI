@@ -856,6 +856,7 @@
 .groups-list {
   list-style-type: none;
   padding: 0 0 0 10px;
+  text-transform: capitalize;
 }
 
 .sub-groups-list {

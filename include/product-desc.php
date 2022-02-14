@@ -1,4 +1,4 @@
-<?php if ($args['group'] == 'test') { // ============================================================?> 
+<?php if ($args['group'] == 'glowice-wiertarskie') { // ============================================================?> 
 
     <div class="col-12 mb-5 text-center text-md-left">
         <h1 class="h4 font-title mb-3">
