@@ -1,7 +1,8 @@
 <?php get_header(); the_post(); ?>
 
 <!-- MAIN CONTENT -->
-<main class="container single-container my-5" id="single-content">
+<main class="container single-container my-5" id="single-content" data-custom-title="<?php 
+echo get_post_meta($post->ID, 'title', true); ?>">
     <div class="row my-5 <?php if (get_post_type(get_the_ID()) == 'post') echo 'pt-5'; else echo 'pt-2' ?>">
         <?php if (get_post_type(get_the_ID()) == 'news') { ?>
             <div class="col-12 pt-5 text-center text-md-left">

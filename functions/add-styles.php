@@ -137,5 +137,14 @@ function lazzoni_enqueue_styles() {
             array('jquery')
         ); 
     }
+
+    // Custom single title script:
+    if (is_single()) {
+        wp_enqueue_script(
+            'single-title',
+            get_stylesheet_directory_uri() . '/js/single-title.js',
+            array('jquery')
+        ); 
+    }
 }
 add_action('wp_enqueue_scripts', 'lazzoni_enqueue_styles');
