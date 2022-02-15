@@ -105,7 +105,7 @@ function load_products () {
 
         get_template_part('include/product-miniature', 'product-miniature', [
             'image' => $current_product['image'],
-            'link' => $current_product['link'],
+            'link' => $current_product['link'].'/?g='.$group,
             'title' => $current_product['title']
         ]);
     }

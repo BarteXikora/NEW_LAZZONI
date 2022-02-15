@@ -1,6 +1,6 @@
 jQuery('document').ready(($) => {
     // DEFAULT GROUP SLUG:
-    const defaultGroup = 'test'
+    const defaultGroup = 'wiertarki'
 
     // FILL SUBCATEGORIES LIST BASED ON LOADED CONTENT:
     const getCategoriesFromProducts = () => {
@@ -103,6 +103,7 @@ jQuery('document').ready(($) => {
 
                     getCategoriesFromProducts()
                     highlightSubCategory()
+                    updateURL(group)
 
                     setLoadingCourtain(false)
 
@@ -140,6 +141,16 @@ jQuery('document').ready(($) => {
 
         if ($('#search-input').val()) loadProducts('')
     })
+
+    // UPDATES URL:
+    const updateURL = (group) => {
+        var newURL = window.location.origin + '/new_lazzoni/products/?p=' + group
+        window.history.pushState("data", "Title", newURL)
+
+        $('head title', window.parent.document).html(
+            $('.groups-container').find(`[data-category="${group}"]`).text() + '&mdash; Lazzoni Group'
+        )
+    }
 
     getCategoriesFromProducts()
     highlightSubCategory()
