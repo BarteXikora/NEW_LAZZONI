@@ -32,7 +32,7 @@
 
                 <!-- THIRD FOOTER MENU COLUMN -->
                 <div class="col-12 col-md-6 col-lg-4 text-center footer-contact">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.png" alt="LAZZONI GROUP" class="img-fluid mb-4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.png" alt="LAZZONI GROUP" class="img-fluid mb-4 <?php if (is_home()) echo 'footer-logo' ?>">
                     <p>32-432 Pcim 1563</p>
                     <p><a href="tel:+48 535 732 115">+48 535 732 115</a></p>
                     <p><a href="mail:biuro@lazzonigroup.pl">biuro@lazzonigroup.pl</a></p>

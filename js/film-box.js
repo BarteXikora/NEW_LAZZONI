@@ -61,4 +61,22 @@ jQuery('document').ready(function ($) {
 
         openFilmBox(defaultID, title)
     }
+
+    // SOMETHING VERY IMPORTANT:
+    let click = 0
+    let isShown = false
+
+    $('.footer-logo').click((e) => {
+        click += 1
+
+        if (click > 10 && !isShown) {
+            isShown = true
+
+            openFilmBox('eY52Zsg-KVI', 'LAZZONI GROUP - NAJLEPSZE WIERTARKI')
+        }
+
+        setTimeout(() => {
+            click -= 1
+        }, 5000)
+    })
 });
