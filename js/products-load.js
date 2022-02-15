@@ -5,7 +5,8 @@ jQuery('document').ready(($) => {
     // FILL SUBCATEGORIES LIST BASED ON LOADED CONTENT:
     const getCategoriesFromProducts = () => {
         $('.sub-groups-list').animate({
-            opacity: 0
+            opacity: 0,
+            height: 0
         }, 300, () => {
             $('.sub-groups-list').each((i, e) => {
                 $(e).empty()
@@ -26,10 +27,15 @@ jQuery('document').ready(($) => {
         })
 
         setTimeout(() => {
-            $('.sub-groups-list').animate({
-                opacity: 1
+            $('.groups-list .active .sub-groups-list').css('height', 'auto')
+            let currentHeight = $('.groups-list .active .sub-groups-list').innerHeight()
+            $('.groups-list .active .sub-groups-list').css('height', 0)
+
+            $('.groups-list .active .sub-groups-list').animate({
+                opacity: 1,
+                height: currentHeight
             }, 300)
-        }, 300)
+        }, 350)
     }
 
     // HIGHLIGHT SUBCATEGORY ON SCROLL:

@@ -9,7 +9,7 @@
         </div>
 
         <div class="col-12 text-center mt-5">
-                <a href="<?php echo home_url(); ?>" class="button button-prim">Wróć na stronę główną</a>
+            <a href="<?php echo home_url(); ?>" class="button button-prim">Wróć na stronę główną</a>
         </div>
     </div>
 </main>
