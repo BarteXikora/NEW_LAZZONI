@@ -1,4 +1,4 @@
-<?php if ($args['group'] == 'glowice-wiertarskie') { // ============================================================?> 
+<?php if ($args['group'] == 'glowice-wiertarskie') { ?> 
 
     <div class="col-12 mb-5 text-center text-md-left">
         <h1 class="h4 font-title mb-3">
@@ -61,7 +61,7 @@
         </div>
     </div>
 
-<?php } else if ($args['group'] == 'wiertarki') {  // ============================================================?>
+<?php } else if ($args['group'] == 'wiertarki') { ?>
 
     <div class="col-12 mb-5 text-center text-md-left">
         <h1 class="h4 font-title mb-3">
@@ -140,6 +140,60 @@
                 Czytaj dalej
             </button>
         </div>
+    </div>
+
+<?php } else if ($args['group'] == 'automatyzacja') { ?>
+
+    <div class="col-12 mb-5 text-center text-md-left">
+        <h1 class="h4 font-title mb-3">
+            AUTOMATYZACJA PROCESU WIERCENIA
+        </h1>
+
+        <p>
+            W ofercie posiadamy również rozwiązania dla automatyzacji procesu wiercenia. Począwszy 
+            od automatycznych załadunków i rozładunków elementu po roboty. Wszystkie nasze urządzenia 
+            tej serii są kompatybilne z wiertarkami przelotowymi na Pasku.
+        </p>
+
+        <div class="collapse m-0" id="read-more">
+            <p>
+                Wyposażenie wiertarki 
+                wielowrzecionowej (wiertarki przelotowej) w zautomatyzowany podajnik i odbiornik 
+                znacząco pozwoli przyspieszyć proces produkcji. Techniki, które wykorzystujemy w 
+                procesie automatyzacji wiercenia znacząco wpływają na szybkość realizacji produkcji. 
+                Taki zabieg ozwala nam znacząco skrócić cykl wykonywanych czynności wykonywanych 
+                ręcznie, zapewniając przy tym 100% powtarzalność. Ponadto nasze produkty są 
+                przeznaczone nie tylko dla wielkich fabryk, ale i również dla małych firm.
+            </p>
+        </div>
+
+        <div class="text-center">
+            <button class="button-read-more py-2 px-4 mt-2" type="button" data-toggle="collapse"
+                data-target="#read-more">
+                Czytaj dalej
+            </button>
+        </div>
+    </div>
+
+<?php } else if ($args['group'] == 'dostepne') { ?>
+
+    <div class="col-12 mb-5 text-center text-md-left">
+        <h1 class="h4 font-title mb-3">
+            WIERTARKI WIELOWRZECIONOWE DOSTĘPNE OD RĘKI
+        </h1>
+
+        <!-- <div class="collapse m-0" id="read-more">
+            <p>
+                
+            </p>
+        </div>
+
+        <div class="text-center">
+            <button class="button-read-more py-2 px-4 mt-2" type="button" data-toggle="collapse"
+                data-target="#read-more">
+                Czytaj dalej
+            </button>
+        </div> -->
     </div>
 
 <?php } ?>
