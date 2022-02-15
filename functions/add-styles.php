@@ -76,7 +76,7 @@ function lazzoni_enqueue_styles() {
     }
 
     // Box aspect ratio script:
-    if (is_home() || is_page('films') || is_page('news') || is_page('products') || is_page('catalogs')) {
+    if (is_home() || is_page('films') || is_page('news') || is_page('products') || is_page('catalog')) {
         wp_enqueue_script(
             'box-aspect-ratio',
             get_stylesheet_directory_uri() . '/js/box-aspect-ratio.js',
