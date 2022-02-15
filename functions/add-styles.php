@@ -14,6 +14,33 @@ function lazzoni_enqueue_styles() {
         array('jquery')
     );
 
+    // GSAP script:
+    if (is_home()) {
+        wp_enqueue_script(
+            'gsap',
+            'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js',
+            array('jquery')
+        ); 
+    }
+
+    // GSAP animations for index:
+    if (is_home()) {
+        wp_enqueue_script(
+            'animations-index',
+            get_stylesheet_directory_uri() . '/js/animations-index.js',
+            array('jquery')
+        );
+    }
+
+    // GSAP animations for titles:
+    if (is_page('products')) {
+        wp_enqueue_script(
+            'animations-titles',
+            get_stylesheet_directory_uri() . '/js/animations-titles.js',
+            array('jquery')
+        );
+    }
+
     // Main styles:
     wp_enqueue_style(
         'styles',

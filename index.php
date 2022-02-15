@@ -7,10 +7,10 @@
     </video>
     <div class="video-bg-courtain">
         <div class="video-bg-content container text-center px-md-5">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="LAZZONI GROUP" class="d-none d-lg-inline px-5 mb-3">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-mobile.png" alt="LAZZONI GROUP" class="d-inline px-4 d-lg-none mb-4">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="LAZZONI GROUP" class="d-none d-lg-inline px-5 mb-3 gsap-main-logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-mobile.png" alt="LAZZONI GROUP" class="d-inline px-4 d-lg-none mb-4 gsap-main-logo">
 
-            <p class="mb-4 mb-md-5 px-5">
+            <p class="mb-4 mb-md-5 px-5 gsap-main-text">
                     Jesteśmy polskim producentem wiertarek przemysłowych stworzonych dla branży meblarskiej.
 
                 <span class="d-none d-md-inline">
@@ -21,8 +21,10 @@
                 </span>
             </p>
 
-            <a href="#" class="button button-prim mb-2">Nasze produkty</a>
-            <a href="#f" class="button mb-5 mb-md-0">Nasze filmy</a>
+            <div class="gsap-main-buttons">
+                <a href="#" class="button button-prim mb-2">Nasze produkty</a>
+                <a href="#f" class="button mb-5 mb-md-0">Nasze filmy</a>
+            </div>
         </div>
 
         <!-- ARROW DOWN -->
