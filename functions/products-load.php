@@ -70,7 +70,7 @@ function load_products () {
     if (!$show_categories) {
         ?>
 
-        <div class="col-12 px-4 mt-5">
+        <div class="col-12 px-4">
             <h2 class="products-category-title title text-center text-md-left">
                 Wyniki wyszukiwania dla <i>&bdquo;<?php echo $search; ?>&rdquo;</i>:
             </h2>
