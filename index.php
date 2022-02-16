@@ -3,34 +3,42 @@
 <!-- VIDEO BACKGROUND -->
 <section class="video-bg-container">
     <video autoplay muted loop>
-        <source src="<?php echo get_template_directory_uri(); ?>//img/background.mp4" type="video/mp4">
+        <source src="<?php echo get_template_directory_uri(); ?>/img/background.mp4" type="video/mp4">
     </video>
     <div class="video-bg-courtain">
-        <div class="video-bg-content container text-center px-md-5">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="LAZZONI GROUP" class="d-none d-lg-inline px-5 mb-3 gsap-main-logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-mobile.png" alt="LAZZONI GROUP" class="d-inline px-4 d-lg-none mb-4 gsap-main-logo">
+        <div class="video-bg-content container-fluid text-left px-md-5">
+            <div class="row">
+                <div class="col-7 pr-5">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.png" alt="LAZZONI GROUP" class="d-none d-lg-inline px-5 mb-3 mr-5 gsap-main-logo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-mobile.png" alt="LAZZONI GROUP" class="d-inline px-4 d-lg-none mb-4 gsap-main-logo">
 
-            <p class="mb-4 mb-md-5 px-5 gsap-main-text">
-                    Jesteśmy polskim producentem wiertarek przemysłowych stworzonych dla branży meblarskiej.
+                    <p class="mb-4 mb-md-5 px-5 gsap-main-text">
+                            Jesteśmy polskim producentem wiertarek przemysłowych stworzonych dla branży meblarskiej.
 
-                <span class="d-none d-md-inline">
-                        Specjalizujemy się w zakresie wiertarek przelotowych, wiertarek CNC, a także
-                        automatyzacji procesu wiercenia. Oprócz szerokiego wachlarzu maszyn w standardowej
-                        konfiguracji, produkujemy również maszyny customowe oraz głowice wiertarskie bazując
-                        na rysunkach elementów otrzymanych od klienta.
-                </span>
-            </p>
+                        <span class="d-none d-md-inline">
+                                Specjalizujemy się w zakresie wiertarek przelotowych, wiertarek CNC, a także
+                                automatyzacji procesu wiercenia. Oprócz szerokiego wachlarzu maszyn w standardowej
+                                konfiguracji, produkujemy również maszyny customowe oraz głowice wiertarskie bazując
+                                na rysunkach elementów otrzymanych od klienta.
+                        </span>
+                    </p>
 
-            <div class="gsap-main-buttons">
-                <a href="#" class="button button-prim mb-2">Nasze produkty</a>
-                <a href="#f" class="button mb-5 mb-md-0">Nasze filmy</a>
+                    <div class="gsap-main-buttons px-5">
+                        <a href="#" class="button button-prim mb-2">Nasze produkty</a>
+                        <a href="#f" class="button button-white mb-5 mb-md-0">Nasze filmy</a>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- ARROW DOWN -->
         <a href="#o">
-            <div class="arrow-down-container">
-                <div class="arrow-down"></div>
+            <div class="arrow-down-container container-fluid">
+                <div class="row">
+                    <div class="col-12 px-5">
+                        <div class="arrow-down ml-4"></div>
+                    </div>
+                </div>
             </div>
         </a>
     </div>
@@ -48,8 +56,8 @@
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Wiertarki</h2>
                         <p>
-                         W ofercie posiadamy wiertarki półautomatyczne z załadunkiem ręcznym, wiertarki przemysłowe z załadunkiem 
-                         automatycznym, wiertarki przelotowe, wiertarki wielowrzecionowe oraz inne urządzenia.
+                        W ofercie posiadamy wiertarki półautomatyczne z załadunkiem ręcznym, wiertarki przemysłowe z załadunkiem 
+                        automatycznym, wiertarki przelotowe, wiertarki wielowrzecionowe oraz inne urządzenia.
                         </p>
                     </div>
                 </div>

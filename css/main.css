@@ -85,9 +85,8 @@
 }
 
 .navbar {
-  background-color: white;
-  -webkit-box-shadow: 0px 6px 25px -11px #a0a0a0;
-          box-shadow: 0px 6px 25px -11px #a0a0a0;
+  background-color: #282828;
+  color: white;
 }
 
 .navbar-brand img {
@@ -95,7 +94,7 @@
 }
 
 .nav-link {
-  color: #282828;
+  color: white;
 }
 
 .nav-link:hover {
@@ -114,10 +113,6 @@
   background-color: transparent;
 }
 
-.collapse {
-  background-color: white;
-}
-
 .language-btn {
   -webkit-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
@@ -133,7 +128,7 @@
 }
 
 .language-list {
-  background-color: white;
+  background-color: #282828;
   -webkit-box-shadow: 6px 6px 15px -11px #282828;
           box-shadow: 6px 6px 15px -11px #282828;
   position: fixed;
@@ -174,6 +169,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  color: white;
 }
 
 .video-bg-courtain {
@@ -182,7 +178,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(27, 27, 27, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,51 +194,53 @@
 
 .video-bg-courtain p {
   font-size: 1.4rem;
-  font-weight: bold;
 }
 
 .arrow-down-container {
   position: absolute;
   bottom: 0;
-  left: calc(50vw - 50px);
-  width: 100px;
-  height: 80px;
-  text-align: center;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.arrow-down-container:hover .arrow-down {
+  background-color: #ea9334;
+}
+
+.arrow-down-container:hover .arrow-down::before {
+  border-color: #ea9334;
 }
 
 .arrow-down {
+  position: relative;
+  left: 100px;
   -webkit-animation-name: arrow;
           animation-name: arrow;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-}
-
-.arrow-down::before, .arrow-down::after {
-  position: relative;
-  top: 20px;
+  width: 4px;
   height: 50px;
-  border: 4px #282828 solid;
-  background-color: #282828;
-  width: 0;
-  border-radius: 5px;
-  content: '';
-  display: inline-block;
+  background-color: white;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .arrow-down::before {
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
-  margin-right: 14px;
-}
-
-.arrow-down::after {
-  -webkit-transform: rotate(55deg);
-          transform: rotate(55deg);
-  margin-left: 14px;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  position: absolute;
+  content: '';
+  width: 35px;
+  height: 35px;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  bottom: 2px;
+  left: -15.5px;
 }
 
 @-webkit-keyframes arrow {
@@ -251,8 +249,8 @@
             transform: translateY(0);
   }
   60% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -266,28 +264,12 @@
             transform: translateY(0);
   }
   60% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
-  }
-}
-
-@media (max-width: 767.98px) {
-  .arrow-down::before, .arrow-down::after {
-    height: 35px;
-  }
-  .arrow-down::before {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    margin-right: 6px;
-  }
-  .arrow-down::after {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    margin-left: 6px;
   }
 }
 
@@ -1375,6 +1357,16 @@ footer .footer-contact a:hover {
 
 .button-prim:hover {
   background-color: #f5ad5b;
+  color: #282828;
+}
+
+.button-white {
+  background-color: white;
+  color: #282828;
+}
+
+.button-white:hover {
+  background-color: #f1f1f1;
   color: #282828;
 }
 

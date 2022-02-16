@@ -330,6 +330,16 @@ footer {
     }
 }
 
+.button-white {
+    background-color: $white;
+    color: $black;
+
+    &:hover {
+        background-color: $white-d;
+        color: $black;
+    }
+}
+
 .button-smaller {
     padding: 10px 30px;
     font-size: $f-default;
