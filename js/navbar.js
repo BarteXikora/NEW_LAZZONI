@@ -22,6 +22,16 @@ jQuery(document).ready(($) => {
         toggleBackground()
     })
 
+    $('.dropdown').on('hidden.bs.dropdown', () => {
+        isMenuOpen = false
+        toggleBackground()
+    })
+
+    $('.dropdown').on('show.bs.dropdown', () => {
+        isMenuOpen = true
+        toggleBackground()
+    })
+
     $('.language-list').on('ls-hide', () => {
         isLanguageSelectorOpen = false
         toggleBackground()

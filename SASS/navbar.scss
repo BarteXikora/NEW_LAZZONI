@@ -24,6 +24,7 @@
 }
 
 .dropdown-menu {
+    transition: all .1s ease-in-out;
     background-color: $black;
     border: none;
     border-radius: 0;

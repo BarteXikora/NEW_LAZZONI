@@ -108,6 +108,8 @@
 }
 
 .dropdown-menu {
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
   background-color: #282828;
   border: none;
   border-radius: 0;
