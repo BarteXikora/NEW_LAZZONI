@@ -8,7 +8,7 @@
     <div class="video-bg-courtain">
         <div class="video-bg-content container-fluid text-center text-lg-left px-md-5">
             <div class="row">
-                <div class="col-md-8 offset-md-2 col-lg-12 offset-lg-0 col-xl-10 pr-5">
+                <div class="col-md-8 offset-md-2 col-lg-12 offset-lg-0 col-xl-10 pr-lg-5">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.png" alt="LAZZONI GROUP" class="d-none d-lg-inline px-5 mb-3 mr-5 gsap-main-logo">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-mobile.png" alt="LAZZONI GROUP" class="d-inline px-4 d-lg-none mb-4 gsap-main-logo">
 
@@ -36,7 +36,7 @@
             <div class="arrow-down-container container-fluid px-5">
                 <div class="row px-5">
                     <div class="col-12 px-5 text-center text-lg-left">
-                        <div class="arrow-down ml-4"></div>
+                        <div class="arrow-down ml-md-4"></div>
                     </div>
                 </div>
             </div>
@@ -46,25 +46,25 @@
 
 <!-- CARDS -->
 <section class="section-dark py-5 px-3" id="o">
-    <div class="container-fuid px-5 py-5">
+    <div class="container-fuid px-md-5 py-5">
         <div class="row">
 
             <!-- CARD 1: WIERTARKI -->
-            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=wiertarki" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pr-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=wiertarki" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pr-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-0.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Wiertarki</h2>
                         <p>
-                         W ofercie posiadamy wiertarki półautomatyczne z załadunkiem ręcznym, wiertarki przemysłowe z załadunkiem 
-                         automatycznym, wiertarki przelotowe, wiertarki wielowrzecionowe oraz inne urządzenia.
+                            W ofercie posiadamy wiertarki półautomatyczne z załadunkiem ręcznym, wiertarki przemysłowe z załadunkiem 
+                            automatycznym, wiertarki przelotowe, wiertarki wielowrzecionowe oraz inne urządzenia.
                         </p>
                     </div>
                 </div>
             </a>
 
             <!-- CARD 2: AUTOMATYZACJA -->
-            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=automatyzacja" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pl-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=automatyzacja" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pl-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-1.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
@@ -78,7 +78,7 @@
             </a>
 
             <!-- CARD 3: GŁOWICE WIERTARSKIE -->
-            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=glowice-wiertarskie" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pr-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=glowice-wiertarskie" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pr-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-2.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
@@ -93,7 +93,7 @@
             </a>
 
             <!-- CARD 4: DOSTEPNE W MAGAZYNIE -->
-            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=dostepne" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pl-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=dostepne" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pl-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-3.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
@@ -119,8 +119,19 @@
 <section class="py-5">
     <div class="container-fluid px-5 py-5">
         <div class="row">
-            <div class="col-3"></div>
-            <main class="about-us-container px-md-5 col-9 text-center text-md-left">
+            <div class="col-12 col-md-3">
+                <div class="row">
+                    <div class="col-6 col-md-12">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/about-0.jpg" alt="//" class="img-fluid mb-3 mt-1">
+                    </div>
+                    <div class="col-6 col-md-12">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/about-1.jpg" alt="//" class="img-fluid mb-3 mt-1">
+                    </div>
+                
+                </div>
+            </div>
+
+            <main class="about-us-container px-md-5 col-12 col-md-9 text-center text-md-left">
                 <h1>Wiertarki przemysłowe, wielowrzencionowe, CNC</h1>
                 <h2>DLACZEGO MY?</h2>
                 <p>

@@ -1,5 +1,5 @@
 <a href="<?php echo $args['link'] ?>" class="miniature col-12 <?php 
-    if ($args['small']) echo 'col-md-6 col-lg-3';
+    if ($args['small']) echo 'col-lg-6 col-xl-3';
     else echo 'col-lg-6';
 ?> p-4 text-center text-md-left" <?php if ($args['catalog']) echo 'target="_blank"'; ?>>
     <div class="box<?php if ($args['catalog']) echo ' ar8'; ?>" style="background-image: url(<?php echo $args['image'] ?>)">
