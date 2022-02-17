@@ -85,7 +85,14 @@
 }
 
 .navbar {
+  background-color: #282828;
   color: white;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.navbar-transparent {
+  background-color: transparent;
 }
 
 .navbar-brand img {

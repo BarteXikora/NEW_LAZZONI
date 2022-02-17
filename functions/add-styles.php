@@ -54,6 +54,15 @@ function lazzoni_enqueue_styles() {
         array('jquery')
     );
 
+    // Navbar background script:
+    if (is_home()) {
+        wp_enqueue_script(
+            'navbar',
+            get_stylesheet_directory_uri() . '/js/navbar.js',
+            array('jquery')
+        );
+    }
+
     // Go-up button script:
     wp_enqueue_script(
         'go-up-button',
