@@ -19,8 +19,9 @@
 }
 
 .arrow-down {
+    display: inline-block;
     position: relative;
-    left: 100px;
+    // left: 100px;
     animation-name: arrow;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;

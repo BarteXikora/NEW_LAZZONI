@@ -5,6 +5,10 @@
     height: 100vh;
     overflow: hidden;
     color: $white;
+
+    video {
+        min-width: 100vw;
+    }
 }
 
 .video-bg-courtain {
@@ -24,6 +28,7 @@
 
     p {
         font-size: $f-big;
-        // font-weight: bold;
+        display: block;
+        max-width: 1000px;
     }
 }

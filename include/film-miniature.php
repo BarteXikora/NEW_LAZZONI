@@ -1,5 +1,5 @@
 <a class="miniature film col-12 <?php  
-    if ($args['small']) echo 'col-md-6 col-lg-4';
+    if ($args['small']) echo 'col-md-6 col-lg-3';
     else echo 'col-lg-6';
 ?> p-4 text-center text-md-left">
     <div class="box" style="background-image: url(<?php echo $args['image'] ?>)"

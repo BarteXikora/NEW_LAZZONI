@@ -102,10 +102,15 @@
 }
 
 .dropdown-menu {
+  background-color: #282828;
   border: none;
   border-radius: 0;
   -webkit-box-shadow: 6px 6px 15px -11px #282828;
           box-shadow: 6px 6px 15px -11px #282828;
+}
+
+.dropdown-item {
+  color: white;
 }
 
 .dropdown-item:hover {
@@ -172,6 +177,10 @@
   color: white;
 }
 
+.video-bg-container video {
+  min-width: 100vw;
+}
+
 .video-bg-courtain {
   position: absolute;
   top: 0;
@@ -194,6 +203,8 @@
 
 .video-bg-courtain p {
   font-size: 1.4rem;
+  display: block;
+  max-width: 1000px;
 }
 
 .arrow-down-container {
@@ -213,8 +224,8 @@
 }
 
 .arrow-down {
+  display: inline-block;
   position: relative;
-  left: 100px;
   -webkit-animation-name: arrow;
           animation-name: arrow;
   -webkit-animation-duration: 1.5s;
@@ -1366,7 +1377,7 @@ footer .footer-contact a:hover {
 }
 
 .button-white:hover {
-  background-color: #f1f1f1;
+  background-color: #a0a0a0;
   color: #282828;
 }
 

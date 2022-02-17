@@ -19,14 +19,19 @@
 }
 
 .dropdown-menu {
+    background-color: $black;
     border: none;
     border-radius: 0;
     box-shadow: $shadow;
 }
 
-.dropdown-item:hover {
-    color: $prim;
-    background-color: transparent;
+.dropdown-item {
+    color: $white;
+
+    &:hover {
+        color: $prim;
+        background-color: transparent;
+    }
 }
 
 // .collapse {
