@@ -122,10 +122,11 @@
             <div class="col-12 col-md-3">
                 <div class="row">
                     <div class="col-6 col-md-12">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/about-0.jpg" alt="//" class="img-fluid mb-3 mt-1">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/about-1.png" alt="//" class="img-fluid mb-5 px-3">
                     </div>
+
                     <div class="col-6 col-md-12">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/about-1.jpg" alt="//" class="img-fluid mb-3 mt-1">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/about-0.png" alt="//" class="img-fluid mb-3 mt-3 px-3">
                     </div>
                 
                 </div>

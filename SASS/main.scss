@@ -228,6 +228,7 @@ textarea,
 footer {
     a {
         color: $white;
+        font-size: $f-small;
 
         &:hover {
             color: $prim;
@@ -244,22 +245,32 @@ footer {
         padding-bottom: 5px;
     }
 
+    h2 {
+        font-weight: bold;
+        font-family: $font-title;
+        font-size: $f-big;
+    }
+
     p {
         margin-bottom: 5px;
     }
 
-    .footer-contact a {
-        color: $prim;
+    .footer-contact {
+        font-size: $f-small;
 
-        &:hover {
-            color: $prim-l;
+        a {
+            color: $prim;
+
+            &:hover {
+                color: $prim-l;
+            }
         }
     }
 }
 
 .icon-a {
     display: inline-block;
-    padding: 10px;
+    padding: 3px;
     margin: 0 1px;
     transition: all .1s ease-in-out;
 

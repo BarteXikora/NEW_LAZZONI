@@ -1,8 +1,8 @@
 <?php get_header() ?>
 
-<section class="container fixed-top products-navigation-container">
-    <div class="row pt-5 pb-4">
-        <div class="col-10 col-md-5 col-lg-4 py-4 py-md-5 pr-5 products-navigation">
+<section class="container-fluid fixed-top products-navigation-container">
+    <div class="row pt-5 pb-4 px-5">
+        <div class="col-10 col-md-5 col-lg-3 py-4 py-md-5 pr-3 pr-xl-5 products-navigation">
             <!-- TOGGLE BUTTON -->
             <button class="products-toggler">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/icon-search.png" id="open" alt="Rozwiń menu" class="img-fluid p-1">
@@ -53,11 +53,11 @@
 </section>
 
 <!-- PRODUCTS -->
-<section class="container single-container py-5">
-    <div class="row pt-5 pb-4 single-container-products" \
+<section class="container-fluid single-container py-5">
+    <div class="row pt-5 pb-4 px-5 single-container-products"
         data-page="<?php if (isset($_GET['p'])) echo $_GET['p']; ?>" 
         data-link="<?php echo admin_url('admin-ajax.php'); ?>">
-        <div class="col-12 col-lg-8 offset-0 offset-lg-4">
+        <div class="col-12 col-lg-9 offset-0 offset-lg-3">
             <div class="loading-courtain pt-5">
                 <div class="loading-elements mt-5"></div>
             </div>
