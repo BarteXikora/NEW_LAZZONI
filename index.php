@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- VIDEO BACKGROUND -->
-<section class="video-bg-container">
+<section class="video-bg-container" id="t">
     <video autoplay muted loop>
         <source src="<?php echo get_template_directory_uri(); ?>/img/background.mp4" type="video/mp4">
     </video>
@@ -50,7 +50,7 @@
         <div class="row">
 
             <!-- CARD 1: WIERTARKI -->
-            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=wiertarki" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pr-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=010_wiertarki" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pr-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-0.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
@@ -64,7 +64,7 @@
             </a>
 
             <!-- CARD 2: AUTOMATYZACJA -->
-            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=automatyzacja" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pl-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=030_automatyzacja" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pl-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-1.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
@@ -78,7 +78,7 @@
             </a>
 
             <!-- CARD 3: GŁOWICE WIERTARSKIE -->
-            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=glowice-wiertarskie" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pr-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=020_glowice-wiertarskie" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pr-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-2.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
@@ -93,7 +93,7 @@
             </a>
 
             <!-- CARD 4: DOSTEPNE W MAGAZYNIE -->
-            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=dostepne" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pl-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=000_dostepne" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pl-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-3.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
@@ -116,25 +116,15 @@
 </section>
 
 <!-- ABOUT US SECTION -->
-<section class="py-5">
+<main class="py-5">
     <div class="container-fluid px-5 py-5">
-        <div class="row">
-            <div class="col-12 col-md-3">
-                <div class="row">
-                    <div class="col-6 col-md-12">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/about-1.png" alt="//" class="img-fluid mb-5 px-3">
-                    </div>
-
-                    <div class="col-6 col-md-12">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/about-0.png" alt="//" class="img-fluid mb-3 mt-3 px-3">
-                    </div>
-                
-                </div>
-            </div>
-
-            <main class="about-us-container px-md-5 col-12 col-md-9 text-center text-md-left">
+        <div class="row px-5 about-us-container text-center text-md-left">
+            <div class="col-12">
                 <h1>Wiertarki przemysłowe, wielowrzencionowe, CNC</h1>
                 <h2>DLACZEGO MY?</h2>
+            </div>
+
+            <div class="col-12 col-lg-4">
                 <p>
                     Pierwsze wiertarki przemysłowe Lazzoni Group zapoczątkowały na rynku w 2000 r.
                     Doświadczenie, które zdobyliśmy przez ten okres czasu pozwala nam na zastosowanie
@@ -144,22 +134,116 @@
                     że tworzymy silną grupę wiertarek przemysłowych dla zakładów stolarskich oraz
                     przemysłu.
                 </p>
+            </div>
+
+            <div class="col-12 col-lg-4">
                 <p>
-                    Współpraca z różnymi producentami z Europy, Turcji oraz Azji pozwoliła nam jeszcze
-                    bardziej poszerzyć nasze doświadczenie w branży meblarskiej oraz stolarskiej, co
-                    sprawiło, że nasze wiertarki przemysłowe zostały pod każdym względem udoskonalone tak,
-                    aby maksymalnie przyspieszyć produkcję. Śmiało możemy stwierdzić, że znając potrzeby
-                    rynku jesteśmy w stanie sprostać nawet najbardziej wymagającym klientom. Nasza firma
-                    posiada szeroką gamę produktów. Zaczynając od wiertarek wielowrzecionowych, po
-                    <a href="#">wiertarki przelotowe</a>, kończąc na Centrach wiertarskich sterowanych CNC.
+                    Współpraca z różnymi producentami z Europy, Turcji oraz Azji pozwoliła nam jeszcze 
+                    bardziej poszerzyć nasze doświadczenie w branży meblarskiej oraz stolarskiej, co 
+                    sprawiło, że nasze wiertarki przemysłowe zostały pod każdym względem udoskonalone tak, 
+                    aby maksymalnie przyspieszyć produkcję. Śmiało możemy stwierdzić, że znając potrzeby 
+                    rynku jesteśmy w stanie sprostać nawet najbardziej wymagającym klientom. Nasza firma 
+                    posiada szeroką gamę produktów. Zaczynając od wiertarek wielowrzecionowych, po 
+                    wiertarki przelotowe, kończąc na Centrach wiertarskich sterowanych CNC.
                 </p>
-                <p class="mb-3">
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <p>
                     Praktycznie każda wiertarka wielowrzecionowa oraz wiertarka przelotowa posiada
                     możliwość konfiguracji pod szczególne wymagania klienta. „Wyposażenie w dodatkowe
                     jednostki wiercące, zamontowanie spersonalizowanej głowicy wiertarskiej, powrót
                     elementu do operatora, zwiększenie pola roboczego wiertarki przelotowej lub wiertarki
                     wielowrzecionowej” są to przykładowe konfiguracje, które jesteśmy w stanie wykonać.
                 </p>
+            </div>
+
+            <div class="collapse row m-0" id="read-more">
+                <div class="col-12 col-lg-8 mt-5 pr-lg-5">
+                    <h2>WIERTARKI PRZEMYSŁOWE OD LAZZONI GROUP</h2>
+                    <p>
+                        Zapewniamy projektowanie oraz realizację niezawodnych ciągów technologicznych dla wiertarek
+                        przemysłowych pod względem wydajności, efektywności oraz jakości. Z naszymi maszynami można
+                        zapoznać się zarówno zdalnie, za pośrednictwem filmów obrazujących pracę wiertarek
+                        przemysłowych
+                        na kanale YouTube, oraz stacjonarnie odwiedzając naszą halę wystawową, na której
+                        prezentowane są
+                        ich najnowsze modele (aktualnie na naszej hali wystawowej znajduje się ponad 40 wiertarek
+                        przemysłowych). Oferujemy klientom również fachowe doradztwo z zakresu zakupu maszyn i
+                        narzędzi,
+                        profesjonalny serwis gwarancyjny oraz obsługę pogwarancyjną.
+                    </p>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <h3 class="mb-3">
+                        Poniżej przedstawiamy nasze wiertarki przemysłowe i ich rodzaje oraz rozwiązania w tematyce
+                        wiercenia:
+                    </h3>
+
+                    <ul>
+                        <li>Wiertarki przelotowe</li>
+                        <li>Wiertarki CNC</li>
+                        <li>Wiertarki do szuflad</li>
+                        <li>Wiertarki wielowrzecionowe</li>
+                        <li>wiertarki automatyczne</li>
+                        <li>Centra wiertarskie</li>
+                        <li>Głowice wielowrzecionowe</li>
+                        <li>Spersonalizowane głowice wiertarskie</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 text-center">
+                <button class="button-read-more py-2 px-4 mt-4" type="button" data-toggle="collapse"
+                    data-target="#read-more">
+                    Czytaj dalej
+                </button>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<!--<section class="py-5">
+    <div class="container-fluid px-5 py-5">
+        <main class="row about-us-container text-center text-md-left">
+                    <div class="col-12">
+                        <h1>Wiertarki przemysłowe, wielowrzencionowe, CNC</h1>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h2>DLACZEGO MY?</h2>
+                        <p>
+                            Pierwsze wiertarki przemysłowe Lazzoni Group zapoczątkowały na rynku w 2000 r.
+                            Doświadczenie, które zdobyliśmy przez ten okres czasu pozwala nam na zastosowanie
+                            różnych rozwiązań w tematyce wiercenia. Ponadto kilka naszych wiertarek przemysłowych
+                            zostało wzbogacone o dodatkowe wyposażenie takie jak piły tnąco-kątowe czy też
+                            agregaty kołkujące. Dzięki doświadczeniu, które zdobyliśmy możemy śmiało powiedzieć,
+                            że tworzymy silną grupę wiertarek przemysłowych dla zakładów stolarskich oraz
+                            przemysłu.
+                        </p>
+                        <p>
+                            Współpraca z różnymi producentami z Europy, Turcji oraz Azji pozwoliła nam jeszcze
+                            bardziej poszerzyć nasze doświadczenie w branży meblarskiej oraz stolarskiej, co
+                            sprawiło, że nasze wiertarki przemysłowe zostały pod każdym względem udoskonalone tak,
+                            aby maksymalnie przyspieszyć produkcję. Śmiało możemy stwierdzić, że znając potrzeby
+                            rynku jesteśmy w stanie sprostać nawet najbardziej wymagającym klientom. Nasza firma
+                            posiada szeroką gamę produktów. Zaczynając od wiertarek wielowrzecionowych, po
+                            <a href="#">wiertarki przelotowe</a>, kończąc na Centrach wiertarskich sterowanych CNC.
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <p class="mb-3">
+                            Praktycznie każda wiertarka wielowrzecionowa oraz wiertarka przelotowa posiada
+                            możliwość konfiguracji pod szczególne wymagania klienta. „Wyposażenie w dodatkowe
+                            jednostki wiercące, zamontowanie spersonalizowanej głowicy wiertarskiej, powrót
+                            elementu do operatora, zwiększenie pola roboczego wiertarki przelotowej lub wiertarki
+                            wielowrzecionowej” są to przykładowe konfiguracje, które jesteśmy w stanie wykonać.
+                        </p>
+                    </div>
+                </div>
+                
 
                 <div class="collapse m-0" id="read-more">
                     <h3 class="m-0">
@@ -200,9 +284,7 @@
                     </button>
                 </div>
             </main>
-        </div>
-    </div>
-</section>
+</section> -->
 
 <!-- YOUTUBE FILMS SECTION -->
 <section class="section-dark py-5" id="f">

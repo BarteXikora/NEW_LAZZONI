@@ -29,7 +29,9 @@
 
                     <?php
                         $post_types = get_terms('product-group', array(
-                            'hide_empty' => 0
+                            'hide_empty' => 0,
+                            'orderby' => 'slug',
+                            'order' => 'ASC'
                         ));
 
                         foreach($post_types as $type) {

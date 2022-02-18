@@ -16,6 +16,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <meta name="keywords" content="
+        wiertarka przelotowa, wiertarki przelotowe, wiertarka przemysłowa, wiertarki przemysłowe,
+        wiertarka wielowrzecionowa, wiertarki wielowrzecionowe, wiertarki CNC, wiertarka CNC,
+        producent wiertarek, wiertarka na zamówienie, wiertarka do drewna, wiertarki do drewna, 
+        automatyzacja procesu wiercenia, głowice wiertarskie, głowica wiertarska, głowice 
+        wielowrzecionowe, głowica wielowrzecionowa, głowice na zamówienie, głowica na zamówienie, 
+        głowice do wiertarki, głowica do wiertarki, automatyzacja, robotyzacja, podajnik elementu,
+        odbiornik elementu,
+
+        through-feed drill, through-feed drills, industrial drill, industrial drills,
+        multi-spindle drilling machine, multi-spindle drills, CNC drills, CNC drilling machine,
+        manufacturer of drills, custom drill, wood drill, wood drills,
+        automation of the drilling process, drilling heads, drilling head, heads
+        multi-spindle, multi-spindle head, heads on request, head on request,
+        automation, robotics, element loader, element unloader,
+    ">
+    
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
     <title>
@@ -49,7 +66,7 @@
         <div class="container-fluid px-md-5">
 
             <!-- NAVBAR LOGO -->
-            <a class="navbar-brand" href="<?php echo home_url(); ?>">
+            <a class="navbar-brand" href="<?php if(is_home()) echo '#t'; else echo home_url(); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.png" alt="LAZZONI GROUP" class="d-none d-md-flex img-fluid my-2">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo-mobile-navbar.png" alt="LAZZONI GROUP" class="d-flex d-md-none img-fluid my-2">
             </a>
