@@ -27,6 +27,34 @@
 
                 <ul class="pr-3 groups-list" id="groups">
 
+                    <li>
+                        <a class="group-button py-1" data-category="dostepne">
+                            Dostępne w magazynie
+                        </a>
+                        <div class="sub-groups-list"></div>
+                    </li>
+
+                    <li>
+                        <a class="group-button py-1" data-category="wiertarki">
+                            Wiertarki
+                        </a>
+                        <div class="sub-groups-list"></div>
+                    </li>
+
+                    <li>
+                        <a class="group-button py-1" data-category="glowice-wiertarskie">
+                            Głowice wiertarskie
+                        </a>
+                        <div class="sub-groups-list"></div>
+                    </li>
+
+                    <li>
+                        <a class="group-button py-1" data-category="automatyzacja">
+                            Automatyzacja
+                        </a>
+                        <div class="sub-groups-list"></div>
+                    </li>
+
                     <?php
                         $post_types = get_terms('product-group', array(
                             'hide_empty' => 0,
@@ -35,6 +63,9 @@
                         ));
 
                         foreach($post_types as $type) {
+
+                            if ($type->slug != 'dostepne' && $type->slug != 'wiertarki' && 
+                            $type->slug != 'glowice-wiertarskie' && $type->slug != 'automatyzacja') {
                     ?>
 
                     <li>
@@ -45,6 +76,7 @@
                     </li>
 
                     <?php
+                            }
                         }
                     ?>
 
