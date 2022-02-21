@@ -117,8 +117,8 @@
 
 <!-- ABOUT US SECTION -->
 <main class="py-5">
-    <div class="container-fluid px-5 py-5">
-        <div class="row px-5 about-us-container text-center text-md-left">
+    <div class="container-fluid px-md-5 py-5">
+        <div class="row px-md-5 about-us-container text-center text-md-left">
             <div class="col-12">
                 <h1>Wiertarki przemysłowe, wielowrzencionowe, CNC</h1>
                 <h2>DLACZEGO MY?</h2>
@@ -205,91 +205,10 @@
     </div>
 </main>
 
-<!--<section class="py-5">
-    <div class="container-fluid px-5 py-5">
-        <main class="row about-us-container text-center text-md-left">
-                    <div class="col-12">
-                        <h1>Wiertarki przemysłowe, wielowrzencionowe, CNC</h1>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <h2>DLACZEGO MY?</h2>
-                        <p>
-                            Pierwsze wiertarki przemysłowe Lazzoni Group zapoczątkowały na rynku w 2000 r.
-                            Doświadczenie, które zdobyliśmy przez ten okres czasu pozwala nam na zastosowanie
-                            różnych rozwiązań w tematyce wiercenia. Ponadto kilka naszych wiertarek przemysłowych
-                            zostało wzbogacone o dodatkowe wyposażenie takie jak piły tnąco-kątowe czy też
-                            agregaty kołkujące. Dzięki doświadczeniu, które zdobyliśmy możemy śmiało powiedzieć,
-                            że tworzymy silną grupę wiertarek przemysłowych dla zakładów stolarskich oraz
-                            przemysłu.
-                        </p>
-                        <p>
-                            Współpraca z różnymi producentami z Europy, Turcji oraz Azji pozwoliła nam jeszcze
-                            bardziej poszerzyć nasze doświadczenie w branży meblarskiej oraz stolarskiej, co
-                            sprawiło, że nasze wiertarki przemysłowe zostały pod każdym względem udoskonalone tak,
-                            aby maksymalnie przyspieszyć produkcję. Śmiało możemy stwierdzić, że znając potrzeby
-                            rynku jesteśmy w stanie sprostać nawet najbardziej wymagającym klientom. Nasza firma
-                            posiada szeroką gamę produktów. Zaczynając od wiertarek wielowrzecionowych, po
-                            <a href="#">wiertarki przelotowe</a>, kończąc na Centrach wiertarskich sterowanych CNC.
-                        </p>
-                    </div>
-
-                    <div class="col-12 col-lg-6">
-                        <p class="mb-3">
-                            Praktycznie każda wiertarka wielowrzecionowa oraz wiertarka przelotowa posiada
-                            możliwość konfiguracji pod szczególne wymagania klienta. „Wyposażenie w dodatkowe
-                            jednostki wiercące, zamontowanie spersonalizowanej głowicy wiertarskiej, powrót
-                            elementu do operatora, zwiększenie pola roboczego wiertarki przelotowej lub wiertarki
-                            wielowrzecionowej” są to przykładowe konfiguracje, które jesteśmy w stanie wykonać.
-                        </p>
-                    </div>
-                </div>
-                
-
-                <div class="collapse m-0" id="read-more">
-                    <h3 class="m-0">
-                        Poniżej przedstawiamy nasze wiertarki przemysłowe i ich rodzaje oraz rozwiązania w tematyce
-                        wiercenia:
-                    </h3>
-
-                    <ul>
-                        <li>Wiertarki przelotowe</li>
-                        <li>Wiertarki CNC</li>
-                        <li>Wiertarki do szuflad</li>
-                        <li>Wiertarki wielowrzecionowe</li>
-                        <li>wiertarki automatyczne</li>
-                        <li>Centra wiertarskie</li>
-                        <li>Głowice wielowrzecionowe</li>
-                        <li>Spersonalizowane głowice wiertarskie</li>
-                    </ul>
-
-                    <h2>WIERTARKI PRZEMYSŁOWE OD LAZZONI GROUP</h2>
-                    <p>
-                        Zapewniamy projektowanie oraz realizację niezawodnych ciągów technologicznych dla wiertarek
-                        przemysłowych pod względem wydajności, efektywności oraz jakości. Z naszymi maszynami można
-                        zapoznać się zarówno zdalnie, za pośrednictwem filmów obrazujących pracę wiertarek
-                        przemysłowych
-                        na kanale YouTube, oraz stacjonarnie odwiedzając naszą halę wystawową, na której
-                        prezentowane są
-                        ich najnowsze modele (aktualnie na naszej hali wystawowej znajduje się ponad 40 wiertarek
-                        przemysłowych). Oferujemy klientom również fachowe doradztwo z zakresu zakupu maszyn i
-                        narzędzi,
-                        profesjonalny serwis gwarancyjny oraz obsługę pogwarancyjną.
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <button class="button-read-more py-2 px-4 mt-4" type="button" data-toggle="collapse"
-                        data-target="#read-more">
-                        Czytaj dalej
-                    </button>
-                </div>
-            </main>
-</section> -->
-
 <!-- YOUTUBE FILMS SECTION -->
 <section class="section-dark py-5" id="f">
-    <div class="container-fluid px-5 py-5">
-        <div class="row px-5">
+    <div class="container-fluid px-md-5 py-5">
+        <div class="row px-md-5">
             <div class="col-12 text-center text-md-left">
                 <h2 class="h1">Zobacz nasze wiertarki w akcji:</h2>
             </div>
@@ -324,8 +243,8 @@
 
 <!-- NEWS SECTION -->
 <section class="py-5">
-    <div class="container-fluid px-5 py-5">
-        <div class="row px-5">
+    <div class="container-fluid px-md-5 py-5">
+        <div class="row px-md-5">
             <div class="col-12 text-center text-md-left">
                 <h2 class="h1">Aktualności:</h2>
             </div>
