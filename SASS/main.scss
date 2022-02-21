@@ -32,6 +32,15 @@ body {
     font-size: $f-default;
 }
 
+.accent {
+    color: $prim !important;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        color: $prim-l !important;
+    }
+}
+
 h1,
 .h1 {
     font-family: $font-title;

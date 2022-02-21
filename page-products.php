@@ -28,7 +28,7 @@
                 <ul class="pr-3 groups-list" id="groups">
 
                     <li>
-                        <a class="group-button py-1" data-category="dostepne">
+                        <a class="group-button accent py-1" data-category="dostepne">
                             Dostępne w magazynie
                         </a>
                         <div class="sub-groups-list"></div>
@@ -87,8 +87,8 @@
 </section>
 
 <!-- PRODUCTS -->
-<section class="container-fluid single-container py-5 px-5">
-    <div class="row pt-5 pb-4 px-5 single-container-products"
+<section class="container-fluid single-container py-5 px-md-5">
+    <div class="row pt-5 pb-4 px-md-5 single-container-products"
         data-page="<?php if (isset($_GET['p'])) echo $_GET['p']; ?>" 
         data-link="<?php echo admin_url('admin-ajax.php'); ?>">
         <div class="col-12 col-lg-9 offset-0 offset-lg-3">
@@ -96,7 +96,7 @@
                 <div class="loading-elements mt-5"></div>
             </div>
 
-            <div class="row text-center" id="products-content"></div>
+            <div class="row text-center px-3" id="products-content"></div>
         </div>
     </div>
 </section>

@@ -117,6 +117,16 @@
           box-shadow: 6px 6px 15px -11px #282828;
 }
 
+.dropdown-menu a[href*="?p=dostepne"] {
+  color: #ea9334;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.dropdown-menu a[href*="?p=dostepne"]:hover {
+  color: #f5ad5b;
+}
+
 .dropdown-item {
   color: white;
 }
@@ -1067,6 +1077,16 @@ body {
   background-color: white;
   color: #282828;
   font-size: 1rem;
+}
+
+.accent {
+  color: #ea9334 !important;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.accent:hover {
+  color: #f5ad5b !important;
 }
 
 h1,

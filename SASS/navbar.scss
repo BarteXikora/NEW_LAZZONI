@@ -29,6 +29,15 @@
     border: none;
     border-radius: 0;
     box-shadow: $shadow;
+    
+    a[href*="?p=dostepne"] {
+        color: $prim;
+        transition: all .1s ease-in-out;
+
+        &:hover {
+            color: $prim-l;
+        }
+    }
 }
 
 .dropdown-item {
@@ -39,10 +48,6 @@
         background-color: transparent;
     }
 }
-
-// .collapse {
-//     // background-color: $white;
-// }
 
 .language-btn {
     transition: all .1s ease-in-out;
