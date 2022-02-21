@@ -4,7 +4,11 @@
 
                 <div class="col-12 col-lg-9 offset-lg-0 pr-md-5 col-xl-4 pr-xl-0 mb-5">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.png" alt="LAZZONI GROUP" class="img-fluid mb-4 <?php if (is_home()) echo 'footer-logo' ?>">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quo nam eveniet quia id magni est. Inventore tempora quo totam cupiditate dicta eaque itaque rem.</p>
+                    <p>
+                        Polski producent wiertarek przelotowych, wiertarek wielowrzecionowych, wiertarek CNC,
+                        oraz głowic wiertarskich. Automatyzujemy proces wiercenia, dostosowując nasze 
+                        maszyny wedle potrzeb klienta.
+                    </p>
                     <div class="mt-3">
                         <a target="_blank" href="https://www.facebook.com/lazzonigroup/?__tn__=%2Cd%2CP-R&eid=ARDawjMEBlb__QZVORVHD6vSI0GUMumWYJ6-Oz50WXLpIOLCIpCMc1-Zs5-iVTpygEgMYnjdCaSR0Njh" class="icon-a">
                             <img src="<?php echo get_template_directory_uri(); ?>/img/icon-fb.png" alt="Facebook">
@@ -56,7 +60,7 @@
                     <h2>Kontakt:</h2>
                     <p>32-432 Pcim 1563</p>
                     <p><a href="tel:+48 535 732 115">+48 535 732 115</a></p>
-                    <p><a href="mail:biuro@lazzonigroup.pl">biuro@lazzonigroup.pl</a></p>
+                    <p><a href="mailto:biuro@lazzonigroup.pl">biuro@lazzonigroup.pl</a></p>
                 </div>
 
                 <div class="col-12 mt-5 mb-3">
