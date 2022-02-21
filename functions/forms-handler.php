@@ -7,44 +7,37 @@ function enquiry_form() {
 
     // From 'contact' page:
     $send_to_contact = [
-        // 'biuro@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'biuro@lazzonigroup.pl'
     ];
 
     // From 'service' page - pl:
     $send_to_service_pl = [
-        // 'serwis@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'serwis@lazzonigroup.pl'
     ];
 
     // From 'service' page - other lang:
     $send_to_service_other = [
-        // 'service@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'service@lazzonigroup.pl'
     ];
 
     // From 'contact app' - wiertarki:
     $send_to_phone_wiertarki = [
-        // 'm.zadlo@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'm.zadlo@lazzonigroup.pl'
     ];
 
     // From 'contact app' - glowice:
     $send_to_phone_glowice = [
-        // 'w.ciesielski@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'w.ciesielski@lazzonigroup.pl'
     ];
 
     // From 'contact app' - czesci:
     $send_to_phone_czesci = [
-        // 'czesci@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'czesci@lazzonigroup.pl'
     ];
 
     // From 'contact app' - serwis:
     $send_to_phone_serwis = [
-        // 'serwis@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'serwis@lazzonigroup.pl'
     ];
 
     // ===============================
