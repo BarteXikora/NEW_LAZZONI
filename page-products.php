@@ -1,7 +1,7 @@
 <?php get_header() ?>
 
 <section class="container-fluid fixed-top products-navigation-container">
-    <div class="row pt-5 pb-4 px-5">
+    <div class="row pt-5 pb-4 px-0 px-lg-3 px-xl-5">
         <div class="col-10 col-md-5 col-lg-3 py-4 py-md-5 pr-3 pr-xl-5 products-navigation">
             <!-- TOGGLE BUTTON -->
             <button class="products-toggler">
@@ -55,7 +55,7 @@
 </section>
 
 <!-- PRODUCTS -->
-<section class="container-fluid single-container py-5">
+<section class="container-fluid single-container py-5 px-5">
     <div class="row pt-5 pb-4 px-5 single-container-products"
         data-page="<?php if (isset($_GET['p'])) echo $_GET['p']; ?>" 
         data-link="<?php echo admin_url('admin-ajax.php'); ?>">
