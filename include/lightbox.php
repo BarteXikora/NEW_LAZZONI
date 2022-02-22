@@ -9,7 +9,7 @@
         </div>
         <div class="px-5 px-md-3 pt-2 pb-2 text-center">
             <div>
-                <img src="" alt="" class="img-fluid" id="lightbox-content" style="max-height: 80vh">
+                <img src="" alt="" class="lightbox-image" id="lightbox-content">
             </div>
             <h3 id="lightbox-title" class="mt-4 px-4"></h3>
         </div>

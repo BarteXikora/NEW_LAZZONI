@@ -448,6 +448,11 @@ table {
     }
 }
 
+.lightbox-image {
+    max-height: 80vh;
+    width: 100%;
+}
+
 #single-content img {
     cursor: pointer;
     transition: all .1s ease-in-out;
