@@ -70,7 +70,7 @@ function load_products () {
     if (!$show_categories) {
         ?>
 
-        <div class="col-12 px-4">
+        <div class="col-12">
             <h2 class="products-category-title title text-center text-md-left">
                 Wyniki wyszukiwania dla <i>&bdquo;<?php echo $search; ?>&rdquo;</i>:
             </h2>
@@ -87,14 +87,24 @@ function load_products () {
 
             $current_slug = get_category_by_slug($current_product['category'])->slug;
             if ($current_slug == 'uncategorized' || $current_slug == 'bez-kategorii')
-                $current_category = "Produkty LAZZONI GROUP"
+                $current_category = "Produkty LAZZONI GROUP";
 
+            $current_description = category_description( get_category_by_slug($current_slug)->term_id );
+            
             ?>
 
-            <div class="col-12 px-4 <?php if ($n > 0) echo 'mt-5' ?>" data-anchor="<?php echo $current_category; ?>">
-                <h2 class="products-category-title title text-center text-md-left">
-                    <?php echo $current_category; ?>
+            <div class="col-12 p-0 title-box text-center text-md-left py-3 <?php if ($n > 0) echo 'mt-5' ?>" data-anchor="<?php echo $current_category; ?>">
+                <h2 class="products-category-title px-5 my-0">
+                    <?php echo $current_category; ?>:
                 </h2>
+
+                <?php if (strlen($current_description) > 0) { ?>
+
+                    <div class="px-5 mr-md-5 mb-0 pt-2">
+                        <?php echo $current_description; ?>
+                    </div>
+
+                <?php } ?>
             </div>
 
             <?php

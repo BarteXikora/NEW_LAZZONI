@@ -96,7 +96,7 @@
                 <div class="loading-elements mt-5"></div>
             </div>
 
-            <div class="row text-center px-3" id="products-content"></div>
+            <div class="row text-center px-3 px-md-5" id="products-content"></div>
         </div>
     </div>
 </section>

@@ -31,12 +31,7 @@
     box-shadow: $shadow;
     
     a[href*="?p=dostepne"] {
-        color: $prim;
-        transition: all .1s ease-in-out;
-
-        &:hover {
-            color: $prim-l;
-        }
+        font-weight: bold;
     }
 }
 

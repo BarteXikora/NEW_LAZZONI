@@ -118,9 +118,7 @@
 }
 
 .dropdown-menu a[href*="?p=dostepne"] {
-  color: #ea9334;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  font-weight: bold;
 }
 
 .dropdown-menu a[href*="?p=dostepne"]:hover {
@@ -907,6 +905,10 @@
   font-weight: bold;
 }
 
+.products-category-p {
+  font-size: 0.8rem;
+}
+
 .loading-courtain {
   position: absolute;
   top: 0;
@@ -1140,6 +1142,7 @@ textarea:focus,
           box-shadow: none;
 }
 
+.title-box,
 .title {
   position: relative;
   padding: 10px 45px;
@@ -1148,6 +1151,7 @@ textarea:focus,
   font-family: "Arial" !important;
 }
 
+.title-box::before,
 .title::before {
   content: '';
   position: absolute;
@@ -1157,6 +1161,11 @@ textarea:focus,
   height: 100%;
   background-color: #ea9334;
   border-right: 15px solid #282828;
+}
+
+.title-box p,
+.title p {
+  margin: 0;
 }
 
 .section-dark {

@@ -91,6 +91,7 @@ textarea,
     }
 }
 
+.title-box,
 .title {
     position: relative;
     padding: 10px 45px;
@@ -107,6 +108,10 @@ textarea,
         height: 100%;
         background-color: $prim;
         border-right: 15px solid $black;
+    }
+
+    p {
+        margin: 0;
     }
 }
 
