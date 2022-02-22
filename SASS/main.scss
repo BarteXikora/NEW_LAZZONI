@@ -392,6 +392,25 @@ footer {
     }
 }
 
+.button-image {
+    border-radius: 0;
+    transition: all .1s ease-in-out;
+
+    img {
+        max-height: 48px;
+    }
+
+    span {
+        font-size: $f-default;
+        font-weight: bold;
+
+    }
+
+    &:hover {
+        background-color: $white-d;
+    }
+}
+
 .button-group {
     border: 1px solid $black;
 }

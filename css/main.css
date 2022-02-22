@@ -121,10 +121,6 @@
   font-weight: bold;
 }
 
-.dropdown-menu a[href*="?p=dostepne"]:hover {
-  color: #f5ad5b;
-}
-
 .dropdown-item {
   color: white;
 }
@@ -1455,6 +1451,25 @@ footer .footer-contact a:hover {
 
 .button-read-more:hover {
   background-color: #a0a0a0;
+}
+
+.button-image {
+  border-radius: 0;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.button-image img {
+  max-height: 48px;
+}
+
+.button-image span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.button-image:hover {
+  background-color: #f1f1f1;
 }
 
 .button-group {
