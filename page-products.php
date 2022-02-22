@@ -85,7 +85,7 @@
 
             <a href="http://localhost/new_lazzoni/wp-content/uploads/2022/02/Glowice-na-zamowienie-Lazzoni-Group-Mocowanie-1.png" target="_blank" class="btn button-image ml-1">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/dictionary.png" alt="Słownik pojęć" class="img-fluid p-1">
-                <span class="pl-2">Słownik pojęć</span>
+                <span class="pl-2">Słownik branżowy</span>
             </a>
             
         </div>

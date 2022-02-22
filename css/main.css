@@ -889,7 +889,6 @@
 }
 
 .group-button.selected {
-  font-weight: bold;
   color: #ea9334 !important;
   cursor: default;
 }
