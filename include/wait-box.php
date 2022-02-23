@@ -1,8 +1,8 @@
-<div class="film-box-container" id="wait-box-container"> 
-    <div class="film-box p-5">
+<div class="film-box-container d-none" id="wait-box-container"> 
+    <div class="film-box wait-box p-5">
         <h2 class="title">Może Cię zainteresować:</h2>
 
-        <div class="row my-5">
+        <div class="row my-5 px-3">
 
         <?php
 
