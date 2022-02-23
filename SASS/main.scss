@@ -371,6 +371,7 @@ footer {
 }
 
 .button-disabled {
+    position: relative;
     cursor: default !important;
     background-color: $gray-l;
     color: $gray;

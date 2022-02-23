@@ -718,6 +718,31 @@
   padding: 0 5px;
 }
 
+.hint-box {
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  width: 100%;
+  background-color: #282828;
+  color: white;
+  font-size: 0.8rem;
+  text-transform: none;
+  padding: 10px;
+  color: #ff1e00;
+}
+
+.hint-box::before {
+  position: absolute;
+  content: '';
+  bottom: -5px;
+  left: calc(50% - 7px);
+  width: 10px;
+  height: 10px;
+  background-color: #282828;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
 .film-box-container {
   position: fixed;
   top: 0;
@@ -1431,6 +1456,7 @@ footer .footer-contact a:hover {
 }
 
 .button-disabled {
+  position: relative;
   cursor: default !important;
   background-color: #a0a0a0;
   color: #6b6b6b;

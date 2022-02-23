@@ -93,6 +93,15 @@ function lazzoni_enqueue_styles() {
         );
     }
 
+    // Show hint script:
+    if (is_home() || is_page('contact') || is_page('service')) {
+        wp_enqueue_script(
+            'show-hint',
+            get_stylesheet_directory_uri() . '/js/show-hint.js',
+            array('jquery')
+        );
+    }
+
     // Contact App script:
     if (is_home()) {
         wp_enqueue_script(

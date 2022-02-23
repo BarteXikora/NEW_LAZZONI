@@ -52,7 +52,9 @@
 
             <div class="text-center mt-5">
                 <button type="submit" id="c-submit" class="button button-prim button-disabled">
-                    Wyślij!
+                    Wyślij formularz kontaktowy!
+
+                    <div class="hint-box d-none"></div>
                 </button>
             </div>
         </form>

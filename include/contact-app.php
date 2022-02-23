@@ -30,6 +30,8 @@
                 <button type="submit" id="app-submit" 
                     class="button button-prim button-smaller button-disabled">
                         Wyślij wiadomość!
+
+                        <div class="hint-box d-none"></div>
                 </button>
             </div>
 
