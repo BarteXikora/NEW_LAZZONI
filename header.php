@@ -47,6 +47,7 @@
     <?php 
         get_template_part('include/loading-page', 'loading-page');
         get_template_part('include/fixed-buttons', 'fixed-buttons');
+        //get_template_part('include/wait-box', 'wait-box');
         if (is_home()) get_template_part('include/contact-app', 'contact-app');
         if (is_home() || is_page('films')) get_template_part('include/film-box', 'film-box');
         if (is_single()) get_template_part('include/lightbox', 'lightbox');
@@ -66,7 +67,7 @@
         <div class="container-fluid px-md-5">
 
             <!-- NAVBAR LOGO -->
-            <a class="navbar-brand" href="<?php if(is_home()) echo '#t'; else echo home_url(); ?>">
+            <a class="navbar-brand" href="<?php if (is_home()) echo '#t'; else echo home_url(); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.png" alt="LAZZONI GROUP" class="d-none d-md-flex img-fluid my-2">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo-mobile-navbar.png" alt="LAZZONI GROUP" class="d-flex d-md-none img-fluid my-2">
             </a>

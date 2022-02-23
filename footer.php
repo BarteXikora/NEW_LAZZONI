@@ -1,3 +1,5 @@
+<?php get_template_part('include/wait-box', 'wait-box'); ?>
+
 <footer class="section-dark pt-5<?php if (is_404()) echo ' d-none'; ?>">
         <div class="container-fluid pt-4 px-md-5">
             <div class="row px-5 text-center text-md-left">

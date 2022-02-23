@@ -12,7 +12,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.png" alt="LAZZONI GROUP" class="d-none d-lg-inline px-5 mb-3 mr-5 gsap-main-logo">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-mobile.png" alt="LAZZONI GROUP" class="d-inline px-4 d-lg-none mb-4 gsap-main-logo">
 
-                    <p class="mb-4 mb-md-5 px-5 gsap-main-text">
+                    <p translate="no" class="mb-4 mb-md-5 px-5 gsap-main-text">
                         Jesteśmy polskim producentem wiertarek przemysłowych stworzonych dla branży meblarskiej.
 
                         <span class="d-none d-lg-inline">

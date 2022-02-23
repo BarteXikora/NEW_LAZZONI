@@ -182,5 +182,12 @@ function lazzoni_enqueue_styles() {
             array('jquery')
         ); 
     }
+
+    // Wait box script:
+    wp_enqueue_script(
+        'wait-box',
+        get_stylesheet_directory_uri() . '/js/wait-box.js',
+        array('jquery')
+    );
 }
 add_action('wp_enqueue_scripts', 'lazzoni_enqueue_styles');
