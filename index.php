@@ -12,14 +12,20 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.png" alt="LAZZONI GROUP" class="d-none d-lg-inline px-5 mb-3 mr-5 gsap-main-logo">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-mobile.png" alt="LAZZONI GROUP" class="d-inline px-4 d-lg-none mb-4 gsap-main-logo">
 
-                    <p translate="no" class="mb-4 mb-md-5 px-5 gsap-main-text">
+                    <p class="mb-4 mb-md-5 px-5 gsap-main-text">
                         Jesteśmy polskim producentem wiertarek przemysłowych stworzonych dla branży meblarskiej.
+
+                        <?php //get_template_part('include/main-languages', 'main-languages', 
+                            //['content' => 'film-bg-text']); ?>
 
                         <span class="d-none d-lg-inline">
                             Specjalizujemy się w zakresie wiertarek przelotowych, wiertarek CNC, a także
                             automatyzacji procesu wiercenia. Oprócz szerokiego wachlarzu maszyn w standardowej
                             konfiguracji, produkujemy również maszyny customowe oraz głowice wiertarskie bazując
                             na rysunkach elementów otrzymanych od klienta.
+
+                            <?php //get_template_part('include/main-languages', 'main-languages', 
+                                //['content' => 'film-bg-desktop']); ?>
                         </span>
                     </p>
 

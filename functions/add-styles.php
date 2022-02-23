@@ -196,5 +196,23 @@ function lazzoni_enqueue_styles() {
         get_stylesheet_directory_uri() . '/js/wait-box.js',
         array('jquery')
     );
+
+    // Cookies script:
+    if (is_home()) {
+        wp_enqueue_script(
+            'cookies',
+            'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js',
+            array('jquery')
+        );
+    }
+
+    // Custom translations script:
+    if (is_home()) {
+        wp_enqueue_script(
+            'custom-translations',
+            get_stylesheet_directory_uri() . '/js/custom-translations.js',
+            array('jquery')
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'lazzoni_enqueue_styles');
