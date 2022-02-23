@@ -27,7 +27,7 @@ function enquiry_form() {
 
     // From 'contact app' - glowice:
     $send_to_phone_glowice = [
-        'w.ciesielski@lazzonigroup.pl'
+        'k.wyszowska@lazzonigroup.pl'
     ];
 
     // From 'contact app' - czesci:

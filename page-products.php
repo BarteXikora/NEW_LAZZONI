@@ -42,15 +42,15 @@
                     </li>
 
                     <li>
-                        <a class="group-button py-1" data-category="glowice-wiertarskie">
-                            Głowice wiertarskie
+                        <a class="group-button py-1" data-category="automatyzacja">
+                            Automatyzacja
                         </a>
                         <div class="sub-groups-list"></div>
                     </li>
 
                     <li>
-                        <a class="group-button py-1" data-category="automatyzacja">
-                            Automatyzacja
+                        <a class="group-button py-1" data-category="glowice-wiertarskie">
+                            Głowice wiertarskie
                         </a>
                         <div class="sub-groups-list"></div>
                     </li>
