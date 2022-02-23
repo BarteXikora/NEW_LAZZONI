@@ -77,12 +77,14 @@ function enquiry_form() {
     } //If request from CONTACT FORM:
     else if ($from == 'contact-form') {
         $name = $_REQUEST['name'];
+        $about = $_REQUEST['about'];
 
         $subject = 'Prośba o kontakt z formularza kontaktowego na stronie lazzonigroup.pl';
 
         $message .= '<strong>Podany numer kontaktowy:</strong> '.$phone.'<br />';
         $message .= '<strong>Podany adres e-mail:</strong> '.$email.'<br />';
         $message .= '<strong>Podane imię i nazwisko:</strong> '.$name.'<br />';
+        $message .= '<strong>Produkt / powód kontaktu:</strong> '.$about.'<br />';
         $message .= '<strong>Treść wiadomości:</strong> '.$req_message;
 
         $answer = send_mail($send_to_contact, $headers, $subject, $message);

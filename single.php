@@ -18,6 +18,11 @@ echo get_post_meta($post->ID, 'title', true); ?>">
             <?php if (get_post_type(get_the_ID()) == 'news') { ?>
                 <a href="<?php echo get_page_link(get_page_by_path('news')); ?>" class="button button-prim">Wróć do aktualności</a>
             <?php } else if (get_post_type(get_the_ID()) == 'post') { ?>
+                <a href="<?php
+                    echo get_page_link(get_page_by_path('contact'));
+                    echo '?about='.get_the_title();
+                ?>" class="button button-prim">Skontaktuj się w sprawie tego produktu</a>
+
                 <a href="<?php 
 
                     $goBack = '';
@@ -27,7 +32,7 @@ echo get_post_meta($post->ID, 'title', true); ?>">
                     echo get_page_link(get_page_by_path('products')); 
                     echo $goBack;
 
-                ?>" class="button button-prim">Wróć na listę produktów</a>
+                ?>" class="button">Wróć na listę produktów</a>
             <?php } else { ?>
                 <a href="<?php echo home_url(); ?>" class="button button-prim">Wróć na stronę główną</a>
             <?php } ?>
