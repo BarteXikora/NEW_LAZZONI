@@ -30,7 +30,7 @@
                     </p>
 
                     <div class="gsap-main-buttons px-5">
-                        <a href="#" class="button button-prim mb-2">Nasze produkty</a>
+                        <a href="#o" class="button button-prim mb-2">Nasze produkty</a>
                         <a href="#f" class="button button-white mb-5 mb-md-0">Nasze filmy</a>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
         </div>
 
         <div class="col-12 text-center mt-5">
-            <a href="#" class="button button-prim">
+            <a href="https://lazzonigroup.olx.pl" target="_blank" class="button button-prim">
                 Zobacz nasze aukcje
             </a>
         </div>
