@@ -44,6 +44,16 @@
     <?php wp_head(); ?>
 </head>
 <body>
+
+    <!-- __ SIZES -->
+    <div class="_sizes">
+        <span class="_size d-sm-none">XS</span>
+        <span class="_size d-none d-sm-flex d-md-none">SM</span>
+        <span class="_size d-none d-md-flex d-lg-none">MD</span>
+        <span class="_size d-none d-lg-flex d-xl-none">LG</span>
+        <span class="_size d-none d-xl-flex">XL</span>
+    </div> 
+
     <?php 
         get_template_part('include/loading-page', 'loading-page');
         get_template_part('include/fixed-buttons', 'fixed-buttons');
@@ -52,15 +62,6 @@
         if (is_home() || is_page('films')) get_template_part('include/film-box', 'film-box');
         if (is_single()) get_template_part('include/lightbox', 'lightbox');
     ?>
-
-    <!-- __ SIZES --
-    <div class="_sizes">
-        <span class="_size d-sm-none">XS</span>
-        <span class="_size d-none d-sm-flex d-md-none">SM</span>
-        <span class="_size d-none d-md-flex d-lg-none">MD</span>
-        <span class="_size d-none d-lg-flex d-xl-none">LG</span>
-        <span class="_size d-none d-xl-flex">XL</span>
-    </div> -->
     
     <!-- NAVBAR -->
     <nav class="navbar fixed-top navbar-expand-xl py-0<?php if (is_404()) echo ' d-none'; ?>">

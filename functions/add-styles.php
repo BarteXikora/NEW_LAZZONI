@@ -209,11 +209,18 @@ function lazzoni_enqueue_styles() {
     // Cookies script:
     if (is_home()) {
         wp_enqueue_script(
-            'cookies',
+            'cookies-jquery',
             'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js',
             array('jquery')
         );
     }
+
+    // Cookies script:
+    wp_enqueue_script(
+        'cookies',
+        get_stylesheet_directory_uri() . '/js/cookies.js',
+        array('jquery')
+    );
 
     // Custom translations script:
     if (is_home()) {
