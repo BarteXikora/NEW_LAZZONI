@@ -3,13 +3,13 @@ jQuery(document).ready(($) => {
 
     let delay = delayInMinutes * 60000
     let isDelayDone = false
-    let everShown = false
+    let lastShown = -1
 
     const $container = $('#wait-box-container')
 
     // Check for everShown var in local storage:
     if (localStorage.getItem('everShown') !== undefined)
-        everShown = localStorage.getItem('everShown')
+        lastShown = localStorage.getItem('lastShown')
 
     // Allow wait box to open after delay:
     setTimeout(() => {
@@ -18,7 +18,8 @@ jQuery(document).ready(($) => {
 
     // Show wait box on mouse leave:
     $(document).mouseleave(() => {
-        if (isDelayDone && !everShown) showWaitBox()
+        if (isDelayDone && lastShown - $.now() < -86400000) showWaitBox()
+        console.log(lastShown - $.now());
     })
 
     // Close wait box on click outsite:
@@ -28,8 +29,8 @@ jQuery(document).ready(($) => {
 
     // Show wait box:
     const showWaitBox = () => {
-        everShown = true
-        localStorage.setItem('everShown', true)
+        lastShown = $.now()
+        localStorage.setItem('lastShown', $.now())
 
         $container.css('opacity', 0)
         $container.addClass('d-md-flex')

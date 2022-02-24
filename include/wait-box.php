@@ -39,8 +39,8 @@
         </div>
 
         <div class="text-center">
-            <a href="#" class="button button-prim mb-2">Skontaktuj się z nami</a>
-            <a href="#f" class="button mb-5 mb-md-0">Zobacz więcej produktów</a>
+            <a href="<?php echo get_page_link(get_page_by_path('contact')); ?>" class="button button-prim mb-2">Skontaktuj się z nami</a>
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>" class="button mb-5 mb-md-0">Zobacz więcej produktów</a>
         </div>
 
     </div>
