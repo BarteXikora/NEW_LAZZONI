@@ -19,13 +19,15 @@ jQuery(document).ready(($) => {
     // Show wait box on mouse leave:
     $(document).mouseleave(() => {
         if (isDelayDone && lastShown - $.now() < -86400000) showWaitBox()
-        console.log(lastShown - $.now());
     })
 
     // Close wait box on click outsite:
     $container.click((e) => {
         if ($(e.target).hasClass('film-box-container')) hideWaitBox()
     })
+
+    // Close wait box on click on X button:
+    $('#wait-box-close').click(() => { hideWaitBox() })
 
     // Show wait box:
     const showWaitBox = () => {
