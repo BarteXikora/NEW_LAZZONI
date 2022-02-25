@@ -2,6 +2,18 @@ jQuery('document').ready(($) => {
     // DEFAULT GROUP SLUG:
     const defaultGroup = 'wiertarki'
 
+    // HANDLE EXPANDING ANIMATION:
+    const showSubMenu = () => {
+        $('.groups-list .active .sub-groups-list').css('height', 'auto')
+        let currentHeight = $('.groups-list .active .sub-groups-list').innerHeight()
+        $('.groups-list .active .sub-groups-list').css('height', 0)
+
+        $('.groups-list .active .sub-groups-list').animate({
+            opacity: 1,
+            height: currentHeight
+        }, 300)
+    }
+
     // FILL SUBCATEGORIES LIST BASED ON LOADED CONTENT:
     const getCategoriesFromProducts = () => {
         $('.sub-groups-list').animate({
@@ -27,16 +39,14 @@ jQuery('document').ready(($) => {
         })
 
         setTimeout(() => {
-            $('.groups-list .active .sub-groups-list').css('height', 'auto')
-            let currentHeight = $('.groups-list .active .sub-groups-list').innerHeight()
-            $('.groups-list .active .sub-groups-list').css('height', 0)
-
-            $('.groups-list .active .sub-groups-list').animate({
-                opacity: 1,
-                height: currentHeight
-            }, 300)
+            showSubMenu()
         }, 350)
     }
+
+    $(window).resize(function () {
+        clearTimeout(this.id)
+        this.id = setTimeout(showSubMenu(), 100)
+    })
 
     // HIGHLIGHT SUBCATEGORY ON SCROLL:
     const highlightSubCategory = () => {
