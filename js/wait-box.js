@@ -1,6 +1,6 @@
 jQuery(document).ready(($) => {
-    const delayInMinutes = 2
-    const delayAfterAction = .1 // 10 sec
+    const delayInMinutes = .5 // 30 sec
+    const delayAfterAction = .05 // 5 sec
     const showOnceEvery = 60 // 1 h
 
     let isDelayDone = false
