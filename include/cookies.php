@@ -15,7 +15,7 @@
                         przeglądarki internetowej. Dalsze korzystanie z naszego serwisu internetowego, 
                         bez zmiany ustawień przeglądarki internetowej oznacza, iż użytkownik 
                         akceptuje stosowanie plików cookies. Czytaj więcej: 
-                        <a href="#">Polityka prywatności</a>.
+                        <a href="http://localhost/new_lazzoni/polityka/">Polityka prywatności</a>.
                     </p>
                     <button class="btn button button-smaller" id="cookies-button">
                         Nie pokazuj ponownie
