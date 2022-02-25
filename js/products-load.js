@@ -14,6 +14,17 @@ jQuery('document').ready(($) => {
         }, 300)
     }
 
+    const makeSure = () => {
+        const $activeSubMenu = $('.groups-list .active .sub-groups-list')
+
+        $activeSubMenu.css('height', 'auto')
+        const realHeight = $activeSubMenu.height()
+
+        $activeSubMenu.animate({
+            height: realHeight
+        }, 300)
+    }
+
     // FILL SUBCATEGORIES LIST BASED ON LOADED CONTENT:
     const getCategoriesFromProducts = () => {
         $('.sub-groups-list').animate({
@@ -41,12 +52,18 @@ jQuery('document').ready(($) => {
         setTimeout(() => {
             showSubMenu()
         }, 350)
+
+        setTimeout(() => {
+            makeSure()
+        }, 1000)
     }
 
     $(window).resize(function () {
         clearTimeout(this.id)
         this.id = setTimeout(showSubMenu(), 100)
     })
+
+    $('.groups-container h2').on('DOMSubtreeModified', () => { setTimeout(() => { showSubMenu() }, 1000) })
 
     // HIGHLIGHT SUBCATEGORY ON SCROLL:
     const highlightSubCategory = () => {
