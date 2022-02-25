@@ -1,24 +1,35 @@
 jQuery(document).ready(($) => {
-    const delayInMinutes = .5
+    const delayInMinutes = 2
+    const delayAfterAction = .1 // 10 sec
+    const showOnceEvery = 60 // 1 h
 
-    let delay = delayInMinutes * 60000
     let isDelayDone = false
     let lastShown = -1
+    let sessionDelay = $.now()
 
     const $container = $('#wait-box-container')
 
-    // Check for everShown var in local storage:
-    if (localStorage.getItem('everShown') !== undefined)
+    // Check for lastShown var in local storage:
+    if (localStorage.getItem('lastShown') !== null)
         lastShown = localStorage.getItem('lastShown')
+
+    // Check for sessionDelay in local storage:
+    if (localStorage.getItem('sessionDelay') !== null) {
+        sessionDelay = localStorage.getItem('sessionDelay')
+    } else {
+        localStorage.setItem('sessionDelay', sessionDelay)
+    }
 
     // Allow wait box to open after delay:
     setTimeout(() => {
         isDelayDone = true
-    }, delay)
+    }, delayAfterAction * 60000)
 
     // Show wait box on mouse leave:
     $(document).mouseleave(() => {
-        if (isDelayDone && lastShown - $.now() < -86400000) showWaitBox()
+        if (isDelayDone && sessionDelay - $.now() < delayInMinutes * -60 * 1000
+            && lastShown - $.now() < showOnceEvery * -60 * 1000)
+            showWaitBox()
     })
 
     // Close wait box on click outsite:
@@ -33,6 +44,8 @@ jQuery(document).ready(($) => {
     const showWaitBox = () => {
         lastShown = $.now()
         localStorage.setItem('lastShown', $.now())
+
+        localStorage.removeItem('sessionDelay')
 
         $container.css('opacity', 0)
         $container.addClass('d-md-flex')
