@@ -45,14 +45,14 @@
 </head>
 <body>
 
-    <!-- __ SIZES -->
+    <!-- __ SIZES --
     <div class="_sizes">
         <span class="_size d-sm-none">XS</span>
         <span class="_size d-none d-sm-flex d-md-none">SM</span>
         <span class="_size d-none d-md-flex d-lg-none">MD</span>
         <span class="_size d-none d-lg-flex d-xl-none">LG</span>
         <span class="_size d-none d-xl-flex">XL</span>
-    </div> 
+    </div> -->
 
     <?php 
         get_template_part('include/loading-page', 'loading-page');

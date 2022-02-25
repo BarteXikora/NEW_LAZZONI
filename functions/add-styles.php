@@ -54,6 +54,13 @@ function lazzoni_enqueue_styles() {
         array('jquery')
     );
 
+    // Translated parent script:
+    wp_enqueue_script(
+        'translated-parent',
+        get_stylesheet_directory_uri() . '/js/translated-parent.js',
+        array('jquery')
+    );
+
     // Navbar background script:
     if (is_home()) {
         wp_enqueue_script(

@@ -118,7 +118,7 @@ jQuery('document').ready(($) => {
             if ($(element).hasClass('selected')) $(element).removeClass('selected')
         })
 
-        $(e.target).addClass('selected')
+        $(getTranslatedParent(e.target)).addClass('selected')
     })
 
     // SET APP COLUMNS WHEN APP IS TO HIGH:
@@ -220,8 +220,6 @@ jQuery('document').ready(($) => {
         const $phone = $('#app-phone')
         const $mail = $('#app-mail')
         const $message = $('#app-message')
-
-        console.log($('.input-wrong').length);
 
         if ($('.input-wrong').length == 0) {
             if ($phone.val().length == 0 && $mail.val().length == 0 && $message.val().length == 0)

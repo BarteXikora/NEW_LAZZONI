@@ -163,8 +163,8 @@ jQuery('document').ready(($) => {
 
     // HANDLE CLICK ON NAVIGATION:
     $('.group-button').click((e) => {
-        if (!$(e.target).parent().hasClass('active')) {
-            loadProducts($(e.target).data('category') || '')
+        if (!$(getTranslatedParent(e.target)).parent().hasClass('active')) {
+            loadProducts($(getTranslatedParent(e.target)).data('category') || '')
         }
     })
 
