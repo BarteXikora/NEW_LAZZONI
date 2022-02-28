@@ -14,7 +14,15 @@
 
             <?php
 
-                $query_array = array('post_type' => 'post', 'posts_per_page' => 3, 'orderby' => 'rand');
+                $query_array = array('post_type' => 'post', 'posts_per_page' => 3, 
+                    'orderby' => 'rand', 'tax_query' => array(array(
+                        'taxonomy' => 'product-group',
+                        'field' => 'slug',
+                        'terms' => array (
+                            'dostepne'
+                        )
+                    )
+                ));
                 query_posts($query_array);
 
                 $products_list = array();

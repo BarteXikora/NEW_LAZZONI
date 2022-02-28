@@ -51,6 +51,59 @@
                     <h2>Nasze produkty:</h2>
                     <div class="pl-md-2">
                         <?php
+
+                            $query_array = array('post_type' => 'post', 'posts_per_page' => 8, 
+                                'orderby' => 'rand', 'tax_query' => array(array(
+                                        'taxonomy' => 'product-group',
+                                        'field' => 'slug',
+                                        'terms' => array (
+                                            'dostepne'
+                                        )
+                                    )
+                                ));
+
+                            query_posts($query_array);
+
+                            $products_list = array();
+
+                            if (have_posts()) {
+                                while (have_posts()) {
+                                    the_post();
+
+                                    $current = array(
+                                        'link' => get_the_permalink(),
+                                        'title' => get_the_title(),
+                                    );
+
+                                    array_push($products_list, $current);
+                                }
+                            }
+                        ?>
+
+                        <ul>
+
+                        <?php
+
+                            foreach ($products_list as $current_product) {
+                                echo '<li><a href="'.$current_product['link'].'">';
+                                echo $current_product['title'].'</a></li>';
+                            }
+
+                        ?>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <?php
+
+                ?>
+
+                <?php /*
+                <div class="col-12 col-md-4 col-xl-2">
+                    <h2>Nasze produkty:</h2>
+                    <div class="pl-md-2">
+                        <?php
                             wp_nav_menu(array(
                                 'theme_location'  => 'footer_menu_2',
                                 'depth'           => 1,
@@ -62,6 +115,7 @@
                         ?>
                     </div>
                 </div>
+                */ ?>
 
                 <div class="col-12 col-md-4 col-xl-2 footer-contact pl-md-2">
                     <h2>Kontakt:</h2>
