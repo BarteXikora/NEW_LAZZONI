@@ -43,8 +43,17 @@ function load_products () {
         while (have_posts()) {
             the_post();
 
+            $current_image;
+
+            if ($group == 'dostepne') {
+                $current_image = kdmfi_get_featured_image_src( 'featured-image-2', 'full' );  
+
+                if ($current_image == '') $current_image = wp_get_attachment_url(get_post_thumbnail_id( $post->ID ));
+            } 
+            else $current_image = wp_get_attachment_url(get_post_thumbnail_id( $post->ID ));
+
             $current = array(
-                'image' => wp_get_attachment_url(get_post_thumbnail_id( $post->ID )),
+                'image' => $current_image,
                 'link' => get_the_permalink(),
                 'title' => get_the_title(),
                 'category' => get_the_category()[0]->slug

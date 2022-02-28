@@ -12,6 +12,9 @@ require_once('functions/wp-bootstrap-navwalker.php');
 // Add theme support:
 require_once('functions/add-theme-support.php');
 
+// Secondary post image:
+require_once('functions/multiple-featured-images.php');
+
 // Change posts to PRODUCTS:
 require_once('functions/posts-to-products.php');
 
