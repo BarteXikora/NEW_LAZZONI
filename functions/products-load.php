@@ -103,17 +103,30 @@ function load_products () {
             ?>
 
             <div class="col-12 p-0 title-box text-center text-md-left py-3 <?php if ($n > 0) echo 'mt-5' ?>" data-anchor="<?php echo $current_category; ?>">
-                <h2 class="products-category-title px-5 my-0">
-                    <?php echo $current_category; ?>:
-                </h2>
-
-                <?php if (strlen($current_description) > 0) { ?>
-
-                    <div class="px-5 mr-md-5 mb-0 pt-2">
-                        <?php echo $current_description; ?>
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <h2 class="products-category-title pr-5 pl-3 pl-md-5 my-0 py-2">
+                            <?php echo $current_category.':'; ?>
+                        </h2>
                     </div>
 
-                <?php } ?>
+                    <?php if (strlen($current_description) > 0) { ?>
+
+                        <div class="col-12 col-lg-4 text-center text-md-right">
+                            <button class="button-read-more read-more-product py-2 px-4 mr-5" type="button" data-toggle="collapse"
+                                data-target="#read-more-<?php echo $current_slug; ?>">
+                                rozwiń opis
+                            </button>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="collapse m-0 pr-5 pl-3 pl-md-5 mr-md-5 mb-0" id="read-more-<?php echo $current_slug; ?>">
+                                <?php echo $current_description; ?>
+                            </div>
+                        </div>
+
+                    <?php } ?>
+                </div>
             </div>
 
             <?php

@@ -928,6 +928,7 @@
   font-family: "Arial";
   text-transform: uppercase;
   font-weight: bold;
+  display: inline-block;
 }
 
 .products-category-p {
@@ -1506,6 +1507,10 @@ footer .footer-contact a:hover {
 
 .button-read-more:hover {
   background-color: #a0a0a0;
+}
+
+.read-more-product {
+  display: inline-block;
 }
 
 .button-image {
