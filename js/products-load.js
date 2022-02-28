@@ -177,7 +177,7 @@ jQuery('document').ready(($) => {
 
     // UPDATES URL:
     const updateURL = (group) => {
-        var newURL = window.location.origin + '/new_lazzoni/products/?p=' + group
+        var newURL = window.location.origin + '/products/?p=' + group
         window.history.pushState("data", "Title", newURL)
 
         $('head title', window.parent.document).html(

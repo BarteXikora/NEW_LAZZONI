@@ -21,7 +21,7 @@ echo get_post_meta($post->ID, 'title', true); ?>">
                 <a href="<?php
                     echo get_page_link(get_page_by_path('contact'));
                     echo '?about='.get_the_title();
-                ?>" class="button button-prim">Skontaktuj się w sprawie tego produktu</a>
+                ?>" class="button button-prim mb-3">Skontaktuj się w sprawie tego produktu</a>
 
                 <a href="<?php 
 

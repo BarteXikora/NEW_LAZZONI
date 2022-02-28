@@ -77,4 +77,11 @@
         min-width: 0;
         width: 100%;
     }
+
+    .film-box-container {
+        h3 {
+            font-size: $f-big;
+            font-weight: bold;
+        }
+    }
 }

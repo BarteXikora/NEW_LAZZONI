@@ -103,15 +103,34 @@ function enquiry_form() {
         $fv = $_REQUEST['fv'];
 
         switch ($country) {
-            case 'pl': $country = 'Polska';
-            case 'ua': $country = 'Ukraina';
-            case 'de': $country = 'Niemcy';
-            case 'cz': $country = 'Czechy';
-            case 'sk': $country = 'Słowacja';
-            case 'by': $country = 'Białoruś';
-            case 'lt': $country = 'Litwa';
-            case 'lv': $country = 'Łotwa';
-            case 'ee': $country = 'Estonia';
+            case 'pl': {
+                $country = 'Polska';
+                break;
+            } case 'ua': {
+                $country = 'Ukraina';
+                break;
+            } case 'de': {
+                $country = 'Niemcy';
+                break;
+            } case 'cz': {
+                $country = 'Czechy';
+                break;
+            } case 'sk': {
+                $country = 'Słowacja';
+                break;
+            } case 'by': {
+                $country = 'Białoruś';
+                break;
+            } case 'lt': {
+                $country = 'Litwa';
+                break;
+            } case 'lv': {
+                $country = 'Łotwa';
+                break;
+            } case 'ee': {
+                $country = 'Estonia';
+                break;
+            }
         }
 
         $subject = 'Prośba o kontakt z formularza serwisowego na stronie lazzonigroup.pl';
