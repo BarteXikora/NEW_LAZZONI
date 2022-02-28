@@ -902,6 +902,11 @@
 .sub-groups-list .group-button {
   font-size: 0.8rem;
   font-weight: 400;
+  color: #282828 !important;
+}
+
+li.active .group-button {
+  color: #ea9334;
 }
 
 .group-button {
@@ -1133,13 +1138,7 @@ body {
 }
 
 .accent {
-  color: #ea9334 !important;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
-}
-
-.accent:hover {
-  color: #f5ad5b !important;
+  text-decoration: underline !important;
 }
 
 h1,

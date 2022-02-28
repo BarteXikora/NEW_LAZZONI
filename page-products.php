@@ -27,7 +27,7 @@
 
                 <ul class="pr-3 groups-list" id="groups">
 
-                    <li>
+                    <li class="mb-4">
                         <a class="group-button accent py-1" data-category="dostepne">
                             Dostępne w magazynie
                         </a>

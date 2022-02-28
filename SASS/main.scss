@@ -34,12 +34,7 @@ body {
 }
 
 .accent {
-    color: $prim !important;
-    transition: all .1s ease-in-out;
-
-    &:hover {
-        color: $prim-l !important;
-    }
+    text-decoration: underline !important;
 }
 
 h1,
