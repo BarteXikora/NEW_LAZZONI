@@ -21,6 +21,9 @@ require_once('functions/posts-to-products.php');
 // Add custom taxonomy of "PRODUCT GROUP":
 require_once('functions/taxonomy-group.php');
 
+// Add custom taxonomy of "FILM CATEGOTY":
+require_once('functions/taxonomy-films.php');
+
 // Add NEWS post type (0):
 require_once('functions/post-type-news.php');
 

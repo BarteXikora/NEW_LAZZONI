@@ -23,7 +23,7 @@ function lazzoni_post_type_films() {
         ),
         'description'         => 'Filmy z youtube',
         'labels'              => $labels,
-        'taxonomies'          => array('category'),
+        'taxonomies'          => array(),
         'hierarchical'        => false,
         'public'              => true, 
         'show_ui'             => true,
