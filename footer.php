@@ -10,7 +10,7 @@
             <div class="row px-5 text-center text-md-left">
 
                 <div class="col-12 col-lg-9 offset-lg-0 pr-md-5 col-xl-4 pr-xl-0 mb-5">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.png" alt="LAZZONI GROUP" class="img-fluid mb-4 <?php if (is_home()) echo 'footer-logo' ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.png" alt="LAZZONI GROUP" class="img-fluid mb-4 footer-logo">
                     <p>
                         Polski producent wiertarek przelotowych, wiertarek wielowrzecionowych, wiertarek CNC,
                         oraz głowic wiertarskich. Automatyzujemy proces wiercenia, dostosowując nasze 
