@@ -13,5 +13,15 @@
             </div>
             <h3 id="lightbox-title" class="mt-4 px-4"></h3>
         </div>
+
+        <button class="lightbox-arrow-button arrow-left" id="prev-image-button">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-arrow-left.png"
+                alt="Poprzedni obrazek" class="img-fluid">
+        </button>
+
+        <button class="lightbox-arrow-button arrow-right" id="next-image-button">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-arrow-left.png" 
+                alt="Następny obrazek" class="img-fluid">
+        </button>
     </div>
 </div>

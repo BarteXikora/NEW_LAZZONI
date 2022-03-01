@@ -768,6 +768,7 @@
 }
 
 .film-box {
+  position: relative;
   display: inline-block;
   background-color: white;
   width: 1000px;
@@ -820,14 +821,33 @@
   text-transform: uppercase;
 }
 
+.lightbox-arrow-button {
+  position: absolute;
+  top: 50%;
+  height: 55px;
+  width: 55px;
+  background-color: #282828;
+  border: none;
+}
+
+.lightbox-arrow-button:hover {
+  background-color: #474747;
+}
+
+.lightbox-arrow-button.arrow-left {
+  left: 0;
+}
+
+.lightbox-arrow-button.arrow-right {
+  right: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
 @media (max-width: 768px) {
   .film-box {
     min-width: 0;
     width: 100%;
-  }
-  .film-box-container h3 {
-    font-size: 1.4rem;
-    font-weight: bold;
   }
 }
 
