@@ -50,7 +50,7 @@
                     'image' => $film['image'],
                     'link' => $film['link'],
                     'title' => $film['title'],
-                    'small' => true
+                    'small' => false
                 ]);
 
             }
