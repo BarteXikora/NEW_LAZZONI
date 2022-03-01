@@ -40,6 +40,11 @@ function enquiry_form() {
         'serwis@lazzonigroup.pl'
     ];
 
+    $user_subject = 'Potwierdzenie wysłania danych kontaktowych na stronie Lazzoni Group';
+
+    $user_message = 'Dzień dobry,<br />Informujemy, że podane w formularzu dane i treść ';
+    $user_message .= 'wiadomości zostały do nas wysłane. Wkrótce się z Tobą skontaktujemy!<br /><br />';
+
     // ===============================
 
     $from = $_REQUEST['from'];
@@ -74,6 +79,9 @@ function enquiry_form() {
 
         $answer = send_mail($mail_to, $headers, $subject, $message);
 
+        // Send mail to user:
+        if ($answer) send_mail(array($email), $headers, $user_subject, $user_message);
+
     } //If request from CONTACT FORM:
     else if ($from == 'contact-form') {
         $name = $_REQUEST['name'];
@@ -88,6 +96,9 @@ function enquiry_form() {
         $message .= '<strong>Treść wiadomości:</strong> '.$req_message;
 
         $answer = send_mail($send_to_contact, $headers, $subject, $message);
+
+        // Send mail to user:
+        if ($answer) send_mail(array($email), $headers, $user_subject, $user_message);
 
     } // If request from SERVICE FORM:
     else if ($from == 'service-form') {
@@ -158,6 +169,9 @@ function enquiry_form() {
         else $mail_to = $send_to_service_other;
 
         $answer = send_mail($mail_to, $headers, $subject, $message);
+
+        // Send mail to user:
+        if ($answer) send_mail(array($email), $headers, $user_subject, $user_message);
 
     }
 
