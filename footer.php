@@ -15,6 +15,9 @@
                         Polski producent wiertarek przelotowych, wiertarek wielowrzecionowych, wiertarek CNC,
                         oraz głowic wiertarskich. Automatyzujemy proces wiercenia, dostosowując nasze 
                         maszyny wedle potrzeb klienta.
+
+                        <?php //get_template_part('include/main-languages', 'main-languages', 
+                            //['content' => 'footer-text']); ?>
                     </p>
                     <div class="mt-3">
                         <a target="_blank" href="https://www.facebook.com/lazzonigroup/?__tn__=%2Cd%2CP-R&eid=ARDawjMEBlb__QZVORVHD6vSI0GUMumWYJ6-Oz50WXLpIOLCIpCMc1-Zs5-iVTpygEgMYnjdCaSR0Njh" class="icon-a">

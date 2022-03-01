@@ -64,6 +64,9 @@
                         <p>
                             W ofercie posiadamy wiertarki półautomatyczne z załadunkiem ręcznym, wiertarki przemysłowe z załadunkiem 
                             automatycznym, wiertarki przelotowe, wiertarki wielowrzecionowe oraz inne urządzenia.
+                        
+                            <?php //get_template_part('include/main-languages', 'main-languages', 
+                            //['content' => 'wiertarki']); ?>
                         </p>
                     </div>
                 </div>
@@ -78,6 +81,9 @@
                             <p>
                                 Specjalizujemy się również w automatyzacji procesu wiercenia. Nasze zautomatyzowane podajniki 
                                 idealnie współgrają z wiertarkami przelotowymi.
+
+                                <?php //get_template_part('include/main-languages', 'main-languages', 
+                                //['content' => 'automatyzacja']); ?>
                             </p>
                     </div>
                 </div>
@@ -93,6 +99,9 @@
                                 Projektujemy i wykonujemy głowice wiertarskie na zamówienie do wiertarek przemysłowych, wiertarek 
                                 przelotowych, wielowrzecionowych itp. Posiadamy wiele konfiguracji głowic wiertarskich z 
                                 możliwością adaptacji pod Państwa urządzenie. 
+
+                                <?php //get_template_part('include/main-languages', 'main-languages', 
+                                //['content' => 'glowice']); ?>
                             </p>
                     </div>
                 </div>
@@ -107,6 +116,9 @@
                             <p>
                                 W naszej hali wystawowo-prezentacyjnej posiadamy około 60 produktów lazzoni dostępnych od ręki. 
                                 Są to urządzenia takie jak: wiertarki przelotowe, wiertarki wielowrzecionowe, podajniki, roboty.
+                            
+                                <?php //get_template_part('include/main-languages', 'main-languages', 
+                                //['content' => 'dostepne']); ?>
                             </p>
                     </div>
                 </div>
@@ -126,8 +138,18 @@
     <div class="container-fluid px-md-5 py-5">
         <div class="row px-md-5 about-us-container text-center text-md-left">
             <div class="col-12">
-                <h1>Wiertarki przemysłowe, wielowrzencionowe, CNC</h1>
-                <h2>DLACZEGO MY?</h2>
+                <h1>
+                    Wiertarki przemysłowe, wielowrzencionowe, CNC
+
+                    <?php //get_template_part('include/main-languages', 'main-languages', 
+                            //['content' => 'about-title']); ?>
+                </h1>
+                <h2>
+                    DLACZEGO MY?
+
+                    <?php //get_template_part('include/main-languages', 'main-languages', 
+                            //['content' => 'about-subtitle1']); ?>
+                </h2>
             </div>
 
             <div class="col-12 col-lg-4">
@@ -139,6 +161,9 @@
                     agregaty kołkujące. Dzięki doświadczeniu, które zdobyliśmy możemy śmiało powiedzieć,
                     że tworzymy silną grupę wiertarek przemysłowych dla zakładów stolarskich oraz
                     przemysłu.
+
+                    <?php //get_template_part('include/main-languages', 'main-languages', 
+                            //['content' => 'about-p1']); ?>
                 </p>
             </div>
 
@@ -151,6 +176,9 @@
                     rynku jesteśmy w stanie sprostać nawet najbardziej wymagającym klientom. Nasza firma 
                     posiada szeroką gamę produktów. Zaczynając od wiertarek wielowrzecionowych, po 
                     wiertarki przelotowe, kończąc na Centrach wiertarskich sterowanych CNC.
+
+                    <?php //get_template_part('include/main-languages', 'main-languages', 
+                            //['content' => 'about-p2']); ?>
                 </p>
             </div>
 
@@ -161,12 +189,20 @@
                     jednostki wiercące, zamontowanie spersonalizowanej głowicy wiertarskiej, powrót
                     elementu do operatora, zwiększenie pola roboczego wiertarki przelotowej lub wiertarki
                     wielowrzecionowej” są to przykładowe konfiguracje, które jesteśmy w stanie wykonać.
+
+                    <?php //get_template_part('include/main-languages', 'main-languages', 
+                            //['content' => 'about-p3']); ?>
                 </p>
             </div>
 
             <div class="collapse row m-0" id="read-more">
                 <div class="col-12 col-lg-8 mt-5 pr-lg-5">
-                    <h2>WIERTARKI PRZEMYSŁOWE OD LAZZONI GROUP</h2>
+                    <h2>
+                        WIERTARKI PRZEMYSŁOWE OD LAZZONI GROUP
+
+                        <?php //get_template_part('include/main-languages', 'main-languages', 
+                            //['content' => 'about-subtitle2']); ?>
+                    </h2>
                     <p>
                         Zapewniamy projektowanie oraz realizację niezawodnych ciągów technologicznych dla wiertarek
                         przemysłowych pod względem wydajności, efektywności oraz jakości. Z naszymi maszynami można
@@ -178,6 +214,9 @@
                         przemysłowych). Oferujemy klientom również fachowe doradztwo z zakresu zakupu maszyn i
                         narzędzi,
                         profesjonalny serwis gwarancyjny oraz obsługę pogwarancyjną.
+
+                        <?php //get_template_part('include/main-languages', 'main-languages', 
+                            //['content' => 'abour-p4']); ?>
                     </p>
                 </div>
 
@@ -185,6 +224,9 @@
                     <h3 class="mb-3">
                         Poniżej przedstawiamy nasze wiertarki przemysłowe i ich rodzaje oraz rozwiązania w tematyce
                         wiercenia:
+
+                        <?php //get_template_part('include/main-languages', 'main-languages', 
+                            //['content' => 'about-subtitle3']); ?>
                     </h3>
 
                     <ul>
@@ -196,6 +238,9 @@
                         <li>Centra wiertarskie</li>
                         <li>Głowice wielowrzecionowe</li>
                         <li>Spersonalizowane głowice wiertarskie</li>
+
+                        <?php //get_template_part('include/main-languages', 'main-languages', 
+                            //['content' => 'about-list']); ?>
                     </ul>
                 </div>
             </div>
