@@ -30,7 +30,10 @@ jQuery(document).ready(($) => {
 
     // CLOSES COOKIES INFO ON BUTTON CLICK: 
     $('#cookies-button').click(() => {
-        $.cookie('cookies-info-shown', true)
+        let date = new Date()
+        date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+
+        $.cookie('cookies-info-shown', true, { expires: date })
         hideCookies()
     })
 })
