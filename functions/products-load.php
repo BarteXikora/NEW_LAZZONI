@@ -23,6 +23,27 @@ function load_products () {
         $_a = array('s' => $search);
 
         $query_array = array_merge($query_array, $_a);
+
+        // Only in any group:
+        $post_types = get_terms('product-group', array(
+            'hide_empty' => 0
+        ));
+
+        $all_groups = array();
+
+        foreach($post_types as $type) {
+            array_push($all_groups, $type->slug);
+        }
+
+        $_a = array('tax_query' => array(
+            array(
+                'taxonomy' => 'product-group',
+                'field' => 'slug',
+                'terms' => $all_groups
+            )
+        ));
+
+        $query_array = array_merge($query_array, $_a);
     } else {
         $_a = array('tax_query' => array(
             array(
@@ -80,7 +101,7 @@ function load_products () {
         ?>
 
         <div class="col-12">
-            <h2 class="products-category-title title text-center text-md-left">
+            <h2 class="products-category-title title text-center text-md-left d-block">
                 Wyniki wyszukiwania dla <i>&bdquo;<?php echo $search; ?>&rdquo;</i>:
             </h2>
         </div>
