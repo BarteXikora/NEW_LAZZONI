@@ -36,19 +36,19 @@
 
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-0.png" alt="" class="img-fluid p-5 p-lg-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-0.png" alt="Głowice wiertrskie - Lazzoni Group" class="img-fluid p-5 p-lg-2">
                 </div> 
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-1.png" alt="" class="img-fluid p-5 p-lg-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-1.png" alt="Głowica wiertarska - Lazzoni Group" class="img-fluid p-5 p-lg-2">
                 </div> 
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-2.png" alt="" class="img-fluid p-5 p-lg-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-2.png" alt="Głowice wiertarskie" class="img-fluid p-5 p-lg-2">
                 </div> 
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-3.png" alt="" class="img-fluid p-5 p-lg-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-3.png" alt="Głowica wiertarska" class="img-fluid p-5 p-lg-2">
                 </div> 
             </div>
         </div>
