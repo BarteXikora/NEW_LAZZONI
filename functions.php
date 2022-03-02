@@ -38,3 +38,6 @@ require_once('functions/products-load.php');
 
 // Handle forms - send mails:
 require_once('functions/forms-handler.php');
+
+// Remove canonical in products page:
+require_once('functions/remove-canonical.php');
