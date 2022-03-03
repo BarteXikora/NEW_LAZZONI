@@ -95,9 +95,14 @@
             <div class="col-12 col-md-4 col-xl-2 footer-contact pl-md-2">
                 <h2>Kontakt:</h2>
 
-                <p>32-432 Pcim 1563</p>
-                <p><a href="tel:+48 535 732 115">+48 535 732 115</a></p>
+                <p class="mb-0">Wiertarki przelotowe:</p>
                 <p><a href="mailto:biuro@lazzonigroup.pl">biuro@lazzonigroup.pl</a></p>
+
+                <p class="mt-3 mb-0">Głowice wielowrzecionowe:</p>
+                <p><a href="mailto:glowice@lazzonigroup.pl">glowice@lazzonigroup.pl</a></p>
+
+                <p class="mt-3 mb-0">Infolinia:</p>
+                <p><a href="tel:+48 535 732 115">+48 535 732 115</a></p>
             </div>
 
             <div class="col-12 mt-5 mb-3">
