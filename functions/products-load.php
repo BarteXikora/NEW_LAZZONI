@@ -101,7 +101,7 @@ function load_products () {
         ?>
 
         <div class="col-12">
-            <h2 class="products-category-title title text-center text-md-left d-block">
+            <h2 class="products-category-title title text-md-left d-block">
                 Wyniki wyszukiwania dla <i>&bdquo;<?php echo $search; ?>&rdquo;</i>:
             </h2>
         </div>
@@ -123,10 +123,10 @@ function load_products () {
             
             ?>
 
-            <div class="col-12 p-0 title-box text-center text-md-left py-3 <?php if ($n > 0) echo 'mt-5' ?>" data-anchor="<?php echo $current_category; ?>">
+            <div class="col-12 p-0 title-box text-left py-3 <?php if ($n > 0) echo 'mt-5' ?>" data-anchor="<?php echo $current_category; ?>">
                 <div class="row">
                     <div class="col-12 col-lg-8">
-                        <h2 class="products-category-title pr-5 pl-3 pl-md-5 my-0 py-2">
+                        <h2 class="products-category-title px-3 px-md-5 pl-3 pl-md-5 my-0 py-2">
                             <?php echo $current_category.':'; ?>
                         </h2>
                     </div>
