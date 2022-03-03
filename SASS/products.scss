@@ -124,6 +124,14 @@ li.active .group-button {
     }
 }
 
+#single-content {
+    overflow-x: hidden;
+}
+
+#single-content img {
+    max-width: 90vw;
+}
+
 @media (min-width: 992px) {
     .products-toggler {
         display: none;
