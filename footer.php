@@ -12,12 +12,8 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.png" alt="LAZZONI GROUP" class="img-fluid mb-4 footer-logo">
                 
                 <p>
-                    Polski producent wiertarek przelotowych, wiertarek wielowrzecionowych, wiertarek CNC,
-                    oraz głowic wiertarskich. Automatyzujemy proces wiercenia, dostosowując nasze 
-                    maszyny wedle potrzeb klienta.
-
-                    <?php //get_template_part('include/main-languages', 'main-languages', 
-                        //['content' => 'footer-text']); ?>
+                    <?php get_template_part('include/main-languages', 'main-languages', 
+                        ['content' => 'footer-text']); ?>
                 </p>
 
                 <div class="mt-3">

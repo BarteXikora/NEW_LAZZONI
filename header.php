@@ -31,6 +31,35 @@
         automation of the drilling process, drilling heads, drilling head, heads
         multi-spindle, multi-spindle head, heads on request, head on request,
         automation, robotics, element loader, element unloader,
+
+        p vŕtačka, priebežné vŕtačky, priemyselné vŕtačky, kolikovačka, kolikovačky, vŕtacie 
+        stroje CNC, vŕtačky CNC, vŕtačka CNC, výrobca vŕtačiek, producent vŕtačiek, vŕtačka na 
+        objednávku, vŕtačka do dreva, vŕtačky do dreva, automatizácia procesu vŕtania, vŕtacie hlavy, 
+        vŕtacie hlavice, vŕtacia hlavica, kolikovacie hlavy, kolikovacia hlava, kolikovacia hlavica, 
+        hlavy na objednávku, hlavice na objednávku, hlava na objednávku, hlavica na objednávku, hlavy 
+        do vŕtačky, hlavice do vŕtačky, hlava do vŕtačky, hlavica do vŕtačky, automatizácia, 
+        robotizácia, podávač elementu, podávač elementov, podávač dielca, podávač dielcov, odoberač 
+        elementu, odoberač elementov, odoberač dielca, odoberač dielcov, skladovač elementov, stohovač 
+        elementov, skladovač dielcov, stohovač dielcov, skladovanie elementov, skladovanie elementov, 
+        skladovanie dielcov, skladovanie dielcov, dopravník elementov, dopravník dielcov, 
+
+        průběžná vrtačka, průběžné vrtačky, průmyslové vrtačky, kolikovačka, kolikovačky, vrtací stroje 
+        CNC, vrtačky CNC, vrtačka CNC, výrobce vrtaček, producent vrtaček, vrtačka na objednávku, 
+        vrtačka do dřeva, vrtačky do dřeva, automatizace procesu vrtání, vrtací hlavy, vrtací hlavice, 
+        kolikovací hlavy, kolikovací hlava, kolikovací hlavice, hlavy na objednávku, hlavice na 
+        objednávku, hlava na objednávku, hlavy do vrtačky, hlavice do vrtačky, hlava do vrtačky, 
+        automatizace, robotizace, podávač elementu, podávač elementů, podávač dílce, podávač dílců, 
+        odkládač elementu, odkládač elementů, odkládač dílce, odkládač dílců, skladovač elementů, 
+        stohovač elementů, skladovač dílců, stohovač dílců, skladování elementů, skladování dílců, 
+        stohování elementů, stohování dílců, dopravník elementů, dopravník dílců,
+
+        Durchlaufbohrmaschine, Durchlaufbohrmaschinen, Industriebohrmaschinen, Dübelmaschinen, 
+        Dübelmaschinen, CNC-Bohrmaschinen, CNC-Bohrmaschine, Bohrmaschinenhersteller, Bohrmaschine 
+        auf Bestellung, Holzbohrmaschine, Bohrkopf Automatisierung, Bohrköpfe , Bohrkopf, Dübelköpfe, 
+        Dübelkopf, Köpfe auf Bestellung, Kopf auf Bestellung, Automatisierung, Robotik, 
+        Zuführungselement, Elementzuführung, Teilezuführung, Elementenabnahme, Elemententnahme, 
+        Teileabnahme, Teileentnahme, Elementstapler, Teilestapler, Elementlager, Teilelager, 
+        Elementförderer, Teileförderer,
     ">
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">

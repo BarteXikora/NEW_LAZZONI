@@ -3,8 +3,8 @@ jQuery(document).ready(($) => {
 
     // Handle switching language:
     const switchLanguage = (language) => {
-        if (language != 'Polish' && language != 'English' && language != 'Ukrainian')
-            language = 'English'
+        if (language != 'Polish' && language != 'Czech' && language != 'Slovak' && language != 'German')
+            language = 'Polish'
 
         $('.custom-translation').each((index, item) => {
             $(item).addClass('d-none')
@@ -20,9 +20,16 @@ jQuery(document).ready(($) => {
         currentLanguage = $.cookie('googtrans')
 
         switch (currentLanguage) {
-            case '/pl/uk': currentLanguage = 'Ukrainian'
+            case '/pl/sk': currentLanguage = 'Slovak'
                 break
-            default: currentLanguage = 'English'
+
+            case '/pl/cz': currentLanguage = 'Czech'
+                break
+
+            case '/pl/de': currentLanguage = 'German'
+                break
+
+            default: currentLanguage = 'Polish'
         }
 
         switchLanguage(currentLanguage)
