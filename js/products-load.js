@@ -4,6 +4,8 @@ jQuery('document').ready(($) => {
 
     // HANDLE EXPANDING ANIMATION:
     const showSubMenu = () => {
+        highlightSubCategory()
+
         $('.groups-list .active .sub-groups-list').css('height', 'auto')
         let currentHeight = $('.groups-list .active .sub-groups-list').innerHeight()
         $('.groups-list .active .sub-groups-list').css('height', 0)
@@ -113,6 +115,9 @@ jQuery('document').ready(($) => {
         if (!isLoading) {
             isLoading = true
 
+            // localStorage.setItem('selectedGroup', group)
+            $.cookie('selectedGroup', group)
+
             setLoadingCourtain(true)
 
             $('.groups-list').children().each((i, e) => {
@@ -188,5 +193,14 @@ jQuery('document').ready(($) => {
     getCategoriesFromProducts()
     highlightSubCategory()
 
-    loadProducts($('.single-container-products').data('page') || defaultGroup)
+    // Get last selected group from local storage:
+    const lastSelectedGroup = () => {
+        // if (localStorage.getItem('selectedGroup') !== null) return localStorage.getItem('selectedGroup')
+        // return defaultGroup
+
+        if ($.cookie('selectedGroup') !== undefined) return $.cookie('selectedGroup')
+        return defaultGroup
+    }
+
+    loadProducts($('.single-container-products').data('page') || lastSelectedGroup())
 })

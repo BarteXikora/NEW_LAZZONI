@@ -23,16 +23,7 @@ echo get_post_meta($post->ID, 'title', true); ?>">
                     echo '?about='.get_the_title();
                 ?>" class="button button-prim mb-3">Skontaktuj się w sprawie tego produktu</a>
 
-                <a href="<?php 
-
-                    $goBack = '';
-
-                    if (isset($_GET['g'])) $goBack = '?p='.$_GET['g'];
-
-                    echo get_page_link(get_page_by_path('products')); 
-                    echo $goBack;
-
-                ?>" class="button">Wróć na listę produktów</a>
+                <a href="<?php echo get_page_link(get_page_by_path('products')); ?>" class="button">Wróć na listę produktów</a>
             <?php } else { ?>
                 <a href="<?php echo home_url(); ?>" class="button button-prim">Wróć na stronę główną</a>
             <?php } ?>
