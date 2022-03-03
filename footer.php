@@ -1,11 +1,14 @@
 <?php
 
+    $show_footer = '';
+    if (is_404()) $show_footer = ' d-none';
+
     get_template_part('include/wait-box', 'wait-box');
     get_template_part('include/cookies', 'cookies');
 
 ?>
 
-<footer class="section-dark pt-5<?php if (is_404()) echo ' d-none'; ?>">
+<footer class="section-dark pt-5<?php echo $show_footer; ?>">
     <div class="container-fluid pt-4 px-md-5">
         <div class="row px-5 text-center text-md-left">
             <div class="col-12 col-lg-9 offset-lg-0 pr-md-5 col-xl-4 pr-xl-0 mb-5">
