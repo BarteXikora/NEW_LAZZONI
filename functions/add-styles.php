@@ -135,13 +135,11 @@ function lazzoni_enqueue_styles() {
     );
 
     // Box aspect ratio script:
-    if (is_home() || is_page('films') || is_page('news') || is_page('products') || is_page('catalog')) {
-        wp_enqueue_script(
-            'box-aspect-ratio',
-            get_stylesheet_directory_uri() . '/js/box-aspect-ratio.js',
-            array('jquery')
-        ); 
-    }
+    wp_enqueue_script(
+        'box-aspect-ratio',
+        get_stylesheet_directory_uri() . '/js/box-aspect-ratio.js',
+        array('jquery')
+    ); 
 
     // Contact page script:
     if (is_page('contact')) {
@@ -189,7 +187,7 @@ function lazzoni_enqueue_styles() {
     }
 
     // Lightbox script:
-    if (is_single()) {
+    if (is_single() || is_page('single-post')) {
         wp_enqueue_script(
             'lightbox',
             get_stylesheet_directory_uri() . '/js/lightbox.js',
