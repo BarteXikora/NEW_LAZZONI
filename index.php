@@ -168,15 +168,6 @@
                     </h3>
 
                     <ul>
-                        <!-- <li>Wiertarki przelotowe</li>
-                        <li>Wiertarki CNC</li>
-                        <li>Wiertarki do szuflad</li>
-                        <li>Wiertarki wielowrzecionowe</li>
-                        <li>wiertarki automatyczne</li>
-                        <li>Centra wiertarskie</li>
-                        <li>Głowice wielowrzecionowe</li>
-                        <li>Spersonalizowane głowice wiertarskie</li> -->
-
                         <?php get_template_part('include/main-languages', 'main-languages', 
                             ['content' => 'about-list']); ?>
                     </ul>

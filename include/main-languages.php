@@ -265,6 +265,24 @@
         Garantieservice und Nachgarantiebetreuung.
     </span>
 
+    <div class="row pt-3">
+        <div class="col-12 col-md-6 col-lg-3 p-5 p-md-2">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/main-images/0.jpg" alt="Centrum wiertarskie MASTER - Lazzoni Group">
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 p-5 p-md-2">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/main-images/1.jpg" alt="Głowice wielowrzecionowe - Lazzoni Group">
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 p-5 p-md-2">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/main-images/2.jpg" alt="Robotyzacja i Automatyzacja wiercenia - Lazzoni Group">
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 p-5 p-md-2">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/main-images/3.jpg" alt="Wiertarka przelotowa CNC - Lazzoni Group">
+        </div>
+    </div>
+
 <?php } else if ($args['content'] == 'about-subtitle3') { ?>
 
     <span class="custom-translation" data-language-content="Polish">
