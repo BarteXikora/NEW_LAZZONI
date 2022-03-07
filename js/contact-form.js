@@ -6,7 +6,7 @@ jQuery(document).ready(($) => {
         validate($('#c-name'))
         validate($('#c-email'), 5, 50, mailValid)
         validate($('#c-phone'), 5, 50, phoneValid)
-        validate($('#c-about'), 5, 50)
+        validate($('#c-about'), 5, 100)
         validate($('#c-message'), 15, 255)
 
         if ($('.input-wrong').length == 0) {
