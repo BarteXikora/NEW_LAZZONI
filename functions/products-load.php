@@ -133,7 +133,7 @@ function load_products () {
 
                     <?php if (strlen($current_description) > 0) { ?>
 
-                        <div class="col-12 col-lg-4 text-center text-md-right">
+                        <div class="col-12 col-lg-4 text-left text-md-right">
                             <button class="button-read-more read-more-product py-2 px-4 mr-5" type="button" data-toggle="collapse"
                                 data-target="#read-more-<?php echo $current_slug; ?>">
                                 rozwiń opis
