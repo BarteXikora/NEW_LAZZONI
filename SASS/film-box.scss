@@ -99,5 +99,9 @@
     .film-box {
         min-width: 0;
         width: 100%;
+
+        h3 {
+            font-size: $f-big;
+        }
     }
 }

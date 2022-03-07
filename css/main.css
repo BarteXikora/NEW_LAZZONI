@@ -849,6 +849,9 @@
     min-width: 0;
     width: 100%;
   }
+  .film-box h3 {
+    font-size: 1.4rem;
+  }
 }
 
 .single-container-products {
