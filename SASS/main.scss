@@ -147,6 +147,12 @@ textarea,
     min-height: 250px;
 }
 
+.card-see-more {
+    color: $prim;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .about-us-container {
     p {
         margin-bottom: 25px;
@@ -497,6 +503,12 @@ table {
     .fixed-button {
         width: 55px;
         height: 55px;
+    }
+
+    .card-container {
+        &:hover {
+            transform: none;
+        }
     }
 
     .box h3 {

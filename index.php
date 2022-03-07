@@ -58,6 +58,10 @@
                             <?php get_template_part('include/main-languages', 'main-languages', 
                                 ['content' => 'wiertarki']); ?>
                         </p>
+
+                        <span class="card-see-more d-lg-none mt-3">
+                            Zobacz produkty
+                        </span>
                     </div>
                 </div>
             </a>
@@ -68,10 +72,14 @@
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-1.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Automatyzacja</h3>
-                            <p>
-                                <?php get_template_part('include/main-languages', 'main-languages', 
-                                    ['content' => 'automatyzacja']); ?>
-                            </p>
+                        <p>
+                            <?php get_template_part('include/main-languages', 'main-languages', 
+                                ['content' => 'automatyzacja']); ?>
+                        </p>
+
+                        <span class="card-see-more d-lg-none mt-3">
+                            Zobacz produkty
+                        </span>
                     </div>
                 </div>
             </a>
@@ -82,10 +90,14 @@
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-2.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Głowice wiertarskie</h3>
-                            <p>
-                                <?php get_template_part('include/main-languages', 'main-languages', 
-                                    ['content' => 'glowice']); ?>
-                            </p>
+                        <p>
+                            <?php get_template_part('include/main-languages', 'main-languages', 
+                                ['content' => 'glowice']); ?>
+                        </p>
+
+                        <span class="card-see-more d-lg-none mt-3">
+                            Zobacz produkty
+                        </span>
                     </div>
                 </div>
             </a>
@@ -96,10 +108,14 @@
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-3.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Dostępne w magazynie</h3>
-                            <p>
-                                <?php get_template_part('include/main-languages', 'main-languages', 
-                                    ['content' => 'dostepne']); ?>
-                            </p>
+                        <p>
+                            <?php get_template_part('include/main-languages', 'main-languages', 
+                                ['content' => 'dostepne']); ?>
+                        </p>
+
+                        <span class="card-see-more d-lg-none mt-3">
+                            Zobacz produkty
+                        </span>
                     </div>
                 </div>
             </a>

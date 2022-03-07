@@ -1315,6 +1315,12 @@ textarea:focus,
   min-height: 250px;
 }
 
+.card-see-more {
+  color: #ea9334;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .about-us-container p {
   margin-bottom: 25px;
 }
@@ -1666,6 +1672,10 @@ table td {
   .fixed-button {
     width: 55px;
     height: 55px;
+  }
+  .card-container:hover {
+    -webkit-transform: none;
+            transform: none;
   }
   .box h3 {
     font-size: 1rem;
