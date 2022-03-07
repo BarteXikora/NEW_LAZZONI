@@ -28,7 +28,6 @@ jQuery(document).ready(($) => {
     const openLightBox = (src, title, lbi) => {
         $('#lightbox-content').attr('src', src)
         $('#lightbox-content').attr('alt', title)
-        $('#lightbox-title').text(title)
 
         currentImage = lbi
 
@@ -43,7 +42,6 @@ jQuery(document).ready(($) => {
     const switchImage = (src, title) => {
         $('#lightbox-content').attr('src', src)
         $('#lightbox-content').attr('alt', title)
-        $('#lightbox-title').text(title)
     }
 
     const closeLightBox = () => {
