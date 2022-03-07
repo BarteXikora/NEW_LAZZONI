@@ -1221,6 +1221,10 @@ h3 {
   margin-bottom: 15px;
 }
 
+.wrong {
+  color: #ff1e00;
+}
+
 a {
   color: #ea9334;
 }

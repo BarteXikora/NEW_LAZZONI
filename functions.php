@@ -33,6 +33,9 @@ require_once('functions/post-type-films.php');
 // Add CATALOGS post type (2):
 require_once('functions/post-type-catalogs.php');
 
+// Add CAREER post type (3):
+require_once('functions/post-type-career.php');
+
 // Handle products load:
 require_once('functions/products-load.php');
 
