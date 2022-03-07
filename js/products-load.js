@@ -40,7 +40,7 @@ jQuery('document').ready(($) => {
             $('#products-content').children().each(function () {
                 if ($(this).data('anchor')) {
 
-                    let anchorID = $(this).data('anchor').replace(/\s+/g, '-').toLowerCase()
+                    let anchorID = $(this).data('anchor').replace(/\s+/g, '-').replace('/', '-').toLowerCase()
 
                     $(this).attr('id', anchorID)
 
@@ -115,7 +115,6 @@ jQuery('document').ready(($) => {
         if (!isLoading) {
             isLoading = true
 
-            // localStorage.setItem('selectedGroup', group)
             $.cookie('selectedGroup', group)
 
             setLoadingCourtain(true)
@@ -195,9 +194,6 @@ jQuery('document').ready(($) => {
 
     // Get last selected group from local storage:
     const lastSelectedGroup = () => {
-        // if (localStorage.getItem('selectedGroup') !== null) return localStorage.getItem('selectedGroup')
-        // return defaultGroup
-
         if ($.cookie('selectedGroup') !== undefined) return $.cookie('selectedGroup')
         return defaultGroup
     }
