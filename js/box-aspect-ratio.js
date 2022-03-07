@@ -6,5 +6,11 @@ jQuery(document).ready(($) => {
 
     $('#products-content').on('DOMSubtreeModified', () => { resizeBox() })
 
+    $('.button-read-more').click(() => {
+        setTimeout(() => {
+            resizeBox()
+        }, 1)
+    })
+
     resizeBox()
 })
