@@ -12,6 +12,12 @@ echo get_post_meta($post->ID, 'title', true); ?>">
             </div>
 
             <div class="text-center mb-5">
+                <a href="<?php
+                    echo get_page_link(get_page_by_path('contact'));
+                    echo '?about='.get_the_title();
+                ?>" class="button button-prim mb-3" target="_blank">
+                    Skontaktuj się w sprawie tego produktu
+                </a>
                 <a href="<?php echo get_page_link(get_page_by_path('products')); ?>" class="button">
                     Wróć na listę produktów
                 </a>
@@ -25,7 +31,7 @@ echo get_post_meta($post->ID, 'title', true); ?>">
                 <a href="<?php
                     echo get_page_link(get_page_by_path('contact'));
                     echo '?about='.get_the_title();
-                ?>" target="_blank" class="button">
+                ?>" target="_blank" class="button button-prim">
                     <div class="row font-weight-bold text-left d-flex align-items-center">
                         <div class="col-4">
                             <img src="<?php echo get_template_directory_uri(); ?>/img/contact.png" 
