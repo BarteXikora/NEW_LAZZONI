@@ -7,7 +7,7 @@ echo get_post_meta($post->ID, 'title', true); ?>">
         <div class="col-12 col-lg-9 pr-lg-5" id="single-content">
             <h1 class="title"><?php the_title(); ?></h1>
 
-            <div class="px-4">
+            <div class="px-1 px-md-4">
                 <?php the_content(); ?>
             </div>
 
@@ -47,7 +47,14 @@ echo get_post_meta($post->ID, 'title', true); ?>">
             <div class="single-container-products px-1">
                 <?php
 
-                    $query_array = array('post_type' => 'post', 'posts_per_page' => 3, 'orderby' => 'rand');
+                    $query_array = array('post_type' => 'post', 'posts_per_page' => 3, 
+                    'orderby' => 'rand', 'tax_query' => array(array(
+                        'taxonomy' => 'product-group',
+                        'field' => 'slug',
+                        'terms' => array (
+                            'dostepne'
+                        ))
+                    ));
                     query_posts($query_array);
 
                     $products_list = array();

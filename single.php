@@ -4,7 +4,7 @@
 <main class="container single-container my-5" id="single-content" data-custom-title="<?php 
 echo get_post_meta($post->ID, 'title', true); ?>">
     <div class="row my-5 pt-2">
-        <div class="col-12 pt-5 text-center text-md-left">
+        <div class="col-12 text-center text-md-left">
             <h1 class="title"><?php the_title(); ?></h1>
         </div>
 
