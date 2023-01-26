@@ -3,39 +3,44 @@
 .arrow-down-container {
     position: absolute;
     bottom: 0;
-    left: calc(50vw - 50px);
-    width: 100px;
-    height: 80px;
-    text-align: center;
-    transition: all .4s ease-in-out;
+    left: 0;
+    width: 100%;
+    height: 100px;
+
+    &:hover {
+        .arrow-down {
+            background-color: $prim;
+
+            &::before {
+                border-color: $prim;
+            }
+        }
+    }
 }
 
 .arrow-down {
+    display: inline-block;
+    position: relative;
+    // left: 100px;
     animation-name: arrow;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
-
-    &::before,
-    &::after {
-        position: relative;
-        top: 20px;
-        height: 50px;
-        border: 4px $black solid;
-        background-color: $black;
-        width: 0;
-        border-radius: 5px;
-        content: '';
-        display: inline-block;
-    }
+    width: 4px;
+    height: 50px;
+    background-color: $white;
+    transition: all .1s ease-in-out;
 
     &::before {
-        transform: rotate(-55deg);
-        margin-right: 14px;
-    }
-
-    &::after {
-        transform: rotate(55deg);
-        margin-left: 14px;
+        transition: all .1s ease-in-out;
+        position: absolute;
+        content: '';
+        width: 35px;
+        height: 35px;
+        border-bottom: 4px solid $white;
+        border-right: 4px solid $white;
+        transform: rotateZ(45deg);
+        bottom: 2px;
+        left: -15.5px;
     }
 }
 
@@ -45,7 +50,7 @@
     }
     
     60% {
-        transform: translateY(-20px);
+        transform: translateY(20px);
     }
     
     100% {
@@ -54,20 +59,5 @@
 }
 
 @media (max-width: 767.98px) {
-    .arrow-down {
-        &::before,
-        &::after {
-            height: 35px;
-        }
 
-        &::before {
-            transform: rotate(-45deg);
-            margin-right: 6px;
-        }
-    
-        &::after {
-            transform: rotate(45deg);
-            margin-left: 6px;
-        }
-    }
 }

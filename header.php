@@ -16,6 +16,52 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <meta name="keywords" content="
+        wiertarka przelotowa, wiertarki przelotowe, wiertarka przemysłowa, wiertarki przemysłowe,
+        wiertarka wielowrzecionowa, wiertarki wielowrzecionowe, wiertarki CNC, wiertarka CNC,
+        producent wiertarek, wiertarka na zamówienie, wiertarka do drewna, wiertarki do drewna, 
+        automatyzacja procesu wiercenia, głowice wiertarskie, głowica wiertarska, głowice 
+        wielowrzecionowe, głowica wielowrzecionowa, głowice na zamówienie, głowica na zamówienie, 
+        głowice do wiertarki, głowica do wiertarki, automatyzacja, robotyzacja, podajnik elementu,
+        odbiornik elementu,
+
+        through-feed drill, through-feed drills, industrial drill, industrial drills,
+        multi-spindle drilling machine, multi-spindle drills, CNC drills, CNC drilling machine,
+        manufacturer of drills, custom drill, wood drill, wood drills,
+        automation of the drilling process, drilling heads, drilling head, heads
+        multi-spindle, multi-spindle head, heads on request, head on request,
+        automation, robotics, element loader, element unloader,
+
+        p vŕtačka, priebežné vŕtačky, priemyselné vŕtačky, kolikovačka, kolikovačky, vŕtacie 
+        stroje CNC, vŕtačky CNC, vŕtačka CNC, výrobca vŕtačiek, producent vŕtačiek, vŕtačka na 
+        objednávku, vŕtačka do dreva, vŕtačky do dreva, automatizácia procesu vŕtania, vŕtacie hlavy, 
+        vŕtacie hlavice, vŕtacia hlavica, kolikovacie hlavy, kolikovacia hlava, kolikovacia hlavica, 
+        hlavy na objednávku, hlavice na objednávku, hlava na objednávku, hlavica na objednávku, hlavy 
+        do vŕtačky, hlavice do vŕtačky, hlava do vŕtačky, hlavica do vŕtačky, automatizácia, 
+        robotizácia, podávač elementu, podávač elementov, podávač dielca, podávač dielcov, odoberač 
+        elementu, odoberač elementov, odoberač dielca, odoberač dielcov, skladovač elementov, stohovač 
+        elementov, skladovač dielcov, stohovač dielcov, skladovanie elementov, skladovanie elementov, 
+        skladovanie dielcov, skladovanie dielcov, dopravník elementov, dopravník dielcov, 
+
+        průběžná vrtačka, průběžné vrtačky, průmyslové vrtačky, kolikovačka, kolikovačky, vrtací stroje 
+        CNC, vrtačky CNC, vrtačka CNC, výrobce vrtaček, producent vrtaček, vrtačka na objednávku, 
+        vrtačka do dřeva, vrtačky do dřeva, automatizace procesu vrtání, vrtací hlavy, vrtací hlavice, 
+        kolikovací hlavy, kolikovací hlava, kolikovací hlavice, hlavy na objednávku, hlavice na 
+        objednávku, hlava na objednávku, hlavy do vrtačky, hlavice do vrtačky, hlava do vrtačky, 
+        automatizace, robotizace, podávač elementu, podávač elementů, podávač dílce, podávač dílců, 
+        odkládač elementu, odkládač elementů, odkládač dílce, odkládač dílců, skladovač elementů, 
+        stohovač elementů, skladovač dílců, stohovač dílců, skladování elementů, skladování dílců, 
+        stohování elementů, stohování dílců, dopravník elementů, dopravník dílců,
+
+        Durchlaufbohrmaschine, Durchlaufbohrmaschinen, Industriebohrmaschinen, Dübelmaschinen, 
+        Dübelmaschinen, CNC-Bohrmaschinen, CNC-Bohrmaschine, Bohrmaschinenhersteller, Bohrmaschine 
+        auf Bestellung, Holzbohrmaschine, Bohrkopf Automatisierung, Bohrköpfe , Bohrkopf, Dübelköpfe, 
+        Dübelkopf, Köpfe auf Bestellung, Kopf auf Bestellung, Automatisierung, Robotik, 
+        Zuführungselement, Elementzuführung, Teilezuführung, Elementenabnahme, Elemententnahme, 
+        Teileabnahme, Teileentnahme, Elementstapler, Teilestapler, Elementlager, Teilelager, 
+        Elementförderer, Teileförderer,
+    ">
+    
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
     <title>
@@ -27,9 +73,20 @@
     <?php wp_head(); ?>
 </head>
 <body>
+
+    <!-- __ SIZES --
+    <div class="_sizes">
+        <span class="_size d-sm-none">XS</span>
+        <span class="_size d-none d-sm-flex d-md-none">SM</span>
+        <span class="_size d-none d-md-flex d-lg-none">MD</span>
+        <span class="_size d-none d-lg-flex d-xl-none">LG</span>
+        <span class="_size d-none d-xl-flex">XL</span>
+    </div> -->
+
     <?php 
         get_template_part('include/loading-page', 'loading-page');
         get_template_part('include/fixed-buttons', 'fixed-buttons');
+        //get_template_part('include/wait-box', 'wait-box');
         if (is_home()) get_template_part('include/contact-app', 'contact-app');
         if (is_home() || is_page('films')) get_template_part('include/film-box', 'film-box');
         if (is_single()) get_template_part('include/lightbox', 'lightbox');
@@ -37,11 +94,11 @@
     
     <!-- NAVBAR -->
     <nav class="navbar fixed-top navbar-expand-xl py-0<?php if (is_404()) echo ' d-none'; ?>">
-        <div class="container">
+        <div class="container-fluid px-md-5">
 
             <!-- NAVBAR LOGO -->
-            <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="LAZZONI GROUP" class="d-none d-md-flex img-fluid my-2">
+            <a class="navbar-brand" href="<?php if (is_home()) echo '#t'; else echo home_url(); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.png" alt="LAZZONI GROUP" class="d-none d-md-flex img-fluid my-2">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo-mobile-navbar.png" alt="LAZZONI GROUP" class="d-flex d-md-none img-fluid my-2">
             </a>
 

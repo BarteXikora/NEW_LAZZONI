@@ -1,6 +1,6 @@
 <?php if ($args['group'] == 'glowice-wiertarskie') { ?> 
 
-    <div class="col-12 mb-5 text-center text-md-left">
+    <div class="col-12 mb-5 mt-3 text-center text-md-left">
         <h1 class="h4 font-title mb-3">
             <a href="tel:+48504262401">
                 GŁOWICE WIERTARSKIE &mdash; ZAMÓW TERAZ +48 504 262 401
@@ -36,19 +36,19 @@
 
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-0.png" alt="" class="img-fluid p-5 p-lg-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-0.png" alt="Głowice wiertrskie - Lazzoni Group" class="img-fluid p-5 p-lg-2">
                 </div> 
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-1.png" alt="" class="img-fluid p-5 p-lg-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-1.png" alt="Głowica wiertarska - Lazzoni Group" class="img-fluid p-5 p-lg-2">
                 </div> 
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-2.png" alt="" class="img-fluid p-5 p-lg-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-2.png" alt="Głowice wiertarskie" class="img-fluid p-5 p-lg-2">
                 </div> 
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-3.png" alt="" class="img-fluid p-5 p-lg-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/glowice-wiertarskie/gw-3.png" alt="Głowica wiertarska" class="img-fluid p-5 p-lg-2">
                 </div> 
             </div>
         </div>
@@ -63,7 +63,7 @@
 
 <?php } else if ($args['group'] == 'wiertarki') { ?>
 
-    <div class="col-12 mb-5 text-center text-md-left">
+    <div class="col-12 mb-5 mt-3 text-center text-md-left">
         <h1 class="h4 font-title mb-3">
             WIERTARKA WIELOWRZECIONOWA, PRZELOTOWA
         </h1>
@@ -144,7 +144,7 @@
 
 <?php } else if ($args['group'] == 'automatyzacja') { ?>
 
-    <div class="col-12 mb-5 text-center text-md-left">
+    <div class="col-12 mb-5 mt-3 text-center text-md-left">
         <h1 class="h4 font-title mb-3">
             AUTOMATYZACJA PROCESU WIERCENIA
         </h1>
@@ -177,7 +177,7 @@
 
 <?php } else if ($args['group'] == 'dostepne') { ?>
 
-    <div class="col-12 mb-5 text-center text-md-left">
+    <div class="col-12 mb-5 mt-3 text-center text-md-left">
         <h1 class="h4 font-title mb-3">
             WIERTARKI WIELOWRZECIONOWE DOSTĘPNE OD RĘKI
         </h1>

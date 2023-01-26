@@ -182,3 +182,27 @@
     font-weight: bold;
     padding: 0 5px;
 }
+
+.hint-box {
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+    width: 100%;
+    background-color: $black;
+    color: $white;
+    font-size: $f-small;
+    text-transform: none;
+    padding: 10px;
+    color: $wrong;
+    
+    &::before {
+        position: absolute;
+        content: '';
+        bottom: -5px;
+        left: calc(50% - 7px);
+        width: 10px;
+        height: 10px;
+        background-color: $black;
+        transform: rotateZ(45deg);
+    }
+}

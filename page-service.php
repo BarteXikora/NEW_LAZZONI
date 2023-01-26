@@ -101,7 +101,9 @@
 
         <div class="col-12 text-center mt-5">
             <button type="submit" id="s-submit" class="button button-prim button-disabled">
-                Wyślij!
+                Wyślij formularz serwisowy!
+
+                <div class="hint-box d-none"></div>
             </button>
         </div>
     </form>

@@ -7,11 +7,20 @@
                 </button>
             </div>
         </div>
-        <div class="px-5 px-md-3 pt-2 pb-2 text-center">
+        <div class="px-5 px-md-3 pt-2 pb-5 text-center">
             <div>
-                <img src="" alt="" class="img-fluid" id="lightbox-content" style="max-height: 80vh">
+                <img src="" alt="" class="lightbox-image img-fluid" id="lightbox-content">
             </div>
-            <h3 id="lightbox-title" class="mt-4 px-4"></h3>
         </div>
+
+        <button class="lightbox-arrow-button arrow-left" id="prev-image-button">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-arrow-left.png"
+                alt="Poprzedni obrazek" class="img-fluid">
+        </button>
+
+        <button class="lightbox-arrow-button arrow-right" id="next-image-button">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-arrow-left.png" 
+                alt="Następny obrazek" class="img-fluid">
+        </button>
     </div>
 </div>

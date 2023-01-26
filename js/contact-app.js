@@ -118,7 +118,7 @@ jQuery('document').ready(($) => {
             if ($(element).hasClass('selected')) $(element).removeClass('selected')
         })
 
-        $(e.target).addClass('selected')
+        $(getTranslatedParent(e.target)).addClass('selected')
     })
 
     // SET APP COLUMNS WHEN APP IS TO HIGH:
@@ -206,6 +206,7 @@ jQuery('document').ready(($) => {
         }
     })
 
+    // SHOWS AN ERROR IF THERE IS ONE:
     const showError = () => {
         $('.error-box').html('Nie udało się wysłać wiadomości. <br> Proszę spróbować później!')
         $('.error-box').removeClass('d-none')
@@ -213,4 +214,46 @@ jQuery('document').ready(($) => {
         $submit.removeClass('button-disabled')
         $submit.html('Wyślij wiadomość!')
     }
+
+    // CREATE HINT CONTENT:
+    const checkForHint = () => {
+        const $phone = $('#app-phone')
+        const $mail = $('#app-mail')
+        const $message = $('#app-message')
+
+        if ($('.input-wrong').length == 0) {
+            if ($phone.val().length == 0 && $mail.val().length == 0 && $message.val().length == 0)
+                return 'Proszę wpisać numer telefonu i/lub adres e&mdash;mail, oraz uzupełnić wiadomość.'
+            else if ($message.val().length == 0)
+                return 'Proszę uzupełnić treść wiadomości.'
+            else return 'Proszę podać numer telefonu i/lub adres e&mdash;mail.'
+        } else if ($phone.hasClass('input-wrong'))
+            return 'Podano nieprawidłowy numer telefonu.'
+        else if ($mail.hasClass('input-wrong'))
+            return 'Podano nieprawidłowy adres e&mdash;mail. Adres musi zawierać symbol @, oraz ' +
+                'nazwę poczty wraz z domeną.'
+        else if ($message.hasClass('input-wrong')) {
+            if ($message.val().length < 10) return 'Treść wiadomości powinna mieć długość minimum 10 znaków.'
+            else return 'Wiadomość nie może być dłuższa, niż 254 znaki.'
+        } else return 'Proszę sprawdzić dane wpisane w formularzu.'
+    }
+
+    // HANDLE SHOWING HINT:
+    let hintCounter
+    $submit.click((e) => {
+        if ($submit.hasClass('button-disabled')) {
+            showHint($('.hint-box'), checkForHint())
+        }
+    })
+    $submit.mouseenter(() => {
+        if ($submit.hasClass('button-disabled')) {
+            hintCounter = setTimeout(() => {
+                showHint($('.hint-box'), checkForHint())
+            }, 800)
+        }
+    })
+    $submit.mouseleave(() => {
+        clearTimeout(hintCounter)
+        hideHint($('.hint-box'))
+    })
 })

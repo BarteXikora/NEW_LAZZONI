@@ -7,45 +7,43 @@ function enquiry_form() {
 
     // From 'contact' page:
     $send_to_contact = [
-        // 'biuro@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'biuro@lazzonigroup.pl'
     ];
 
     // From 'service' page - pl:
     $send_to_service_pl = [
-        // 'serwis@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'serwis@lazzonigroup.pl'
     ];
 
     // From 'service' page - other lang:
     $send_to_service_other = [
-        // 'service@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'service@lazzonigroup.pl'
     ];
 
     // From 'contact app' - wiertarki:
     $send_to_phone_wiertarki = [
-        // 'm.zadlo@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'm.zadlo@lazzonigroup.pl'
     ];
 
     // From 'contact app' - glowice:
     $send_to_phone_glowice = [
-        // 'w.ciesielski@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'k.wyszowska@lazzonigroup.pl'
     ];
 
     // From 'contact app' - czesci:
     $send_to_phone_czesci = [
-        // 'czesci@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'czesci@lazzonigroup.pl'
     ];
 
     // From 'contact app' - serwis:
     $send_to_phone_serwis = [
-        // 'serwis@lazzonigroup.pl'
-        'sbartek50@gmail.com'
+        'serwis@lazzonigroup.pl'
     ];
+
+    $user_subject = 'Potwierdzenie wysłania danych kontaktowych na stronie Lazzoni Group';
+
+    $user_message = 'Dzień dobry,<br />Informujemy, że podane w formularzu dane i treść ';
+    $user_message .= 'wiadomości zostały do nas wysłane. Wkrótce się z Tobą skontaktujemy!<br /><br />';
 
     // ===============================
 
@@ -81,18 +79,26 @@ function enquiry_form() {
 
         $answer = send_mail($mail_to, $headers, $subject, $message);
 
+        // Send mail to user:
+        if ($answer) send_mail(array($email), $headers, $user_subject, $user_message);
+
     } //If request from CONTACT FORM:
     else if ($from == 'contact-form') {
         $name = $_REQUEST['name'];
+        $about = $_REQUEST['about'];
 
         $subject = 'Prośba o kontakt z formularza kontaktowego na stronie lazzonigroup.pl';
 
         $message .= '<strong>Podany numer kontaktowy:</strong> '.$phone.'<br />';
         $message .= '<strong>Podany adres e-mail:</strong> '.$email.'<br />';
         $message .= '<strong>Podane imię i nazwisko:</strong> '.$name.'<br />';
+        $message .= '<strong>Produkt / powód kontaktu:</strong> '.$about.'<br />';
         $message .= '<strong>Treść wiadomości:</strong> '.$req_message;
 
         $answer = send_mail($send_to_contact, $headers, $subject, $message);
+
+        // Send mail to user:
+        if ($answer) send_mail(array($email), $headers, $user_subject, $user_message);
 
     } // If request from SERVICE FORM:
     else if ($from == 'service-form') {
@@ -108,15 +114,34 @@ function enquiry_form() {
         $fv = $_REQUEST['fv'];
 
         switch ($country) {
-            case 'pl': $country = 'Polska';
-            case 'ua': $country = 'Ukraina';
-            case 'de': $country = 'Niemcy';
-            case 'cz': $country = 'Czechy';
-            case 'sk': $country = 'Słowacja';
-            case 'by': $country = 'Białoruś';
-            case 'lt': $country = 'Litwa';
-            case 'lv': $country = 'Łotwa';
-            case 'ee': $country = 'Estonia';
+            case 'pl': {
+                $country = 'Polska';
+                break;
+            } case 'ua': {
+                $country = 'Ukraina';
+                break;
+            } case 'de': {
+                $country = 'Niemcy';
+                break;
+            } case 'cz': {
+                $country = 'Czechy';
+                break;
+            } case 'sk': {
+                $country = 'Słowacja';
+                break;
+            } case 'by': {
+                $country = 'Białoruś';
+                break;
+            } case 'lt': {
+                $country = 'Litwa';
+                break;
+            } case 'lv': {
+                $country = 'Łotwa';
+                break;
+            } case 'ee': {
+                $country = 'Estonia';
+                break;
+            }
         }
 
         $subject = 'Prośba o kontakt z formularza serwisowego na stronie lazzonigroup.pl';
@@ -144,6 +169,9 @@ function enquiry_form() {
         else $mail_to = $send_to_service_other;
 
         $answer = send_mail($mail_to, $headers, $subject, $message);
+
+        // Send mail to user:
+        if ($answer) send_mail(array($email), $headers, $user_subject, $user_message);
 
     }
 

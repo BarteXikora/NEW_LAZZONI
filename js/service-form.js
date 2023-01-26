@@ -1,9 +1,11 @@
 jQuery('document').ready(($) => {
+    const $submit = $('#s-submit')
+
     // LIVE VALIDATION:
     $('#service-form input, #service-form textarea').on('keyup change click', () => {
         validate($('#s-company-name'))
         validate($('#s-adress'))
-        validate($('#s-nip'), 5, 25)
+        validate($('#s-nip'), 6, 13)
         validate($('#s-name'))
         validate($('#s-email'), 5, 50, mailValid)
         validate($('#s-phone'), 5, 50, phoneValid)
@@ -74,10 +76,66 @@ jQuery('document').ready(($) => {
         }
     })
 
+    // SHOWS AN ERROR IF THERE IS ONE:
     const showError = () => {
-        $('#s-submit').html('Wyślij!')
+        $('#s-submit').html('Wyślij formularz serwisowy!')
         $('#s-submit').removeClass('button-disabled')
 
         $('.error-box').html('Nie udało się wysłaćdanych. Prosimy spróbować później!')
     }
+
+    // CREATE HINT CONTENT:
+    const checkForHint = () => {
+        if ($('.input-wrong').length == 0) {
+            if ($('.input-required:not(.input-correct)').length == 0)
+                return 'Proszę wyrazić zgodę na przetwarzanie danych osobowych.'
+            else return 'Proszę uzupełnić wszystkie pola oznaczone gwiazdką.'
+        } else if ($('#s-company-name').hasClass('input-wrong'))
+            return 'Nazwa firmy powinna mieć długość 3 &mdash; 50 znaków.'
+        else if ($('#s-adress').hasClass('input-wrong'))
+            return 'Adres powinien mieć długość 3 &mdash; 50 znaków.'
+        else if ($('#s-nip').hasClass('input-wrong'))
+            return 'Podano nieprawidłowy NIP.'
+        else if ($('#s-name').hasClass('input-wrong'))
+            return 'W polu Imię i Nazwisko proszę wpisać minimalnie 3 znaki, a maksymalnie 50.'
+        else if ($('#s-email').hasClass('input-wrong'))
+            return 'Podano nieprawidłowy adres e&mdash;mail. Adres musi zawierać symbol @, oraz ' +
+                'nazwę poczty wraz z domeną.'
+        else if ($('#s-phone').hasClass('input-wrong'))
+            return 'Podano nieprawidłowy numer telefonu.'
+
+
+        else if ($('#s-drill').hasClass('input-wrong'))
+            return 'Marka / model powinien mieć długość 3 &mdash; 50 znaków.'
+        else if ($('#s-sn').hasClass('input-wrong'))
+            return 'Numer seryjny powinien mieć długość 3 &mdash; 50 znaków.'
+        else if ($('#s-date').hasClass('input-wrong'))
+            return 'Podano nieprawidłową datę zakupu.'
+        else if ($('#s-fv').hasClass('input-wrong'))
+            return 'Numer faktury powinien mieć długość 3 &mdash; 50 znaków.'
+        else if ($('#s-message').hasClass('input-wrong')) {
+            if ($('#s-message').val().length < 15)
+                return 'Treść wiadomości powinna mieć długość minimum 15 znaków.'
+            else return 'Wiadomość nie może być dłużna niż 254 znaki.'
+        } else return 'Proszę sprawdzić dane wpisane w formularzu.'
+    }
+
+    // HANDLE SHOWING HINT:
+    let hintCounter
+    $submit.click((e) => {
+        if ($submit.hasClass('button-disabled')) {
+            showHint($('.hint-box'), checkForHint())
+        }
+    })
+    $submit.mouseenter(() => {
+        if ($submit.hasClass('button-disabled')) {
+            hintCounter = setTimeout(() => {
+                showHint($('.hint-box'), checkForHint())
+            }, 800)
+        }
+    })
+    $submit.mouseleave(() => {
+        clearTimeout(hintCounter)
+        hideHint($('.hint-box'))
+    })
 })

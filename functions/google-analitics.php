@@ -10,7 +10,7 @@ function lazzoni_google_analytics() {
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
 
-	gtag('config', '***'); //UA-86816670-1
+	gtag('config', 'UA-86816670-1'); 
 </script>
 
 <?php

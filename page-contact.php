@@ -22,6 +22,10 @@
             <label for="c-phone">Numer telefonu:<span class="required">*</span></label>
             <input type="tel" id="c-phone" class="input-required">
 
+            <label for="c-about">Kontakt w sprawie:</label>
+            <input type="text" id="c-about" 
+                <?php if (isset($_GET['about'])) echo 'value="'.$_GET['about'].'"' ?>>
+
             <label for="c-message">Wiadomość, lub pytanie:<span class="required">*</span></label>
             <textarea id="c-message" class="input-required"></textarea>
 
@@ -48,7 +52,9 @@
 
             <div class="text-center mt-5">
                 <button type="submit" id="c-submit" class="button button-prim button-disabled">
-                    Wyślij!
+                    Wyślij formularz kontaktowy!
+
+                    <div class="hint-box d-none"></div>
                 </button>
             </div>
         </form>

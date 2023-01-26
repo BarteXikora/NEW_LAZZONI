@@ -16,10 +16,11 @@ jQuery(document).ready(($) => {
         else $(currentSelect).addClass('select-show')
     })
 
-    // FANDLE CLICK ON OPTION:
+
+    // HANDLE CLICK ON OPTION:
     $('.select-container .option').click((e) => {
-        $(e.target).parent().parent().find('.selected-option').text($(e.target).text())
-        $(e.target).parent().parent().data('value', $(e.target).data('value'))
+        $(getTranslatedParent(e.target)).parent().parent().find('.selected-option').text($(e.target).text())
+        $(getTranslatedParent(e.target)).parent().parent().data('value', $(e.target).data('value'))
     })
 
     // HIDE ON CLICK OUTSIDE:

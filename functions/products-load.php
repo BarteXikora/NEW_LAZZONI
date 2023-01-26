@@ -23,6 +23,27 @@ function load_products () {
         $_a = array('s' => $search);
 
         $query_array = array_merge($query_array, $_a);
+
+        // Only in any group:
+        $post_types = get_terms('product-group', array(
+            'hide_empty' => 0
+        ));
+
+        $all_groups = array();
+
+        foreach($post_types as $type) {
+            array_push($all_groups, $type->slug);
+        }
+
+        $_a = array('tax_query' => array(
+            array(
+                'taxonomy' => 'product-group',
+                'field' => 'slug',
+                'terms' => $all_groups
+            )
+        ));
+
+        $query_array = array_merge($query_array, $_a);
     } else {
         $_a = array('tax_query' => array(
             array(
@@ -43,8 +64,17 @@ function load_products () {
         while (have_posts()) {
             the_post();
 
+            $current_image;
+
+            if ($group == 'dostepne') {
+                $current_image = kdmfi_get_featured_image_src( 'featured-image-2', 'full' );  
+
+                if ($current_image == '') $current_image = wp_get_attachment_url(get_post_thumbnail_id( $post->ID ));
+            } 
+            else $current_image = wp_get_attachment_url(get_post_thumbnail_id( $post->ID ));
+
             $current = array(
-                'image' => wp_get_attachment_url(get_post_thumbnail_id( $post->ID )),
+                'image' => $current_image,
                 'link' => get_the_permalink(),
                 'title' => get_the_title(),
                 'category' => get_the_category()[0]->slug
@@ -70,8 +100,8 @@ function load_products () {
     if (!$show_categories) {
         ?>
 
-        <div class="col-12 px-4">
-            <h2 class="products-category-title title text-center text-md-left">
+        <div class="col-12">
+            <h2 class="products-category-title title text-md-left d-block">
                 Wyniki wyszukiwania dla <i>&bdquo;<?php echo $search; ?>&rdquo;</i>:
             </h2>
         </div>
@@ -87,14 +117,37 @@ function load_products () {
 
             $current_slug = get_category_by_slug($current_product['category'])->slug;
             if ($current_slug == 'uncategorized' || $current_slug == 'bez-kategorii')
-                $current_category = "Produkty LAZZONI GROUP"
+                $current_category = "Produkty LAZZONI GROUP";
 
+            $current_description = category_description( get_category_by_slug($current_slug)->term_id );
+            
             ?>
 
-            <div class="col-12 px-4 <?php if ($n > 0) echo 'mt-5' ?>" data-anchor="<?php echo $current_category; ?>">
-                <h2 class="products-category-title title text-center text-md-left">
-                    <?php echo $current_category; ?>
-                </h2>
+            <div class="col-12 p-0 title-box text-left py-3 <?php if ($n > 0) echo 'mt-5' ?>" data-anchor="<?php echo $current_category; ?>">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <h2 class="products-category-title px-3 px-md-5 pl-3 pl-md-5 my-0 py-2">
+                            <?php echo $current_category.':'; ?>
+                        </h2>
+                    </div>
+
+                    <?php if (strlen($current_description) > 0) { ?>
+
+                        <div class="col-12 col-lg-4 text-left text-md-right">
+                            <button class="button-read-more read-more-product py-2 px-4 mr-5" type="button" data-toggle="collapse"
+                                data-target="#read-more-<?php echo $current_slug; ?>">
+                                rozwiń opis
+                            </button>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="collapse m-0 pr-5 pl-3 pl-md-5 mr-md-5 mb-0" id="read-more-<?php echo $current_slug; ?>">
+                                <?php echo $current_description; ?>
+                            </div>
+                        </div>
+
+                    <?php } ?>
+                </div>
             </div>
 
             <?php
@@ -105,7 +158,7 @@ function load_products () {
 
         get_template_part('include/product-miniature', 'product-miniature', [
             'image' => $current_product['image'],
-            'link' => $current_product['link'].'/?g='.$group,
+            'link' => $current_product['link'],
             'title' => $current_product['title']
         ]);
     }

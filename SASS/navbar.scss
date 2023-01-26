@@ -1,8 +1,14 @@
 @import './variables.scss';
 
 .navbar {
-    background-color: $white;
-    box-shadow: 0px 6px 25px -11px $gray-l;
+    background-color: $black;
+    color: $white;
+    transition: all .1s ease-in-out;
+    // box-shadow: 0px 6px 25px -11px $gray-l;
+}
+
+.navbar-transparent {
+    background-color: transparent;
 }
 
 .navbar-brand img {
@@ -10,7 +16,7 @@
 }
 
 .nav-link {
-    color: $black;
+    color: $white;
 
     &:hover {
         color: $prim;
@@ -18,18 +24,24 @@
 }
 
 .dropdown-menu {
+    transition: all .1s ease-in-out;
+    background-color: $black;
     border: none;
     border-radius: 0;
     box-shadow: $shadow;
+    
+    a[href*="?p=dostepne"] {
+        font-weight: bold;
+    }
 }
 
-.dropdown-item:hover {
-    color: $prim;
-    background-color: transparent;
-}
+.dropdown-item {
+    color: $white;
 
-.collapse {
-    background-color: $white;
+    &:hover {
+        color: $prim;
+        background-color: transparent;
+    }
 }
 
 .language-btn {
@@ -45,7 +57,7 @@
 }
 
 .language-list {
-    background-color: $white;
+    background-color: $black;
     box-shadow: $shadow;
     position: fixed;
     top: 55px;

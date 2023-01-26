@@ -2,6 +2,31 @@ jQuery('document').ready(($) => {
     // DEFAULT GROUP SLUG:
     const defaultGroup = 'wiertarki'
 
+    // HANDLE EXPANDING ANIMATION:
+    const showSubMenu = () => {
+        highlightSubCategory()
+
+        $('.groups-list .active .sub-groups-list').css('height', 'auto')
+        let currentHeight = $('.groups-list .active .sub-groups-list').innerHeight()
+        $('.groups-list .active .sub-groups-list').css('height', 0)
+
+        $('.groups-list .active .sub-groups-list').animate({
+            opacity: 1,
+            height: currentHeight
+        }, 300)
+    }
+
+    const makeSure = () => {
+        const $activeSubMenu = $('.groups-list .active .sub-groups-list')
+
+        $activeSubMenu.css('height', 'auto')
+        const realHeight = $activeSubMenu.height()
+
+        $activeSubMenu.animate({
+            height: realHeight
+        }, 300)
+    }
+
     // FILL SUBCATEGORIES LIST BASED ON LOADED CONTENT:
     const getCategoriesFromProducts = () => {
         $('.sub-groups-list').animate({
@@ -15,7 +40,7 @@ jQuery('document').ready(($) => {
             $('#products-content').children().each(function () {
                 if ($(this).data('anchor')) {
 
-                    let anchorID = $(this).data('anchor').replace(/\s+/g, '-').toLowerCase()
+                    let anchorID = $(this).data('anchor').replace(/\s+/g, '-').replace('/', '-').toLowerCase()
 
                     $(this).attr('id', anchorID)
 
@@ -27,16 +52,20 @@ jQuery('document').ready(($) => {
         })
 
         setTimeout(() => {
-            $('.groups-list .active .sub-groups-list').css('height', 'auto')
-            let currentHeight = $('.groups-list .active .sub-groups-list').innerHeight()
-            $('.groups-list .active .sub-groups-list').css('height', 0)
-
-            $('.groups-list .active .sub-groups-list').animate({
-                opacity: 1,
-                height: currentHeight
-            }, 300)
+            showSubMenu()
         }, 350)
+
+        setTimeout(() => {
+            makeSure()
+        }, 1000)
     }
+
+    $(window).resize(function () {
+        clearTimeout(this.id)
+        this.id = setTimeout(showSubMenu(), 100)
+    })
+
+    $('.groups-container h2').on('DOMSubtreeModified', () => { setTimeout(() => { showSubMenu() }, 1000) })
 
     // HIGHLIGHT SUBCATEGORY ON SCROLL:
     const highlightSubCategory = () => {
@@ -85,6 +114,8 @@ jQuery('document').ready(($) => {
     const loadProducts = (group) => {
         if (!isLoading) {
             isLoading = true
+
+            $.cookie('selectedGroup', group)
 
             setLoadingCourtain(true)
 
@@ -136,8 +167,8 @@ jQuery('document').ready(($) => {
 
     // HANDLE CLICK ON NAVIGATION:
     $('.group-button').click((e) => {
-        if (!$(e.target).parent().hasClass('active')) {
-            loadProducts($(e.target).data('category') || '')
+        if (!$(getTranslatedParent(e.target)).parent().hasClass('active')) {
+            loadProducts($(getTranslatedParent(e.target)).data('category') || '')
         }
     })
 
@@ -150,7 +181,7 @@ jQuery('document').ready(($) => {
 
     // UPDATES URL:
     const updateURL = (group) => {
-        var newURL = window.location.origin + '/new_lazzoni/products/?p=' + group
+        var newURL = window.location.origin + '/products/?p=' + group
         window.history.pushState("data", "Title", newURL)
 
         $('head title', window.parent.document).html(
@@ -161,5 +192,11 @@ jQuery('document').ready(($) => {
     getCategoriesFromProducts()
     highlightSubCategory()
 
-    loadProducts($('.single-container-products').data('page') || defaultGroup)
+    // Get last selected group from local storage:
+    const lastSelectedGroup = () => {
+        if ($.cookie('selectedGroup') !== undefined) return $.cookie('selectedGroup')
+        return defaultGroup
+    }
+
+    loadProducts($('.single-container-products').data('page') || lastSelectedGroup())
 })

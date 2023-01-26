@@ -66,7 +66,12 @@
     .group-button {
         font-size: $f-small;
         font-weight: 400;
+        color: $black !important;
     }
+}
+
+li.active .group-button {
+    color: $prim;
 }
 
 .group-button {
@@ -83,7 +88,6 @@
     }
 
     &.selected {
-        font-weight: bold;
         color: $prim !important;
         cursor: default;
     }
@@ -94,6 +98,11 @@
     font-family: $font-title;
     text-transform: uppercase;
     font-weight: bold;
+    display: inline-block;
+}
+
+.products-category-p {
+    font-size: $f-small;
 }
 
 .loading-courtain {
@@ -113,6 +122,14 @@
         font-size: $f-big;
         font-weight: bold;
     }
+}
+
+#single-content {
+    overflow-x: hidden;
+}
+
+#single-content img {
+    max-width: 90vw;
 }
 
 @media (min-width: 992px) {

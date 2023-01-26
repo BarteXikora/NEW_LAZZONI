@@ -1,106 +1,128 @@
 <?php get_header(); ?>
 
 <!-- VIDEO BACKGROUND -->
-<section class="video-bg-container">
+<section class="video-bg-container" id="t">
     <video autoplay muted loop>
-        <source src="<?php echo get_template_directory_uri(); ?>//img/background.mp4" type="video/mp4">
+        <source src="<?php echo get_template_directory_uri(); ?>/img/background.mp4" type="video/mp4">
     </video>
     <div class="video-bg-courtain">
-        <div class="video-bg-content container text-center px-md-5">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="LAZZONI GROUP" class="d-none d-lg-inline px-5 mb-3 gsap-main-logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-mobile.png" alt="LAZZONI GROUP" class="d-inline px-4 d-lg-none mb-4 gsap-main-logo">
+        <div class="video-bg-content container-fluid text-center text-lg-left px-md-5">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 col-lg-12 offset-lg-0 col-xl-10 pr-lg-5">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.png" alt="LAZZONI GROUP" class="d-none d-lg-inline px-5 mb-3 mr-5 gsap-main-logo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-mobile.png" alt="LAZZONI GROUP" class="d-inline px-4 d-lg-none mb-4 gsap-main-logo">
 
-            <p class="mb-4 mb-md-5 px-5 gsap-main-text">
-                    Jesteśmy polskim producentem wiertarek przemysłowych stworzonych dla branży meblarskiej.
+                    <p class="mb-4 mb-md-5 px-5 gsap-main-text">
+                        <?php get_template_part('include/main-languages', 'main-languages', 
+                            ['content' => 'film-bg-text']); ?>
 
-                <span class="d-none d-md-inline">
-                        Specjalizujemy się w zakresie wiertarek przelotowych, wiertarek CNC, a także
-                        automatyzacji procesu wiercenia. Oprócz szerokiego wachlarzu maszyn w standardowej
-                        konfiguracji, produkujemy również maszyny customowe oraz głowice wiertarskie bazując
-                        na rysunkach elementów otrzymanych od klienta.
-                </span>
-            </p>
+                        <span class="d-none d-lg-inline">
+                            <?php get_template_part('include/main-languages', 'main-languages', 
+                                ['content' => 'film-bg-desktop']); ?>
+                        </span>
+                    </p>
 
-            <div class="gsap-main-buttons">
-                <a href="#" class="button button-prim mb-2">Nasze produkty</a>
-                <a href="#f" class="button mb-5 mb-md-0">Nasze filmy</a>
+                    <div class="gsap-main-buttons px-5">
+                        <a href="#o" class="button button-prim mb-2">Nasze produkty</a>
+                        <a href="#f" class="button button-white mb-5 mb-md-0">Nasze filmy</a>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- ARROW DOWN -->
         <a href="#o">
-            <div class="arrow-down-container">
-                <div class="arrow-down"></div>
+            <div class="arrow-down-container container-fluid px-5">
+                <div class="row px-5">
+                    <div class="col-12 px-5 text-center text-lg-left">
+                        <div class="arrow-down ml-md-4"></div>
+                    </div>
+                </div>
             </div>
         </a>
     </div>
 </section>
 
 <!-- CARDS -->
-<section class="section-dark py-5" id="o">
-    <div class="container py-4">
+<section class="section-dark py-5 px-3" id="o">
+    <div class="container-fuid px-md-5 py-5">
         <div class="row">
 
             <!-- CARD 1: WIERTARKI -->
-            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=wiertarki" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pr-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=wiertarki" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pr-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-0.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Wiertarki</h2>
                         <p>
-                         W ofercie posiadamy wiertarki półautomatyczne z załadunkiem ręcznym, wiertarki przemysłowe z załadunkiem 
-                         automatycznym, wiertarki przelotowe, wiertarki wielowrzecionowe oraz inne urządzenia.
+                            <?php get_template_part('include/main-languages', 'main-languages', 
+                                ['content' => 'wiertarki']); ?>
                         </p>
+
+                        <span class="card-see-more d-lg-none mt-3">
+                            Zobacz produkty
+                        </span>
                     </div>
                 </div>
             </a>
 
             <!-- CARD 2: AUTOMATYZACJA -->
-            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=automatyzacja" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pl-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=automatyzacja" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pl-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-1.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Automatyzacja</h3>
-                            <p>
-                                Specjalizujemy się również w automatyzacji procesu wiercenia. Nasze zautomatyzowane podajniki 
-                                idealnie współgrają z wiertarkami przelotowymi.
-                            </p>
+                        <p>
+                            <?php get_template_part('include/main-languages', 'main-languages', 
+                                ['content' => 'automatyzacja']); ?>
+                        </p>
+
+                        <span class="card-see-more d-lg-none mt-3">
+                            Zobacz produkty
+                        </span>
                     </div>
                 </div>
             </a>
 
             <!-- CARD 3: GŁOWICE WIERTARSKIE -->
-            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=glowice-wiertarskie" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pr-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=glowice-wiertarskie" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pr-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-2.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Głowice wiertarskie</h3>
-                            <p>
-                                Projektujemy i wykonujemy głowice wiertarskie na zamówienie do wiertarek przemysłowych, wiertarek 
-                                przelotowych, wielowrzecionowych itp. Posiadamy wiele konfiguracji głowic wiertarskich z 
-                                możliwością adaptacji pod Państwa urządzenie. 
-                            </p>
+                        <p>
+                            <?php get_template_part('include/main-languages', 'main-languages', 
+                                ['content' => 'glowice']); ?>
+                        </p>
+
+                        <span class="card-see-more d-lg-none mt-3">
+                            Zobacz produkty
+                        </span>
                     </div>
                 </div>
             </a>
 
             <!-- CARD 4: DOSTEPNE W MAGAZYNIE -->
-            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=dostepne" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-3 pl-lg-4">
+            <a href="<?php echo get_page_link(get_page_by_path('products')); ?>?p=dostepne" class="card-a d-flex col-10 col-md-12 col-lg-6 offset-1 offset-md-0 mb-4 pl-lg-4">
                 <div class="row card-container">
                     <div class="card-image col-12 col-md-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/card-3.jpg)"></div>
                     <div class="col-12 col-md-7 p-3 pl-md-4 text-center text-md-left">
                         <h2 class="font-title pt-2 pb-3">Dostępne w magazynie</h3>
-                            <p>
-                                W naszej hali wystawowo-prezentacyjnej posiadamy około 60 produktów lazzoni dostępnych od ręki. 
-                                Są to urządzenia takie jak: wiertarki przelotowe, wiertarki wielowrzecionowe, podajniki, roboty.
-                            </p>
+                        <p>
+                            <?php get_template_part('include/main-languages', 'main-languages', 
+                                ['content' => 'dostepne']); ?>
+                        </p>
+
+                        <span class="card-see-more d-lg-none mt-3">
+                            Zobacz produkty
+                        </span>
                     </div>
                 </div>
             </a>
         </div>
 
         <div class="col-12 text-center mt-5">
-            <a href="#" class="button button-prim">
+            <a href="https://lazzonigroup.olx.pl" target="_blank" class="button button-prim">
                 Zobacz nasze aukcje
             </a>
         </div>
@@ -108,87 +130,87 @@
 </section>
 
 <!-- ABOUT US SECTION -->
-<section class="py-5">
-    <div class="container py-4">
-        <div class="row">
-            <main class="about-us-container px-md-5 col-12 text-center text-md-left">
-                <h1>Wiertarki przemysłowe, wielowrzencionowe, CNC</h1>
-                <h2>DLACZEGO MY?</h2>
+<main class="py-5">
+    <div class="container-fluid px-md-5 py-5">
+        <div class="row px-md-5 about-us-container text-center text-md-left">
+            <div class="col-12">
+                <h1>
+                    <?php get_template_part('include/main-languages', 'main-languages', 
+                        ['content' => 'about-title']); ?>
+                </h1>
+                <h2>
+                    <?php get_template_part('include/main-languages', 'main-languages', 
+                        ['content' => 'about-subtitle1']); ?>
+                </h2>
+            </div>
+
+            <div class="col-12 col-lg-4">
                 <p>
-                    Pierwsze wiertarki przemysłowe Lazzoni Group zapoczątkowały na rynku w 2000 r.
-                    Doświadczenie, które zdobyliśmy przez ten okres czasu pozwala nam na zastosowanie
-                    różnych rozwiązań w tematyce wiercenia. Ponadto kilka naszych wiertarek przemysłowych
-                    zostało wzbogacone o dodatkowe wyposażenie takie jak piły tnąco-kątowe czy też
-                    agregaty kołkujące. Dzięki doświadczeniu, które zdobyliśmy możemy śmiało powiedzieć,
-                    że tworzymy silną grupę wiertarek przemysłowych dla zakładów stolarskich oraz
-                    przemysłu.
+                    <?php get_template_part('include/main-languages', 'main-languages', 
+                        ['content' => 'about-p1']); ?>
                 </p>
+            </div>
+
+            <div class="col-12 col-lg-4">
                 <p>
-                    Współpraca z różnymi producentami z Europy, Turcji oraz Azji pozwoliła nam jeszcze
-                    bardziej poszerzyć nasze doświadczenie w branży meblarskiej oraz stolarskiej, co
-                    sprawiło, że nasze wiertarki przemysłowe zostały pod każdym względem udoskonalone tak,
-                    aby maksymalnie przyspieszyć produkcję. Śmiało możemy stwierdzić, że znając potrzeby
-                    rynku jesteśmy w stanie sprostać nawet najbardziej wymagającym klientom. Nasza firma
-                    posiada szeroką gamę produktów. Zaczynając od wiertarek wielowrzecionowych, po
-                    <a href="#">wiertarki przelotowe</a>, kończąc na Centrach wiertarskich sterowanych CNC.
+                    <?php get_template_part('include/main-languages', 'main-languages', 
+                        ['content' => 'about-p2']); ?>
                 </p>
-                <p class="mb-3">
-                    Praktycznie każda wiertarka wielowrzecionowa oraz wiertarka przelotowa posiada
-                    możliwość konfiguracji pod szczególne wymagania klienta. „Wyposażenie w dodatkowe
-                    jednostki wiercące, zamontowanie spersonalizowanej głowicy wiertarskiej, powrót
-                    elementu do operatora, zwiększenie pola roboczego wiertarki przelotowej lub wiertarki
-                    wielowrzecionowej” są to przykładowe konfiguracje, które jesteśmy w stanie wykonać.
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <p>
+                    <?php get_template_part('include/main-languages', 'main-languages', 
+                        ['content' => 'about-p3']); ?>
                 </p>
+            </div>
 
-                <div class="collapse m-0" id="read-more">
-                    <h3 class="m-0">
-                        Poniżej przedstawiamy nasze wiertarki przemysłowe i ich rodzaje oraz rozwiązania w tematyce
-                        wiercenia:
-                    </h3>
-
-                    <ul>
-                        <li>Wiertarki przelotowe</li>
-                        <li>Wiertarki CNC</li>
-                        <li>Wiertarki do szuflad</li>
-                        <li>Wiertarki wielowrzecionowe</li>
-                        <li>wiertarki automatyczne</li>
-                        <li>Centra wiertarskie</li>
-                        <li>Głowice wielowrzecionowe</li>
-                        <li>Spersonalizowane głowice wiertarskie</li>
-                    </ul>
-
-                    <h2>WIERTARKI PRZEMYSŁOWE OD LAZZONI GROUP</h2>
+            <div class="collapse row m-0" id="read-more">
+                <div class="col-12 col-lg-8 mt-5 pr-lg-5">
+                    <h2>
+                        <?php get_template_part('include/main-languages', 'main-languages', 
+                            ['content' => 'about-subtitle2']); ?>
+                    </h2>
                     <p>
-                        Zapewniamy projektowanie oraz realizację niezawodnych ciągów technologicznych dla wiertarek
-                        przemysłowych pod względem wydajności, efektywności oraz jakości. Z naszymi maszynami można
-                        zapoznać się zarówno zdalnie, za pośrednictwem filmów obrazujących pracę wiertarek
-                        przemysłowych
-                        na kanale YouTube, oraz stacjonarnie odwiedzając naszą halę wystawową, na której
-                        prezentowane są
-                        ich najnowsze modele (aktualnie na naszej hali wystawowej znajduje się ponad 40 wiertarek
-                        przemysłowych). Oferujemy klientom również fachowe doradztwo z zakresu zakupu maszyn i
-                        narzędzi,
-                        profesjonalny serwis gwarancyjny oraz obsługę pogwarancyjną.
+                        <?php get_template_part('include/main-languages', 'main-languages', 
+                            ['content' => 'about-p4']); ?>
                     </p>
                 </div>
 
-                <div class="text-center">
-                    <button class="button-read-more py-2 px-4 mt-4" type="button" data-toggle="collapse"
-                        data-target="#read-more">
-                        Czytaj dalej
-                    </button>
+                <div class="col-12 col-lg-4">
+                    <h3 class="mb-3">
+                        <?php get_template_part('include/main-languages', 'main-languages', 
+                            ['content' => 'about-subtitle3']); ?>
+                    </h3>
+
+                    <ul>
+                        <?php get_template_part('include/main-languages', 'main-languages', 
+                            ['content' => 'about-list']); ?>
+                    </ul>
                 </div>
-            </main>
+            </div>
+
+            <div class="col-12 text-center">
+                <button class="button-read-more py-2 px-4 mt-4" type="button" data-toggle="collapse"
+                    data-target="#read-more">
+                        <?php get_template_part('include/main-languages', 'main-languages', 
+                            ['content' => 'read-more']); ?>
+                </button>
+            </div>
+
         </div>
     </div>
-</section>
+</main>
 
 <!-- YOUTUBE FILMS SECTION -->
 <section class="section-dark py-5" id="f">
-    <div class="container py-4">
-        <div class="row">
+    <div class="container-fluid px-md-5 py-5">
+        <div class="row px-md-5">
             <div class="col-12 text-center text-md-left">
-                <h2 class="h1">Zobacz nasze wiertarki w akcji:</h2>
+                <h2 class="h1">
+                    <?php get_template_part('include/main-languages', 'main-languages', 
+                            ['content' => 'films-title']); ?>
+                </h2>
             </div>
 
             <?php
@@ -206,14 +228,17 @@
                             'image' => wp_get_attachment_url(get_post_thumbnail_id( $post->ID )),
                             'link' => get_post_meta($post->ID, 'link', true),
                             'title' => get_the_title(),
-                            'small' => false
+                            'small' => true
                         ]);
                     }
                 }
             ?>
 
             <div class="col-12 text-center mt-5">
-                <a href="<?php echo get_page_link(get_page_by_path('films')); ?>" class="button button-prim">Wszystkie filmy</a>
+                <a href="<?php echo get_page_link(get_page_by_path('films')); ?>" class="button button-prim">
+                    <?php get_template_part('include/main-languages', 'main-languages', 
+                            ['content' => 'films-btn']); ?>
+                </a>
             </div>
         </div>
     </div>
@@ -221,10 +246,13 @@
 
 <!-- NEWS SECTION -->
 <section class="py-5">
-    <div class="container py-4">
-        <div class="row">
+    <div class="container-fluid px-md-5 py-5">
+        <div class="row px-md-5">
             <div class="col-12 text-center text-md-left">
-                <h2 class="h1">Aktualności:</h2>
+                <h2 class="h1">
+                    <?php get_template_part('include/main-languages', 'main-languages', 
+                            ['content' => 'news-title']); ?>
+                </h2>
             </div>
 
             <?php
@@ -243,7 +271,7 @@
                             'link' => get_the_permalink(),
                             'title' => get_the_title(),
                             'date' => get_the_date(),
-                            'small' => false,
+                            'small' => true,
                             'catalog' => false
                         ]);
                     }
@@ -251,7 +279,10 @@
             ?>
 
             <div class="col-12 text-center mt-5">
-                <a href="<?php echo get_page_link(get_page_by_path('news')); ?>" class="button button-prim">Zobacz aktualności</a>
+                <a href="<?php echo get_page_link(get_page_by_path('news')); ?>" class="button button-prim">
+                    <?php get_template_part('include/main-languages', 'main-languages', 
+                            ['content' => 'news-btn']); ?>
+                </a>
             </div>
         </div>
     </div>

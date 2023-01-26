@@ -12,11 +12,17 @@ require_once('functions/wp-bootstrap-navwalker.php');
 // Add theme support:
 require_once('functions/add-theme-support.php');
 
+// Secondary post image:
+require_once('functions/multiple-featured-images.php');
+
 // Change posts to PRODUCTS:
 require_once('functions/posts-to-products.php');
 
 // Add custom taxonomy of "PRODUCT GROUP":
 require_once('functions/taxonomy-group.php');
+
+// Add custom taxonomy of "FILM CATEGOTY":
+require_once('functions/taxonomy-films.php');
 
 // Add NEWS post type (0):
 require_once('functions/post-type-news.php');
@@ -27,8 +33,14 @@ require_once('functions/post-type-films.php');
 // Add CATALOGS post type (2):
 require_once('functions/post-type-catalogs.php');
 
+// Add CAREER post type (3):
+require_once('functions/post-type-career.php');
+
 // Handle products load:
 require_once('functions/products-load.php');
 
 // Handle forms - send mails:
 require_once('functions/forms-handler.php');
+
+// Remove canonical in products page:
+require_once('functions/remove-canonical.php');
